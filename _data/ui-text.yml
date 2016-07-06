@@ -1,6 +1,33 @@
 # User interface text and labels
 
-# English (default)
+# Turkish (default)
+# --------------
+tr-TR:
+  page                  : "Sayfa"
+  pagination_previous   : "Önceki"
+  pagination_next       : "Sonraki"
+  breadcrumb_home_label : "Anasayfa"
+  breadcrumb_separator  : "/"
+  toc_label             : "Bu Sayfa"
+  ext_link_label        : "Direct Link"
+  less_than             : "less than"
+  minute_read           : "minute read"
+  minutes_read          : "minutes read"
+  share_on_label        : "Share on"
+  meta_label            :
+  tags_label            : "Etiket:"
+  categories_label      : "Kategoriler:"
+  date_label            : "Güncelleme:"
+  comments_label        : "Yorum Yaz"
+  more_label            : "Daha"
+  related_label         : "İlgili Yazılar"
+  follow_label          : "Takip Et:"
+  feed_label            : "Feed"
+  powered_by            : " "
+  website_label         : "Website"
+  email_label           : "Email"
+  recent_posts          : "Son Yazılar"
+
 # -----------------
 en: &DEFAULT_EN
   page                  : "Page"
@@ -31,6 +58,3 @@ en-US:
   <<: *DEFAULT_EN
 en-UK:
   <<: *DEFAULT_EN
-
-# Another locale
-# --------------

@@ -80,7 +80,7 @@ author:
   keybase          :
   instagram        : 
   lastfm           :
-  linkedin         :
+  linkedin         : "makiftokatlioglu"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -149,26 +149,23 @@ kramdown:
 
 # Collections
 collections:
-  docs:
+  blog:
     output: true
     permalink: /:collection/:path/
-  recipes:
+  programlama:
     output: true
     permalink: /:collection/:path/
-  pets:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
+  proje:
     output: true
     permalink: /:collection/:path/
 
 
 # Defaults
 defaults:
-  # _posts
+  # _blog
   - scope:
       path: ""
-      type: posts
+      type: blog
     values:
       layout: single
       author_profile: true
@@ -183,10 +180,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _docs
+  # _programlama
   - scope:
       path: ""
-      type: docs
+      type: programlama
     values:
       layout: single
       read_time: false
@@ -194,34 +191,18 @@ defaults:
       share: false
       comments: false
       sidebar:
-        nav: "docs"
-  # _recipes
+        nav: "programlama"
+  # _proje
   - scope:
       path: ""
-      type: recipes
+      type: proje
     values:
       layout: single
       author_profile: true
-      share: true
+      read_time: true
       comments: true
-  # _pets
-  - scope:
-      path: ""
-      type: pets
-    values:
-      layout: single
-      author_profile: true
       share: true
-      comment: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: false
-      share: true
-
+      related: true
 
 # Outputting
 permalink: /:categories/:title/
