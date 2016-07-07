@@ -4,11 +4,11 @@ permalink: /
 date:
 header:
   overlay_color: "#5e616c"
-  overlay_image: home-feature.jpg
-  cta_label: 
+  overlay_image: home-feature2.jpg
+  cta_label:
   cta_url: 
   caption:
-excerpt: 'Just a free time activity...<br /> <small>v 0.0.2 b (boring)</small><br /><br />'
+excerpt: 'Just a free time activity...<br /> <small>v 0.0.2 c (colored)</small><br /><br />'
 feature_row:
   - image_path: home01.png
     alt: "blog"
