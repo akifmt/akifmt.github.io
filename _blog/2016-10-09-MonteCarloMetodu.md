@@ -15,6 +15,7 @@ tags:
 Örnek sayısı doğru sonuçlar elde etmede büyük önem taşımaktadır. Pi sayısı hesaplama, yazı tura ve zar hesaplaması örnek gösterilebilir.<br>
 
 **Örnek:** C ile Yazı-Tura <br>
+
 ```c
 double rastgele(){
   double r = (double) rand()/RAND_MAX;
