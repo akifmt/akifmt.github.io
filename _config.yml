@@ -63,9 +63,9 @@ google_ad_slot           :
 
 # Site Author
 author:
-  name             : *name
+  name             : "M. Akif Tokatlıoğlu"
   avatar           : "profile.jpg"
-  bio              : "Just a free time activity..."
+  bio              : "something unique or interesting about myself..."
   location         : "Turkey"
   email            : 
   uri              : 
