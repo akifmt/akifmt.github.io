@@ -1,7 +1,7 @@
 ---
-layout: archive
+layout: archive-tr
 title: "Sitemap"
-permalink: /sitemap/
+permalink: tr/sitemap/
 author_profile: false
 ---
 

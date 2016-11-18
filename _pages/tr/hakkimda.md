@@ -1,5 +1,6 @@
 ---
-permalink: /hakkimda/
+layout: single-tr
+permalink: tr/hakkimda/
 title: "Hakkımda"
 excerpt: "hakkımda sayfası"
 

@@ -12,22 +12,22 @@ excerpt: 'Just a free time activity...<br /> <small>v 0.0.2 c (colored)</small><
 feature_row:
   - image_path: home01.png
     alt: "blog"
-    title: "Blog Yazıları"
-    excerpt: "Güncel konular, teknoloji, bilim..."
-    url: "/blog-yazilari/"
-    btn_label: "Yazılar"
+    title: "Blog Posts"
+    excerpt: "Daily topics, technology, science..."
+    url: "/blog/"
+    btn_label: "Blog Posts"
   - image_path: home02.png
-    alt: "programlama"
-    title: "Programlama"
-    excerpt: "Basit kodlama ile ilgili yazılar."
+    alt: "programming"
+    title: "Programming"
+    excerpt: "Basic coding and examples."
     url: "/programlama/programlamagiris/"
-    btn_label: "Programlama"
+    btn_label: "Programming"
   - image_path: home03.png
-    alt: "arsiv"
-    title: "Arşiv"
-    excerpt: "Tüm yazılar."
-    url: "/arsiv/"
-    btn_label: "Arşiv"
+    alt: "archive"
+    title: "Archive"
+    excerpt: "All posts."
+    url: "/archive/"
+    btn_label: "Archive"
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=akifmt&repo=akifmt.github.io&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=akifmt&repo=akifmt.github.io&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 intro:

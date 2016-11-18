@@ -1,6 +1,6 @@
 ---
-layout: splash
-permalink: /tr
+layout: splash-tr
+permalink: tr/
 date:
 header:
   overlay_color: "#5e616c"
@@ -14,19 +14,19 @@ feature_row:
     alt: "blog"
     title: "Blog Yazıları"
     excerpt: "Güncel konular, teknoloji, bilim..."
-    url: "/blog-yazilari/"
+    url: "blog/"
     btn_label: "Yazılar"
   - image_path: home02.png
     alt: "programlama"
     title: "Programlama"
     excerpt: "Basit kodlama ile ilgili yazılar."
-    url: "/programlama/programlamagiris/"
+    url: "programlama/programlamagiris/"
     btn_label: "Programlama"
   - image_path: home03.png
     alt: "arsiv"
     title: "Arşiv"
     excerpt: "Tüm yazılar."
-    url: "/arsiv/"
+    url: "arsiv/"
     btn_label: "Arşiv"
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=akifmt&repo=akifmt.github.io&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=akifmt&repo=akifmt.github.io&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
