@@ -4,7 +4,7 @@ excerpt: "Android 7 Nougat"
 header:
   teaser: "blogimages/blog6_android7n_teaser.png"
 categories: 
-  - blog
+  - blog-tr
 tags:
   - Android 7 Nougat
 ---

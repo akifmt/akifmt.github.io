@@ -4,7 +4,7 @@ excerpt: "Monte Carlo Metodu"
 header:
   teaser: "blogimages/blog5_montecarlometodu.png"
 categories: 
-  - blog
+  - blog-tr
 tags:
   - monte carlo metodu
 ---

@@ -4,7 +4,7 @@ excerpt: "siber güvenlik ve güvenlik eğitimleri"
 header:
   teaser: "blogimages/blog2_invictus_teaser.png"
 categories: 
-  - blog
+  - blog-tr
 tags:
   - staj
 ---

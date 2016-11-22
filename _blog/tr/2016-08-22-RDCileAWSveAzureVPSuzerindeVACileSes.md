@@ -4,7 +4,7 @@ excerpt: "RDC Bağlantıda AWS ve Azure VPS üzerinde VAC ile Ses"
 header:
   teaser: "blogimages/blog3_vac_teaser.png"
 categories: 
-  - blog
+  - blog-tr
 tags:
   - amazon aws
   - microsoft azure

@@ -4,7 +4,7 @@ excerpt: "Raspberry Pi Uzak Masaüstü Türkçe Klavye Problemi"
 header:
   teaser: "blogimages/blog4_rasPiRDC.png"
 categories: 
-  - blog
+  - blog-tr
 tags:
   - Raspberry Pi
   - Remote Desktop Connection

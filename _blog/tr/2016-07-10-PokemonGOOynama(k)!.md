@@ -4,7 +4,7 @@ excerpt: "Pokemon GO Nedir?"
 header:
   teaser: "/blogimages/blog1_pokemon_go_logo.png"
 categories: 
-  - blog
+  - blog-tr
 tags:
   - pokemon go
 ---
