@@ -1,7 +1,7 @@
 ---
 layout: single-tr
 title: "Programlama Giriş"
-permalink: tr/programlama/programlamagiris/
+permalink: /programming-tr/programlamagiris/
 excerpt: "Programlama dilleri genel giriş."
 modified: 2016-01-01T01:01:01-01:02
 ---

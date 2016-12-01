@@ -4,7 +4,7 @@ main:
     url: /blog/
 
   - title: "PROGRAMMING"
-    url: /programlama/programlamagiris/
+    url: /programming/programmingintro/
 
   - title: "ARCHIVE"
     url: /archive/
@@ -17,7 +17,7 @@ main-tr:
     url: /tr/blog/
 
   - title: "Programlama"
-    url: /tr/programlama/programlamagiris/
+    url: /programming-tr/programlamagiris/
 
   - title: "Arşiv"
     url: /tr/arsiv/
@@ -27,10 +27,18 @@ main-tr:
 
 
 # programlama linkleri
-programlama:
-  - title: Başlangıç
+programming:
+  - title: INTRODUCTION
+    children:
+      - title: "Programming"
+        url: /programming/programmingintro/
+      - title: "Programming 01"
+        url: /programming/programming01/
+
+programming-tr:
+  - title: BAŞLANGIÇ
     children:
       - title: "Programlama Dilleri Giriş"
-        url: /programlama/programlamagiris/
+        url: /programming-tr/programlamagiris/
       - title: "Programlama Dilleri 01"
-        url: /programlama/programlama01/
+        url: /programming-tr/programlama01/

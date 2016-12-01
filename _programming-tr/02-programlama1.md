@@ -1,7 +1,7 @@
 ---
 layout: single-tr
 title: "Programlama Dilleri 01"
-permalink: tr/programlama/programlama01/
+permalink: /programming-tr/programlama01/
 excerpt: "Programlama dilleri 01."
 modified: 2015-01-01T01:01:01-01:02
 ---

@@ -152,7 +152,10 @@ collections:
   blog:
     output: true
     permalink: /:collection/:path/
-  programlama:
+  programming:
+    output: true
+    permalink: /:collection/:path/
+  programming-tr:
     output: true
     permalink: /:collection/:path/
   proje:
@@ -180,10 +183,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _programlama
+  # _programming
   - scope:
       path: ""
-      type: programlama
+      type: programming
     values:
       layout: single
       read_time: false
@@ -191,7 +194,19 @@ defaults:
       share: false
       comments: false
       sidebar:
-        nav: "programlama"
+        nav: "programming"
+  # _programming-tr
+  - scope:
+      path: ""
+      type: programming-tr
+    values:
+      layout: single-tr
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "programming-tr"
   # _proje
   - scope:
       path: ""
