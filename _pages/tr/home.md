@@ -20,7 +20,7 @@ feature_row:
     alt: "programlama"
     title: "Programlama"
     excerpt: "Basit kodlama ile ilgili yazılar."
-    url: "programlama/programlamagiris/"
+    url: "/programming-tr/programlamagiris/"
     btn_label: "Programlama"
   - image_path: home03.png
     alt: "arsiv"

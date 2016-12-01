@@ -20,7 +20,7 @@ feature_row:
     alt: "programming"
     title: "Programming"
     excerpt: "Basic coding and examples."
-    url: "/programlama/programlamagiris/"
+    url: "/programming/programmingintro/"
     btn_label: "Programming"
   - image_path: home03.png
     alt: "archive"
