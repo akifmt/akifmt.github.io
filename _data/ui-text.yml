@@ -3,17 +3,17 @@
 # Turkish (default)
 # --------------
 tr-TR:
-  page                  : "Sayfa"
-  pagination_previous   : "Önceki"
-  pagination_next       : "Sonraki"
-  breadcrumb_home_label : "Anasayfa"
+  page                  : "Page"
+  pagination_previous   : "Previous"
+  pagination_next       : "Next"
+  breadcrumb_home_label : "Home"
   breadcrumb_separator  : "/"
   toc_label             : "Bu Sayfa"
   ext_link_label        : "Direct Link"
   less_than             : "less than"
   minute_read           : "minute read"
   minutes_read          : "minutes read"
-  share_on_label        : "PAYLAŞ"
+  share_on_label        : "SHARE ON"
   meta_label            :
   tags_label            : "Etiket:"
   categories_label      : "Kategoriler:"
@@ -21,7 +21,7 @@ tr-TR:
   comments_label        : "Yorum Yaz"
   more_label            : "Daha"
   related_label         : "İlgili Yazılar"
-  follow_label          : "Takip Et:"
+  follow_label          : "FOLLOW:"
   feed_label            : "Feed"
   powered_by            : " "
   website_label         : "Website"
