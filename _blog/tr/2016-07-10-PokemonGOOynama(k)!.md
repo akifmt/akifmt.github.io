@@ -1,4 +1,5 @@
 ---
+layout: single-tr
 title:  "Pokemon GO Oynama(k)!"
 excerpt: "Pokemon GO Nedir?"
 header:

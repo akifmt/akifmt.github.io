@@ -1,4 +1,5 @@
 ---
+layout: single-tr
 title:  "Android 7 Nougat"
 excerpt: "Android 7 Nougat"
 header:

@@ -1,4 +1,5 @@
 ---
+layout: single-tr
 title:  "Monte Carlo Metodu"
 excerpt: "Monte Carlo Metodu"
 header:

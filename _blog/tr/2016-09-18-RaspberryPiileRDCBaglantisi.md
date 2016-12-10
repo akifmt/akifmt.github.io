@@ -1,4 +1,5 @@
 ---
+layout: single-tr
 title:  "Raspberry Pi Uzak Masaüstü Türkçe Klavye Problemi"
 excerpt: "Raspberry Pi Uzak Masaüstü Türkçe Klavye Problemi"
 header:

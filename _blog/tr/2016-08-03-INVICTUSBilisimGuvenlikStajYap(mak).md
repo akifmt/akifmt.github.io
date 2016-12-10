@@ -1,4 +1,5 @@
 ---
+layout: single-tr
 title:  "INVICTUS Bilişim Güvenlik Staj Yap(mak)"
 excerpt: "siber güvenlik ve güvenlik eğitimleri"
 header:

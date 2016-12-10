@@ -1,4 +1,5 @@
 ---
+layout: single-tr
 title:  "Remote Desktop ile Amazon AWS ve Azure üzerinde Uygulama Sesleri"
 excerpt: "RDC Bağlantıda AWS ve Azure VPS üzerinde VAC ile Ses"
 header:
