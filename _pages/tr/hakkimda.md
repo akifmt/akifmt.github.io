@@ -19,7 +19,7 @@ Kişisel blog.
 | [Programlama Sayfası][programlama01link] | Programlama dilleri açıklaması. |
 | [Proje 01][proje01link] | Proje 01. |
 
-[programlama01link]: {{ base_path }}/programlama/programlamagiris/
+[programlama01link]: {{ base_path }}/programming-tr/programlamagiris/
 [proje01link]: {{ base_path }}/proje/proje01/
 
 
