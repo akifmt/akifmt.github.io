@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /about/
-title: "About"
+title: "My Projects & About Me"
 excerpt: "About"
 
 modified: 2016-01-01T01:01:01-01:01
