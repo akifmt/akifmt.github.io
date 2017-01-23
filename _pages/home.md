@@ -14,7 +14,7 @@ feature_row:
     alt: "blog"
     title: "Blog Yazıları"
     excerpt: "Güncel konular, teknoloji, bilim..."
-    url: "blog/"
+    url: "/blog/"
     btn_label: "Yazılar"
   - image_path: home02.png
     alt: "programlama"
@@ -26,7 +26,7 @@ feature_row:
     alt: "arsiv"
     title: "Arşiv"
     excerpt: "Tüm yazılar."
-    url: "arsiv/"
+    url: "/archive/"
     btn_label: "Arşiv"
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=akifmt&repo=akifmt.github.io&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=akifmt&repo=akifmt.github.io&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'

@@ -14,7 +14,7 @@ feature_row:
     alt: "blog"
     title: "Blog Posts"
     excerpt: "Daily topics, technology, science..."
-    url: "/blog/"
+    url: "/en/blog/"
     btn_label: "Blog Posts"
   - image_path: home02.png
     alt: "programming"
@@ -26,7 +26,7 @@ feature_row:
     alt: "archive"
     title: "Archive"
     excerpt: "All posts."
-    url: "/archive/"
+    url: "/en/archive/"
     btn_label: "Archive"
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=akifmt&repo=akifmt.github.io&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=akifmt&repo=akifmt.github.io&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
