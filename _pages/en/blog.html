@@ -1,21 +1,21 @@
 ---
-layout: archive-tr
-title: "Blog Yazıları"
-permalink: tr/blog/
+layout: archive
+title: "Blog Posts"
+permalink: en/blog/
 author_profile: false
 ---
 
 {% include base_path %}
 {% include group-by-array collection=site.blog field="categories" %}
 
-<h5><a href="/blog/"><b>For English Posts Click Here ...</b></a></h5>
+<h5><a href="/blog/"><b>Türkçe Blog Yazıları İçin Buraya Tıklayınız ...</b></a></h5>
 
-<h3 id="{{ category | slugify }}" class="archive__subtitle"> Türkçe Yazılar </h3>
+<h3 id="{{ category | slugify }}" class="archive__subtitle">English Posts</h3>
 
 <div class="grid__wrapper">
 {% for category in group_names %}
   {% assign posts = group_items[forloop.index0] %}
-  {% if category == "blog-tr" %}
+  {% if category == "blog-en" %}
 	  {% for post in posts reversed %}
 		{% include archive-single.html type="grid" %}
 	  {% endfor %}

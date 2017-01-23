@@ -1,5 +1,5 @@
 ---
-layout: single-tr
+layout: single
 title: "Proje 01"
 permalink: /proje/proje01/
 excerpt: "Proje 01."

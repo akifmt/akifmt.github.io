@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: splash-tr
 permalink: /
 date:
 header:
@@ -12,22 +12,22 @@ excerpt: 'Just a free time activity...<br /> <small>v 0.0.3 m (multilingual)</sm
 feature_row:
   - image_path: home01.png
     alt: "blog"
-    title: "Blog Posts"
-    excerpt: "Daily topics, technology, science..."
-    url: "/blog/"
-    btn_label: "Blog Posts"
+    title: "Blog Yazıları"
+    excerpt: "Güncel konular, teknoloji, bilim..."
+    url: "blog/"
+    btn_label: "Yazılar"
   - image_path: home02.png
-    alt: "programming"
-    title: "Programming"
-    excerpt: "Basic coding and examples."
-    url: "/programming/programmingintro/"
-    btn_label: "Programming"
+    alt: "programlama"
+    title: "Programlama"
+    excerpt: "Basit kodlama ile ilgili yazılar."
+    url: "/programming-tr/programlamagiris/"
+    btn_label: "Programlama"
   - image_path: home03.png
-    alt: "archive"
-    title: "Archive"
-    excerpt: "All posts."
-    url: "/archive/"
-    btn_label: "Archive"
+    alt: "arsiv"
+    title: "Arşiv"
+    excerpt: "Tüm yazılar."
+    url: "arsiv/"
+    btn_label: "Arşiv"
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=akifmt&repo=akifmt.github.io&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=akifmt&repo=akifmt.github.io&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 intro:

@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /about/
+permalink: en/about/
 title: "My Projects & About Me"
 excerpt: "About"
 

@@ -1,6 +1,6 @@
 ---
 layout: single-tr
-permalink: tr/hakkimda/
+permalink: hakkimda/
 title: "Projelerim ve Hakkımda"
 excerpt: "hakkımda sayfası"
 

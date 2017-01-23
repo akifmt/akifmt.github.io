@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: archive-tr
 title: "Sitemap"
 permalink: /sitemap/
 author_profile: false

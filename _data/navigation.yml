@@ -1,29 +1,29 @@
 # main links links
 main:
   - title: "BLOG"
-    url: /blog/
+    url: /en/blog/
 
   - title: "PROGRAMMING"
     url: /programming/programmingintro/
 
   - title: "ARCHIVE"
-    url: /archive/
+    url: /en/archive/
     
   - title: "MY PROJECTS & ABOUT ME"
-    url: /about/
+    url: /en/about/
     
 main-tr:
   - title: "Blog Yazıları"
-    url: /tr/blog/
+    url: /blog/
 
   - title: "Programlama"
     url: /programming-tr/programlamagiris/
 
   - title: "Arşiv"
-    url: /tr/arsiv/
+    url: /arsiv/
     
   - title: "Projelerim ve Hakkımda"
-    url: /tr/hakkimda/
+    url: /hakkimda/
 
 
 # programlama linkleri
