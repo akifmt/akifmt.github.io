@@ -32,13 +32,17 @@ programming:
     children:
       - title: "Programming"
         url: /programming/programmingintro/
-      - title: "Programming 01"
-        url: /programming/programming01/
+  - title: OBJECT ORIENTED PROGRAMMING
+    children:
+      - title: "What is OOP?"
+        url: /programming/programming01oop/
 
 programming-tr:
   - title: BAŞLANGIÇ
     children:
       - title: "Programlama Dilleri Giriş"
         url: /programming-tr/programlamagiris/
-      - title: "Programlama Dilleri 01"
-        url: /programming-tr/programlama01/
+  - title: NESNE YÖNELİMLİ PROGRAMLAMA
+    children:
+      - title: "NYP (OOP) Nedir?"
+        url: /programming-tr/programlama01oop/
