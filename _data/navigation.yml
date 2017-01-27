@@ -36,6 +36,8 @@ programming:
     children:
       - title: "What is OOP?"
         url: /programming/programming01oop/
+      - title: "How to identify and design a Class?"
+        url: /programming/programming02oop/
 
 programming-tr:
   - title: BAŞLANGIÇ
