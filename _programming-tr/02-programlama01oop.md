@@ -2,7 +2,7 @@
 layout: single-tr
 title: "NYP (OOP) Nedir?"
 permalink: /programming-tr/programlama01oop/
-excerpt: "Programlama dilleri 01."
+excerpt: "NYP (OOP) Nedir"
 modified: 2015-01-01T01:01:01-01:02
 ---
 
