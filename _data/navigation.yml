@@ -48,3 +48,5 @@ programming-tr:
     children:
       - title: "NYP (OOP) Nedir?"
         url: /programming-tr/programlama01oop/
+      - title: "Nesne tanımı ve tasarımı nasıl yapılmalı?"
+        url: /programming-tr/programlama02oop/
