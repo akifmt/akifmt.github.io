@@ -38,6 +38,8 @@ programming:
         url: /programming/programming01oop/
       - title: "How to identify and design a Class?"
         url: /programming/programming02oop/
+      - title: "What is Encapsulation (or Information Hiding)?"
+        url: /programming/programming03/
 
 programming-tr:
   - title: BAŞLANGIÇ
