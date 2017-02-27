@@ -156,10 +156,10 @@ find . -type f	'dosyaları bulur'
 find . -name "*.txt"	'uzantısı txt olanı bulur'
 find -name "*.txt" | while read filename; do echo $filename; done	'txt bulur saüa gönderir filename olarak yazdırır'
 find -name "*.txt" | while read filename; do rm $filename; done	'bulduğu dosyaları siler'
-dd if=/dev/zero of=zero-file.txt bs=512 count=2	'2x512KB'lık boş dosya oluşturur. '
+dd if=/dev/zero of=zero-file.txt bs=512 count=2	'2x512KB boş dosya oluşturur. '
 hexdump zero-file.txt 'hex olarak ve tekrar eden kısımları kısaltarak gösterir.'
 hexdump -v zero-file.txt	'hepsini gösterir kısaltmasız olarak gösterir'
-dd if=/dev/urandom of=random-file.txt bs=512 count=4	'rastgele değerli 4x512KB'lık dosya oluşturur'
+dd if=/dev/urandom of=random-file.txt bs=512 count=4	'rastgele değerli 4x512KB dosya oluşturur'
 ```
 
 - **İşlemci Üzerinde İşlemler:**
