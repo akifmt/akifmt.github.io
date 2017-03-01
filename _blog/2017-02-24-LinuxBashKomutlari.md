@@ -175,7 +175,7 @@ stress-ng -c 0 -l 40	'tüm CPUlarde %40 yükleme yapar'
 ```bash
 ifconfig	'ağ cihazlarını ve bağlantıları gösterir'
 route -n	'tüm erişimleri gösterir'
-sudo wondershaper ens33 512 512 '512Kpbs indirme sınırlaması yapar'
+sudo wondershaper ens33 512 512 '512Kpbs indirme ve gönderme sınırlaması yapar'
 sudo wondershaper ens33 clear	'limitleri kaldırır'
 ```
 
