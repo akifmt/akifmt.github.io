@@ -58,6 +58,9 @@ luarocks install ffmpeg
 /// sudo rm -rf ~/.cache/luarocks
 ```
 
+IDE: 
+[İndirme Linki](https://eclipse.org/ldt/ "Link")
+
 Kurulumu Test etmek için,
 [İndirme Linki](/files/TEST_LUA_Torch_OpenCV.zip "Link")
 
