@@ -61,8 +61,9 @@ luarocks install ffmpeg
 IDE: 
 [İndirme Linki](https://eclipse.org/ldt/ "Link")
 
-Kurulumu Test etmek için,
-[İndirme Linki](/files/TEST_LUA_Torch_OpenCV.zip "Link")
+Kurulumu Test etmek için:
+[İndirme Linki](/files/TEST_LUA_Torch_OpenCV.zip "Link") , 
+[Github Linki](https://github.com/akifmt/LuaOpenCVTorch "Link")
 
 
 
