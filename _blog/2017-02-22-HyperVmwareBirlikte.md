@@ -13,14 +13,14 @@ tags:
 ![vmware](/images/blogimages/blog9_vmwarehyperv.png "vmware")<br>
 
 **Hyper-V kapatmak için;** <br>
-Cmd üzerinde yünetici olarak: <br>
+Cmd üzerinde yönetici olarak: <br>
 ```
 bcdedit /set hypervisorlaunchtype off
 ```
 *Yeniden başlatıldığında vmware kullanılabilir.*
 
 **Hyper-V tekrar açmak için** <br>
-Cmd üzerinde yünetici olarak: <br>
+Cmd üzerinde yönetici olarak: <br>
 ```
 bcdedit /set hypervisorlaunchtype auto
 ```
