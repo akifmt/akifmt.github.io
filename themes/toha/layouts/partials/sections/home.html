@@ -1,0 +1,59 @@
+{{ $author:= .Site.Data.author }}
+{{ if (index .Site.Data .Site.Language.Lang).author }}
+  {{ $author = (index .Site.Data .Site.Language.Lang).author }}
+{{ end }}
+
+{{ $name:="Jane Doe" }}
+{{ if $author.nickname }}
+  {{ $name = $author.nickname }}
+{{ else if $author.name }}
+  {{ $name = $author.name }}
+{{ end }}
+
+{{ $sections:= .Site.Data.sections }}
+{{ if (index .Site.Data .Site.Language.Lang).sections }}
+  {{ $sections = (index .Site.Data .Site.Language.Lang).sections }}
+{{ end }}
+
+{{ $backgroundImage:= "assets/images/default-background.jpg" }}
+{{ if .Site.Params.background }}
+  {{ $backgroundImage = .Site.Params.background }}
+{{ end }}
+
+{{ $authorImage:= "assets/images/default-avatar.png" }}
+{{ if $author.image }}
+  {{ $authorImage = $author.image }}
+{{ end }}
+
+<div class="container-fluid home" id="home">
+  <div
+    class="background container-fluid"
+    style="background-image: url('{{ $backgroundImage | absURL }}');"
+  ></div>
+  <div class="container content text-center">
+    <img src="{{ $authorImage | absURL }}"
+      class="rounded-circle mx-auto d-block img-fluid"
+    />
+    <h1 class="greeting"> {{ $author.greeting }} {{ $name }}</h1>
+    <div class="typing-carousel">
+      <span id="ityped" class="ityped"></span>
+      <span class="ityped-cursor"></span>
+    </div>
+    <ul id="typing-carousel-data">
+      {{ if $author.summary }}
+        {{ range $author.summary }}
+          <li>{{ . }}</li>
+        {{ end}}
+      {{ end }}
+    </ul>
+    {{ if $sections }}
+      {{ range first 1 (where (sort $sections "section.weight") ".section.enable" true) }}
+        {{ $sectionID := replace (lower .section.name) " " "-"  }}
+        {{ if .section.id }}
+          {{ $sectionID = .section.id }}
+        {{ end }}
+        <a href="#{{ $sectionID }}"><i class="arrow bounce fa fa-chevron-down"></i></a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

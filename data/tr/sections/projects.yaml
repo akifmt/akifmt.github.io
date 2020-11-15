@@ -1,0 +1,67 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Professional
+  filter: "professional"
+- name: Academic
+  filter: "academic"
+- name: Hobby
+  filter: "hobby"
+
+# your projects
+projects:
+- name: ReflectionExamples.Net
+  logo: images/projects/dotnet.png
+  role: Developer
+  timeline: "May 2020 - Present"
+  repo: https://github.com/akifmt/ReflectionExamples.Net # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: Reflection Examples in .Net
+  tags: ["Net", "Reflection", "Examples", "professional"]
+
+- name: e-CommerceAsp.netMvc
+  logo: images/projects/dotnet.png
+  role: Developer
+  timeline: "Jun 2018 - Present"
+  repo: https://github.com/akifmt/e-CommerceAsp.netMvc
+  #url: ""
+  summary: E-commerce Website - Online Store
+  tags: ["E-commerce", "Website","Online Store", "professional"]
+
+- name: Role Based Claims Authorize
+  logo: images/projects/dotnet.png
+  role: Developer
+  timeline: "Aug 2017 - Present"
+  url: "https://github.com/akifmt/RoleBasedClaimsAuthorize"
+  summary: Role Based Claims Authorize .Net MVC 5 - Identity 2.2 Just Another Blog (with User Roles and Permissions)
+  tags: ["Role Based Claims Authorize","hobby"]
+
+- name: Bilcamp2018-Tensorflow
+  logo: images/projects/tensorflow.png
+  role: Developer
+  timeline: "Oct 2019 - Dec 2019"
+  repo: https://github.com/kelseyhightower/nocode
+  #url: ""
+  summary: Bilcamp2018-Tensorflow
+  tags: ["hobby", "fun", "academic"]
+
+- name: LuaOpenCVTorch
+  logo: images/projects/torch.png
+  role: Developer
+  timeline: "Aug 2017 - Present"
+  url: "https://github.com/akifmt/RoleBasedClaimsAuthorize"
+  summary: LuaOpenCVTorch
+  tags: ["LuaOpenCVTorch","academic"]
+ 
+ 
