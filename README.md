@@ -1,5 +1,7 @@
 # akifmt.github.io
 
+[![pages-build-deployment](https://github.com/akifmt/akifmt.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/akifmt/akifmt.github.io/actions/workflows/pages/pages-build-deployment)
+[![Deploy to Github Pages](https://github.com/akifmt/akifmt.github.io/actions/workflows/deploy-site.yaml/badge.svg)](https://github.com/akifmt/akifmt.github.io/actions/workflows/deploy-site.yaml)
 [![GitHub issues](https://img.shields.io/github/issues/akifmt/akifmt.github.io)](https://github.com/akifmt/akifmt.github.io/issues)
 [![GitHub forks](https://img.shields.io/github/forks/akifmt/akifmt.github.io)](https://github.com/akifmt/akifmt.github.io/network)
 [![GitHub stars](https://img.shields.io/github/stars/akifmt/akifmt.github.io)](https://github.com/akifmt/akifmt.github.io/stargazers)
