@@ -1,4 +1,4 @@
-# akifmt.github.io
+## akifmt.github.io
 
 [![pages-build-deployment](https://github.com/akifmt/akifmt.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/akifmt/akifmt.github.io/actions/workflows/pages/pages-build-deployment)
 [![Deploy to Github Pages](https://github.com/akifmt/akifmt.github.io/actions/workflows/deploy-site.yaml/badge.svg)](https://github.com/akifmt/akifmt.github.io/actions/workflows/deploy-site.yaml)
@@ -9,7 +9,7 @@
 
 A personal portfolio with minimalist design and responsiveness.
 
-## Attribution
+### Attribution
 
 - Thanks! [Toha](https://github.com/hugo-toha/toha) for this theme.
 - Thanks! [Hugo](https://gohugo.io/) is one of the most popular open-source static site generators.
