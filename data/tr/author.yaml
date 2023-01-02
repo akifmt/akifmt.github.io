@@ -1,18 +1,19 @@
 # some information about you
-name: " "
-nickname: " "
+name: "Akif T."
+nickname: "akifmt"
 # greeting message before your name. it will default to "Hi! I am" if not provided
 greeting: "Merhaba!"
-image: "images/avatar.png"
+image: "images/author/akif.png"
 # give your some contact information. they will be used in the footer
 contactInfo:
   email: "akifmt@gmail.com"
-  #phone: "+0123456789"
+  # phone: "+0123456789"
+  github: akifmt
+  # linkedin: johndoe
 
 # some summary about what you do
 summary:
   - I am a Developer
-  - I am a Devops
   - I love all kind of codes
   - I work on open-source projects
   - I love to work with some fun projects

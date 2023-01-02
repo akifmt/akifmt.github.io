@@ -12,7 +12,6 @@ menu:
     weight: 502
 author:
   name: Akif T.
-  image: /images/authors/akif.png
 ---
 
 According to Object Oriented Design Principles, there are five principles when design a class.

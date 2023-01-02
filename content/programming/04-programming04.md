@@ -12,7 +12,6 @@ menu:
     weight: 504
 author:
   name: Akif T.
-  image: /images/authors/akif.png
 ---
 
 **Association:**

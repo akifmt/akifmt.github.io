@@ -12,7 +12,6 @@ menu:
     weight: 501
 author:
   name: Akif T.
-  image: /images/authors/akif.png
 ---
 
 Object Oriented Programming(OOP) is a programming paradigm based on the concept of objects, which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods.

@@ -1,4 +1,6 @@
-  
+resources/*
+hugo.exe
+
 # Hugo default output directory
 /public
 

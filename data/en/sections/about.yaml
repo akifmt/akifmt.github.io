@@ -10,15 +10,16 @@ section:
 # your designation
 designation: Software Engineer
 # your company information
-#company:
-#  name: akifmt
-#  url: "https://akifmt.github.io"
+# company:
+#   name: Example Co.
+#   url: "https://www.example.com"
 
 # your resume. this file path should be relative to you "static" directory
-resume: "files/Resume-M.AkifTokatlioglu_EnUS.pdf"
+# Dreprecated. Use resourceLinks instead.
+# resume: "files/resume.pdf"
 
 # a summary about you
-summary: 'I am a passionate software engineer with x years of working experience. Sometimes, I work on some fun projects such as writing a theme, etc.'
+summary: 'I am a passionate software engineer with x years of working experience. I built OSS tools for [Kubernetes](https://kubernetes.io/) using GO. My tools help people to deploy their workloads in Kubernetes. Sometimes, I work on some fun projects such as writing a theme, etc.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
@@ -47,33 +48,38 @@ socialLinks:
   icon: "fab fa-facebook"
   url: "#"
 
-# your soft skills
-# give the percentage between 50 to 100 with 5 intervals.
-# currently supported colors: blue, yellow, pink, green, sky, orange
-softSkills:
-- name: Leadership
+# You can put custom buttons to link your relevant resources.
+# For example, you can put link for your resume.
+# resourceLinks:
+#- title: "My Resume"
+#  url: "files/resume.pdf"
+
+# Show your badges
+# You can show your verifiable certificates from https://www.credly.com.
+# You can also show a circular bar indicating the level of expertise on a certain skill
+badges:
+#- type: certification
+#  name: Artificial Intelligence and Machine Learning
+#  url: "https://www.credly.com/org/grupo-bancolombia/badge/artificial-intelligence-and-machine-learning"
+#  badge: "https://images.credly.com/size/680x680/images/e027514f-9d07-4b29-862f-fe21a8aaebf1/ae.png"
+
+- type: soft-skill-indicator
+  name: Leadership
   percentage: 85
   color: blue
-- name: Team Work
+
+- type: soft-skill-indicator
+  name: Team Work
   percentage: 90
   color: yellow
-- name: Communication
-  percentage: 85
-  color: pink
-- name: Hard Working
-  percentage: 85
-  color: green
-- name: Fast Learner
-  percentage: 85
-  color: sky
-- name: Problem Solving
+
+- type: soft-skill-indicator
+  name: Hard Working
   percentage: 85
   color: orange
-# you can also provide color code instead of pre-defined color name
-# - name: Example 1
+
+# you can also provide color code instead of the color name
+# - type: soft-skill-indicator
+#   name: Example 1
 #   percentage: 75
 #   color: "#00adb5"
-# - name: Example 2
-#   percentage: 65
-#   color: "#8b8383"
-

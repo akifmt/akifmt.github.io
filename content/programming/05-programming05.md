@@ -12,7 +12,6 @@ menu:
     weight: 505
 author:
   name: Akif T.
-  image: /images/authors/akif.png
 ---
 
 **Abstraction:** <br>
