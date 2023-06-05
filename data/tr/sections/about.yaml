@@ -19,7 +19,7 @@ designation: Software Engineer
 # resume: "files/resume.pdf"
 
 # a summary about you
-summary: 'I am a passionate software engineer with x years of working experience. I built OSS tools for [Kubernetes](https://kubernetes.io/) using GO. My tools help people to deploy their workloads in Kubernetes. Sometimes, I work on some fun projects such as writing a theme, etc.'
+summary: 'Passionate software engineer with knowledge of C# .NET. Responsible for enterprise architecture, solutions design as well as technical leadership for software team. Follows and loves new technologies in software. Develops open-source projects in his spare time.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
@@ -34,7 +34,7 @@ socialLinks:
 
 - name: Stackoverflow
   icon: "fab fa-stack-overflow"
-  url: "#"
+  url: "https://stackoverflow.com/users/7191490/akif-t"
 
 - name: LinkedIn
   icon: "fab fa-linkedin"
@@ -59,19 +59,9 @@ socialLinks:
 # You can also show a circular bar indicating the level of expertise on a certain skill
 badges:
 - type: certification
-  name: Certified Kubernetes Security Specialist
-  url: "https://www.credly.com/org/the-linux-foundation/badge/exam-developer-certified-kubernetes-security-specialist"
-  badge: "https://images.credly.com/size/680x680/images/f4bf92ed-8985-40b2-bc07-2f9308780854/kubernetes-security-specialist-logo-examdev.png"
-
-- type: certification
-  name: Istio and IBM Cloud Kubernetes Service
-  url: "https://www.credly.com/org/the-linux-foundation/badge/exam-developer-certified-kubernetes-security-specialist"
-  badge: "https://images.credly.com/size/680x680/images/8d34d489-84bf-4861-a4a0-9e9d68318c5c/Beyond_basics_of_Istio_on_Cloud_v2.png"
-
-- type: certification
-  name: Artificial Intelligence and Machine Learning
-  url: "https://www.credly.com/org/grupo-bancolombia/badge/artificial-intelligence-and-machine-learning"
-  badge: "https://images.credly.com/size/680x680/images/e027514f-9d07-4b29-862f-fe21a8aaebf1/ae.png"
+  name: "Exam 480: Programming in HTML5 with JavaScript and CSS3"
+  url: "https://www.credly.com/badges/44b3d9d7-91fd-491d-a02f-0225648cc01c"
+  badge: "https://images.credly.com/size/340x340/images/84f513e4-256d-4aa0-a29d-973bcb39d87a/Programming_in_HTML5_with_JavaScript_and_Css3-01.png"
 
 - type: soft-skill-indicator
   name: Leadership

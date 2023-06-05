@@ -11,7 +11,7 @@ section:
 # Your Skills.
 # Give a summary of you each skill in the summary section.
 skills:
-- name: C# .Net Development
+- name: C# .Net
   icon: "/images/sections/skills/csharp.png"
   summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
   url: "#"
@@ -34,8 +34,9 @@ skills:
 - name: Python
   icon: "/images/sections/skills/python.png"
   summary: "Know basic Python programming. Used for contest programming and problem solving."
+  url: "#"
 
 - name: Git
   icon: "/images/sections/skills/git.png"
   summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
-  url: "https://git-scm.com/"
+  url: "#"

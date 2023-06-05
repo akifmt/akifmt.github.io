@@ -1,5 +1,6 @@
 resources/*
 hugo.exe
+HUGO_RUN.bat
 
 # Hugo default output directory
 /public

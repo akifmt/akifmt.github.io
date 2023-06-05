@@ -3,7 +3,7 @@ section:
   name: Projects
   id: projects
   enable: true
-  weight: 4
+  weight: 5
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true
@@ -21,46 +21,61 @@ buttons:
 
 # your projects
 projects:
-- name: ReflectionExamples.Net
-  logo: images/projects/dotnet.png
+- name: ReqNotes
+  logo: /images/sections/projects/dotnet.png
   role: Developer
-  timeline: "May 2020 - Present"
-  repo: https://github.com/akifmt/ReflectionExamples.Net # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  timeline: "Mar 2023 - Present"
+  repo: https://github.com/ReqBaa/ReqNotes # If your project is a public repo on GitHub, then provide this link. it will show star count.
   #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-  summary: Reflection Examples in .Net
-  tags: ["Net", "Reflection", "Examples", "professional"]
+  summary: Personal Notes Application, Cross platform desktop application, Published for Windows and Debian based Linux distros, developed with .NET 6 and Avalonia UI
+  tags: [".Net 6", "Avalonia UI", "Reactive UI", "professional", "hobby"]
 
-- name: e-CommerceAsp.netMvc
-  logo: images/projects/dotnet.png
+- name: MnTNotes
+  logo: /images/sections/projects/dotnet.png
   role: Developer
-  timeline: "Jun 2018 - Present"
-  repo: https://github.com/akifmt/e-CommerceAsp.netMvc
-  #url: ""
-  summary: E-commerce Website - Online Store
-  tags: ["E-commerce", "Website","Online Store", "professional"]
+  timeline: "Dec 2020 - Feb 2021"
+  repo: https://github.com/MnTNotes/MnTNotes # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: .Net 6 React with Identity Server React Draft Wysiwyg and SQLite, Just Another Notes App
+  tags: [".Net 6", "React", "Identity Server", "professional", "hobby"]
+
+- name: ReflectionExamples.Net
+  logo: /images/sections/projects/dotnet.png
+  role: Developer
+  timeline: "Oct 2019 - May 2020"
+  repo: https://github.com/akifmt/ReflectionExamples.Net # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  summary: Reflection Examples in .Net, .Net Framework 4.5
+  tags: ["Net", ".Net 4.5", "Reflection", "Examples", "professional"]
 
 - name: Role Based Claims Authorize
-  logo: images/projects/dotnet.png
+  logo: /images/sections/projects/dotnet.png
   role: Developer
-  timeline: "Aug 2017 - Present"
-  url: "https://github.com/akifmt/RoleBasedClaimsAuthorize"
+  timeline: "May 2019 - Jul 2019"
+  repo: https://github.com/akifmt/RoleBasedClaimsAuthorize
   summary: Role Based Claims Authorize .Net MVC 5 - Identity 2.2 Just Another Blog (with User Roles and Permissions)
   tags: ["Role Based Claims Authorize","hobby"]
 
-- name: Bilcamp2018-Tensorflow
-  logo: images/projects/tensorflow.png
+- name: e-CommerceAsp.netMvc
+  logo: /images/sections/projects/dotnet.png
   role: Developer
-  timeline: "Oct 2019 - Dec 2019"
-  repo: https://github.com/kelseyhightower/nocode
-  #url: ""
+  timeline: "Jun 2017 - Aug 2017"
+  repo: https://github.com/akifmt/e-CommerceAsp.netMvc
+  summary: E-commerce Website - Online Store
+  tags: ["E-commerce", "Website","Online Store", "professional"]
+
+- name: Bilcamp2018-Tensorflow
+  logo: /images/sections/projects/tensorflow.png
+  role: Developer
+  timeline: "Apr 2018 - May 2018"
+  repo: https://github.com/akifmt/Bilcamp2018-Tensorflow
   summary: Bilcamp2018-Tensorflow
   tags: ["hobby", "fun", "academic"]
 
 - name: LuaOpenCVTorch
-  logo: images/projects/torch.png
+  logo: /images/sections/projects/torch.png
   role: Developer
-  timeline: "Aug 2017 - Present"
-  url: "https://github.com/akifmt/RoleBasedClaimsAuthorize"
+  timeline: "Jun 2017 - Jun 2017"
+  repo: https://github.com/akifmt/LuaOpenCVTorch
   summary: LuaOpenCVTorch
   tags: ["LuaOpenCVTorch","academic"]
  

@@ -14,7 +14,6 @@ experiences:
     name: MKM Computer Consulting and Training Services Company, Ltd. 
     url: "#"
     location: Istanbul, Turkey
-    # company overview
     #overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
   positions:
   - designation: R&D Unit - Software Engineer
@@ -22,18 +21,17 @@ experiences:
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     end: Jan 2020
     # give some points about what was your responsibilities at the company.
-    responsibilities:
-    - Lead a team of 3 people to manage, develop, operate, designed architecture and fix bugs on a mobile game project (developed with Unity C# .Net and published for Android and iOS)
-    - Developed a module on real time multithreaded application (C# .Net). The module is based on Resource Management module on new generation NEC communication devices. 
-    - Developed a RESTful API with ASP.NET MVC (Backend for Unity game project) 
+    responsibilities:    
+    - Developed a RESTful API with ASP.NET MVC (Backend for Unity game project)
     - Developed license server and fully customized encryption for game licenses (C# .Net – used AES for encryption)
+    - Developed a module on real time multithreaded application (C# .Net). The module is based on Resource Management module on new generation NEC communication devices.
+    - Lead a team to manage, develop, operate, designed architecture and fix bugs on a mobile game project (developed with Unity C# .Net and published for Android and iOS)
     - Developed various script (Bash scripts on Linux – PowerShell scripts on Windows)
 
 - company:
     name: Rofoods & Prohotech Professional Technologies, Ltd
     url: "#"
     location: Istanbul, Turkey
-    #overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
   positions:
   - designation: R&D Unit – Software Developer
     start: Sep 2017
@@ -42,3 +40,14 @@ experiences:
     - Developed an admin panel (.Net MVC) for micro markets. The admin panel includes real time sales and people on area. (Extended with Power BI)
     - Developed real time customer analysis(Python). It gets a frame every second from security cameras and finds people and product on the market.
     - Extended admin panel with Power BI charts for example; person related sales, most popular products and least sold products.
+
+- company:
+    name: Bilge Adam
+    url: "#"
+    location: Istanbul, Turkey
+  positions:
+  - designation: Qualified IT Specialist Training Program (Software)
+    start: Mar 2017
+    end: Aug 2017
+    responsibilities:
+    - Qualified IT Specialist Training Program, which was realized in collaboration with Bilge Adam and İş-kur, was selected among 3000 people and I gained 800 hours of training with 100% scholarship. The purpose of the course; to train informatics who will bring new perspectives to the information sector. As Training Curriculum, MSSQL, C# .Net, OOP, Ado.Net, Entity Framework, Code First, DB First, Fluent Api, LINQ, NTier, HTML5, CSS3, Bootstrap, JavaScript, JQuery, Ajax, JSON, Asp.Net, MVC, Scrum, TFS
