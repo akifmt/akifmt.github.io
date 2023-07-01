@@ -1,3 +1,3 @@
 ---
-title: Yazılar
+title: Blog
 ---

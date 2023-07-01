@@ -3,7 +3,12 @@
 other = "Home"
 
 [posts]
-other = "Posts"
+other = "Blog"
+
+
+[dotnet]
+other = "dotnet"
+
 
 [toc_heading]
 other = "Table of Contents"

@@ -117,7 +117,7 @@
         {{ range $customMenus }}
             {{ if (not .hideFromNavbar) }}
               <li class="nav-item">
-                <a class="nav-link" href="{{ .url }}">{{ .name }}</a>
+                <a class="nav-link" href="{{ .url }}"><img height="20" src="{{ .preimage }}" /> {{ .name }}</a>
               </li>
             {{ end }}
         {{ end }}
