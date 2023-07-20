@@ -9,6 +9,12 @@
 
 A personal portfolio with minimalist design and responsiveness.
 
+
+## Recent
+
+- <a href="https://github.com/akifmt/akifmt.github.io/commit/f64cd62d9f86215536b5f032c19cfcdb63845aea">added right menu to navbar-2</a><br>
+
+
 ### Attribution
 
 - Thanks! [Toha](https://github.com/hugo-toha/toha) for this theme.
