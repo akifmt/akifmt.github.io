@@ -27,9 +27,24 @@
   {{ $invertedLogo = $invertedLogo.RelPermalink}}
 {{ end }}
 
+
+{{/*  variables for enabling/disabling various features  */}}
+{{ $blogEnabled   := site.Params.features.blog.enable   | default false }}
+{{ $notesEnabled  := site.Params.features.notes.enable  | default false }}
+
+{{/*  keep backward compatibility for blog post  */}}
+{{ if site.Params.enableBlogPost }}
+  {{ $blogEnabled = true }}
+{{ end }}
+
+{{ $customMenus := site.Params.customMenus }}
+{{ if (index site.Data site.Language.Lang).site.customMenus }}
+  {{ $customMenus = (index site.Data site.Language.Lang).site.customMenus }}
+{{ end }}
+
 <nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
-      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
@@ -42,8 +57,30 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+
+	<div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
+	  {{ if $blogEnabled }}
+          <li class="nav-item">
+            <a class="nav-link" id="blog-link" href="{{ "/posts/" | relLangURL }}">{{ i18n "posts" }}</a>
+          </li>
+        {{ end }}
+        {{ if $notesEnabled }}
+		  <li class="nav-item">
+            <a class="nav-link" id="note-link" href="{{ "/notes/" | relLangURL }}">{{ i18n "notes" }}</a>
+		  </li>
+        {{ end }}
+		{{ range $customMenus }}
+            {{ if (not .hideFromNavbar) }}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ .url }}"><img height="20" src="{{ .preimage }}" /> {{ .name }}</a>
+              </li>
+            {{ end }}
+        {{ end }}
+		{{ $shouldAddSeparator:= partial "helpers/add-navbar-separator.html" . }}
+        {{ if $shouldAddSeparator }}
+          <div class="dropdown-divider" id="top-navbar-divider"></div>
+        {{ end }}
       {{ if .IsTranslated }}
         {{ partial "navigators/lang-selector-2.html" . }}
       {{ end }}
@@ -52,6 +89,7 @@
       {{ end }}
       </ul>
     </div>
+	
   </div>
   <!-- Store the logo information in a hidden img for the JS -->
   {{ if $mainLogo }}
