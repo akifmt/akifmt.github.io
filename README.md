@@ -13,6 +13,7 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 - <a href="https://github.com/akifmt/akifmt.github.io/commit/f64cd62d9f86215536b5f032c19cfcdb63845aea">added right menu to navbar-2</a><br>
+- <a href="https://github.com/akifmt/akifmt.github.io/commit/c9fe222b6077eaf5a562a554139b901ed64fc86c">added video-player-in-blazor</a><br>
 
 
 ### Attribution
