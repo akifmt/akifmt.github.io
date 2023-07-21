@@ -7,9 +7,9 @@ menu:
   dotnet:
     name: Video Player in Blazor
     identifier: video-player-in-blazor
-    weight: -20230721
-tags: [ Dotnet,Video Player in Blazor]
-categories: [ Dotnet,Video Player in Blazor]
+    weight: -20230720
+tags: [ Dotnet, Video Player in Blazor]
+categories: [ Dotnet, Video Player in Blazor]
 
 author:
   name: Akif T.
