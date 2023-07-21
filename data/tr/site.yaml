@@ -13,7 +13,7 @@ description: Portfolio and personal blog of akifmt.
 # they will be separated by a divider from the main menus.
 
 customMenus:
- - name: dotnet
+ - name: dotnet Blog
    url: /dotnet/
    preimage: /images/dotnet-logo.png
         
