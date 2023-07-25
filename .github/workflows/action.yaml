@@ -2,6 +2,9 @@ name: Update READMEs
 
 on:
   workflow_dispatch:
+  push:
+   branches:
+   - source
 
 jobs:
   action:
