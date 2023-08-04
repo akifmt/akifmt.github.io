@@ -1,0 +1,107 @@
+<!doctype html><html><head><title>Blazor Expose a Feed as RSS</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/google-fonts/Mulish/mulish.css><link rel=stylesheet href=/fontawesome/css/all.min.css><link rel=stylesheet href=/css/colortheme/colortheme.css><link rel=icon type=image/png href=/images/site/favicon_hu5e0469842f323d92977e05301135eda0_41440_42x0_resize_box_3.png><meta property="og:title" content="Blazor Expose a Feed as RSS"><meta property="og:description" content="Blazor Expose a Feed as RSS"><meta property="og:type" content="article"><meta property="og:url" content="https://akifmt.github.io/dotnet/2023-08-02-blazor-rssfeed/"><meta property="article:section" content="dotnet"><meta property="article:published_time" content="2023-08-02T00:00:00+00:00"><meta property="article:modified_time" content="2023-08-02T00:00:00+00:00"><meta name=description content="Blazor Expose a Feed as RSS"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-78150589-1","auto"),ga("send","pageview"))</script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png alt=Logo>
+akifmt</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class=nav-item><a class=nav-link id=blog-link href=/posts/>Blog</a></li><li class=nav-item><a class=nav-link href=/dotnet/><img height=20 src=/images/dotnet-logo.png> dotnet Blog</a></li><div class=dropdown-divider id=top-navbar-divider></div><li class="nav-item dropdown"><div id=theme-initialization style=display:none default-theme=system></div><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# onclick=enableLightTheme()><img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()><img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()><img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_huaeac6b74eff06a7b4d6b563d4aa0a06e_40468_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/dotnet/ data-filter=all>dotnet</a></li><div class=subtree><li><a class=active href=/dotnet/2023-08-02-blazor-rssfeed/ title="Blazor Expose a Feed as RSS">Blazor Expose a Feed as RSS</a></li><li><a href=/dotnet/2023-07-31-blazor-ef-multipledbproviders/ title="Blazor EF Migrations with Multiple Providers">Blazor EF Migrations with Multiple Providers</a></li><li><a href=/dotnet/2023-07-30-blazor-authentication-authorization/ title="Blazor Authentication and Authorization">Blazor Authentication and Authorization</a></li><li><a href=/dotnet/2023-07-26-blazor-radzen-crud/ title="Blazor Radzen CRUD">Blazor Radzen CRUD</a></li><li><a href=/dotnet/2023-07-21-blazor-radzen-searchcomponent/ title="Blazor Radzen SearchComponent">Blazor Radzen SearchComponent</a></li><li><a href=/dotnet/2023-07-20-blazor-videoplayer/ title="Video Player in Blazor">Video Player in Blazor</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/dotnet/2023-08-02-blazor-rssfeed/blazor_dotnet.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/akif_hu0b098ee5eab0ebaed64b2691fffe1073_4640_120x120_fit_box_3.png alt="Author Image"><h5 class=author-name>Akif T.</h5><p>Wednesday, August 2, 2023</p></div><div class=title><h1>Blazor Expose a Feed as RSS</h1></div><div class=taxonomy-terms><ul style=padding-left:0><li class=rounded><a href=/tags/dotnet/ class="btn, btn-sm">Dotnet</a></li><li class=rounded><a href=/tags/blazor-expose-a-feed-as-rss/ class="btn, btn-sm">Blazor Expose a Feed as RSS</a></li></ul></div><div class=post-content id=post-content><p style=text-align:center><img src=blazor_dotnet.jpg alt=blazor_dotnet title=blazor_dotnet><br><p><h5 id=blazor-expose-a-feed-as-rss><strong>Blazor Expose a Feed as RSS</strong></h5><p>In this example, we will explore how to expose a feed as RSS using C# and the Blazor framework. We will create a controller that generates an RSS feed based on mock data.</p><p>RSS (Really Simple Syndication): RSS is a web feed format used to publish frequently updated content, such as blog posts, news headlines, or podcasts. It allows users to subscribe to a website&rsquo;s content and receive updates in a standardized format.</p><p>SyndicationFeed: The <code>SyndicationFeed</code> class represents an RSS or Atom feed. It contains properties like title, description, author, categories, and a collection of <code>SyndicationItem</code> objects.</p><p>SyndicationItem: The <code>SyndicationItem</code> class represents an individual item in an RSS or Atom feed. It contains properties like title, content, author, categories, and a link to the full article.</p><p>Rss20FeedFormatter: The <code>Rss20FeedFormatter</code> class is used to format a <code>SyndicationFeed</code> object as an RSS 2.0 feed.</p><h6 id=rsscontrollercs><strong>RSSController.cs</strong></h6><p><code>RSSController</code> inherits from <code>ControllerBase</code>. It exposes a single GET endpoint <code>(/api/RSS)</code> that returns an RSS feed.</p><p>The controller has a constructor that takes a <code>MockData</code> object as a parameter. This object is used to retrieve mock blog post data.</p><pre tabindex=0><code>[Route(&#34;api/[controller]&#34;)]
+[ApiController]
+public class RSSController : ControllerBase
+{
+    private readonly MockData _mockData;
+
+    public RSSController(MockData mockData)
+    {
+        _mockData = mockData;
+    }
+
+    [HttpGet]
+    public IActionResult Get()
+    {
+        var output = new MemoryStream();
+        string xml;
+
+        var Feeds = _mockData.GetAllBlogPosts();
+
+        List&lt;SyndicationItem&gt; items = new List&lt;SyndicationItem&gt;();
+        var feed = new SyndicationFeed(&#34;RSS Feed Title&#34;, &#34;Feed Description&#34;,
+                                        new Uri(&#34;https://localhost:5001/posts&#34;));
+        // Set feed properties
+        feed.ImageUrl = new Uri(&#34;https://picsum.photos/600/400&#34;);
+        feed.Authors.Add(new SyndicationPerson(&#34;asd@asd.com&#34;, &#34;asdname&#34;, &#34;https://picsum.photos/600/600&#34;));
+        feed.BaseUri = new Uri(&#34;https://localhost:5001&#34;);
+        feed.Categories.Add(new SyndicationCategory(&#34;Feed Category 1 Base&#34;));
+        feed.LastUpdatedTime = DateTime.Now;
+        feed.Language = &#34;Lang1&#34;;
+        feed.Copyright = new TextSyndicationContent(&#34;Copy1&#34;);
+
+        // Create SyndicationItems for each blog post
+        foreach (var post in Feeds)
+        {
+            var solutionfeed = new SyndicationItem(post.Title, post.Content,
+                new Uri(quot;https://localhost:5001/postsingle/{post.Id}&#34;), post.Id.ToString(), DateTime.Now);
+            solutionfeed.Authors.Add(new SyndicationPerson(&#34;post@user.com&#34;, &#34;postuser&#34;, &#34;https://picsum.photos/600/600&#34;));
+            solutionfeed.BaseUri = new Uri(&#34;https://localhost:5001/posts&#34;);
+            solutionfeed.Categories.Add(new SyndicationCategory(&#34;Feed Category 1 feed&#34;));
+            solutionfeed.Contributors.Add(new SyndicationPerson(&#34;postCont@user.com&#34;, &#34;postcontuser&#34;, &#34;https://picsum.photos/600/600&#34;));
+            solutionfeed.Copyright = new TextSyndicationContent(&#34;feed copy&#34;);
+            solutionfeed.ElementExtensions.Add(new XElement(&#34;enclosure&#34;,
+                new XAttribute(&#34;type&#34;, &#34;&#34;),
+                new XAttribute(&#34;url&#34;, &#34;https://picsum.photos/600/400&#34;),
+                new XAttribute(&#34;width&#34;, 200),
+                new XAttribute(&#34;height&#34;, 200)).CreateReader());
+            solutionfeed.PublishDate = DateTime.Now;
+            solutionfeed.Summary = new TextSyndicationContent(post.Content.Substring(0, 5));
+            items.Add(solutionfeed);
+        }
+
+        // Set the items collection of the feed
+        feed.Items = items;
+
+        // Create an Rss20FeedFormatter and write the feed to a MemoryStream
+        var formatter = new Rss20FeedFormatter(feed);
+        var xws = new XmlWriterSettings { Encoding = Encoding.UTF8 };
+        using (var xmlWriter = XmlWriter.Create(output, xws))
+        {
+            formatter.WriteTo(xmlWriter);
+            xmlWriter.Flush();
+        }
+
+        // Read the generated XML from the MemoryStream
+        using (var sr = new StreamReader(output))
+        {
+            output.Position = 0;
+            xml = sr.ReadToEnd();
+            sr.Close();
+        }
+
+        // Return the XML as a ContentResult with the appropriate content type
+        ContentResult result = Content(xml, &#34;application/xml&#34;, Encoding.UTF8);
+        return result;
+    }
+}
+</code></pre><p>The Get method is responsible for generating the RSS feed. Here&rsquo;s a breakdown of the code:</p><ul><li>Create a <code>MemoryStream</code> and a string variable to store the generated XML.</li><li>Retrieve the mock blog post data using the <code>MockData</code> object.</li><li>Create an empty list of <code>SyndicationItem</code> objects and a <code>SyndicationFeed</code> object. Set the properties of the feed, such as title, description, image URL, authors, categories, and last updated time.</li><li>Iterate over each blog post and create a <code>SyndicationItem</code> for it. Set the properties of the item, such as title, content, link, author, categories, contributors, enclosure, publish date, and summary. Add the item to the list of items.</li><li>Set the <code>Items</code> property of the feed to the list of items.</li><li>Create an <code>Rss20FeedFormatter</code> and write the feed to the <code>MemoryStream</code> using an <code>XmlWriter</code>.</li><li>Read the generated XML from the <code>MemoryStream</code> into the <code>xml</code> variable.</li><li>Create a <code>ContentResult</code> with the XML as the content and the appropriate content type.</li><li>Return the <code>ContentResult</code>.</li></ul><h6 id=source><strong>Source</strong></h6><p>Full source code is available at this repository in GitHub:
+<a href=https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppRSSFeed>https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppRSSFeed</a></p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-02-blazor-rssfeed%2f" target=_blank><i class="fab fa-facebook"></i></a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-02-blazor-rssfeed%2f&text=Blazor%20Expose%20a%20Feed%20as%20RSS&via=akifmt" target=_blank><i class="fab fa-twitter"></i></a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-02-blazor-rssfeed%2f&title=Blazor%20Expose%20a%20Feed%20as%20RSS" target=_blank><i class="fab fa-reddit"></i></a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-02-blazor-rssfeed%2f&title=Blazor%20Expose%20a%20Feed%20as%20RSS" target=_blank><i class="fab fa-linkedin"></i></a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Blazor%20Expose%20a%20Feed%20as%20RSS https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-02-blazor-rssfeed%2f" target=_blank><i class="fab fa-whatsapp"></i></a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Blazor%20Expose%20a%20Feed%20as%20RSS&body=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-02-blazor-rssfeed%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/akifmt/akifmt.github.io/edit/main/content/dotnet/2023-08-02-Blazor-RSSFeed/index.md title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="akifmt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
+<a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><ul><li><ul><li><ul><li><a href=#blazor-expose-a-feed-as-rss><strong>Blazor Expose a Feed as RSS</strong></a><ul><li><a href=#rsscontrollercs><strong>RSSController.cs</strong></a></li><li><a href=#source><strong>Source</strong></a></li></ul></li></ul></li></ul></li></ul></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts-dotnet>Recent Dotnet Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts>Recent Posts</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:akifmt@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>akifmt@gmail.com</span></a></li><li><a href=https://github.com/akifmt target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>akifmt</span></a></li></ul></div><div class="col-md-4 col-sm-12"><p>Stay up to date with email notification</p><form action="https://github.us1.list-manage.com/subscribe/post?u=19de52a4603135aae97163fd8&amp;amp;id=094a24c76e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div class=form-group><input type=email class=form-control id=mce-EMAIL name=EMAIL aria-describedby=emailHelp placeholder="Enter email">
+<small id=emailHelp class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small></div><button type=submit class="btn btn-info">Submit</button></form></div></div></div><hr><div class=container><p id=disclaimer><strong>Liability Notice:</strong> This theme is under MIT license. So, you can use it for non-commercial, commercial, or private uses. You can modify or distribute the theme without requiring any permission from the theme author. However, the theme author does not provide any warranty or takes any liability for any issue with the theme.</p></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2023 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script></body></html>
