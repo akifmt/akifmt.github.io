@@ -13,7 +13,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Mon%20Aug%2007%202023%2023%3A02%3A33%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Wed%20Aug%2009%202023%2021%3A55%3A46%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Radzen Globalization and Localization](https://github.com/akifmt/akifmt.github.io/commit/198b11bfb6b5fcc6684ae8457ca2b4f0dc595ea3) - 2023-08-09T21:50:41Z 
 - :page_facing_up: [added new post Blazor Using NPM Packages](https://github.com/akifmt/akifmt.github.io/commit/d4e7058d402eb4eabc94161a0243220bf6d69d10) - 2023-08-07T22:57:32Z 
 - :page_facing_up: [added new post Blazor Generic Components](https://github.com/akifmt/akifmt.github.io/commit/22a6e9677b9bdcb4c14293c3eabaeb8fc2aa6d46) - 2023-08-05T21:24:55Z 
 - :page_facing_up: [added new post Blazor Expose a Feed as RSS](https://github.com/akifmt/akifmt.github.io/commit/be92e2d7f9ee4e8e0443bda6645b2d7250c7e3cc) - 2023-08-04T03:25:47Z 
@@ -23,7 +24,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Deleted intro](https://github.com/akifmt/akifmt.github.io/commit/8ed9cbe2901abd4395a2b13c72ad00c0384e1016) - 2023-07-26T23:06:24Z 
 - :page_facing_up: [Create update-readme,yaml](https://github.com/akifmt/akifmt.github.io/commit/6599247fdd4bd06146c5b53c05118a0f367b30ce) - 2023-07-26T23:02:01Z 
 - :page_facing_up: [Added new post Blazor Radzen CRUD](https://github.com/akifmt/akifmt.github.io/commit/ddedd0c83718454c0975e2127d277bdab018bed3) - 2023-07-26T22:52:13Z 
-- :page_facing_up: [Updated post images](https://github.com/akifmt/akifmt.github.io/commit/7e84f31c431f5738d5720daace38f20e446b3028) - 2023-07-26T22:51:42Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
