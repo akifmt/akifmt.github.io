@@ -13,7 +13,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sat%20Aug%2012%202023%2010%3A57%3A16%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Mon%20Aug%2014%202023%2019%3A17%3A10%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Implementing Google reCAPTCHA v2](https://github.com/akifmt/akifmt.github.io/commit/dde9010f7489979703d7139fc27d46899015ef44) - 2023-08-14T19:11:59Z 
 - :page_facing_up: [added new post Blazor Implementing Google reCAPTCHA v3](https://github.com/akifmt/akifmt.github.io/commit/ec51a147dd53f84e82fc8a79243252699a9460df) - 2023-08-12T10:52:09Z 
 - :page_facing_up: [added new post Blazor Radzen Globalization and Localization](https://github.com/akifmt/akifmt.github.io/commit/198b11bfb6b5fcc6684ae8457ca2b4f0dc595ea3) - 2023-08-09T21:50:41Z 
 - :page_facing_up: [added new post Blazor Using NPM Packages](https://github.com/akifmt/akifmt.github.io/commit/d4e7058d402eb4eabc94161a0243220bf6d69d10) - 2023-08-07T22:57:32Z 
@@ -23,7 +24,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor Authentication and Authorization](https://github.com/akifmt/akifmt.github.io/commit/77c9eabecd86e149cd15bb6cdcd61f2b845b6bb0) - 2023-07-30T20:22:03Z 
 - :page_facing_up: [Update update-readme.yaml](https://github.com/akifmt/akifmt.github.io/commit/d7a4f9c56d399e1a92a8a4a8f6c1b55ad48076b9) - 2023-07-26T23:25:04Z 
 - :page_facing_up: [Deleted intro](https://github.com/akifmt/akifmt.github.io/commit/8ed9cbe2901abd4395a2b13c72ad00c0384e1016) - 2023-07-26T23:06:24Z 
-- :page_facing_up: [Create update-readme,yaml](https://github.com/akifmt/akifmt.github.io/commit/6599247fdd4bd06146c5b53c05118a0f367b30ce) - 2023-07-26T23:02:01Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
