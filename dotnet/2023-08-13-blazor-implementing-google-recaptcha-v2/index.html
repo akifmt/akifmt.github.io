@@ -1,0 +1,309 @@
+<!doctype html><html><head><title>Blazor Implementing Google reCAPTCHA v2</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/google-fonts/Mulish/mulish.css><link rel=stylesheet href=/fontawesome/css/all.min.css><link rel=stylesheet href=/css/colortheme/colortheme.css><link rel=icon type=image/png href=/images/site/favicon_hu5e0469842f323d92977e05301135eda0_41440_42x0_resize_box_3.png><meta property="og:title" content="Blazor Implementing Google reCAPTCHA v2"><meta property="og:description" content="Blazor Implementing Google reCAPTCHA v2"><meta property="og:type" content="article"><meta property="og:url" content="https://akifmt.github.io/dotnet/2023-08-13-blazor-implementing-google-recaptcha-v2/"><meta property="article:section" content="dotnet"><meta property="article:published_time" content="2023-08-13T00:00:00+00:00"><meta property="article:modified_time" content="2023-08-13T00:00:00+00:00"><meta name=description content="Blazor Implementing Google reCAPTCHA v2"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-78150589-1","auto"),ga("send","pageview"))</script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png alt=Logo>
+akifmt</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class=nav-item><a class=nav-link id=blog-link href=/posts/>Blog</a></li><li class=nav-item><a class=nav-link href=/dotnet/><img height=20 src=/images/dotnet-logo.png> dotnet Blog</a></li><div class=dropdown-divider id=top-navbar-divider></div><li class="nav-item dropdown"><div id=theme-initialization style=display:none default-theme=system></div><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# onclick=enableLightTheme()><img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()><img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()><img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_huaeac6b74eff06a7b4d6b563d4aa0a06e_40468_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/dotnet/ data-filter=all>dotnet</a></li><div class=subtree><li><a class=active href=/dotnet/2023-08-13-blazor-implementing-google-recaptcha-v2/ title="Blazor Implementing Google reCAPTCHA v2">Blazor Implementing Google reCAPTCHA v2</a></li><li><a href=/dotnet/2023-08-11-blazor-implementing-google-recaptcha-v3/ title="Blazor Implementing Google reCAPTCHA v3">Blazor Implementing Google reCAPTCHA v3</a></li><li><a href=/dotnet/2023-08-09-blazor-radzen-globalization-and-localization/ title="Blazor Radzen Globalization and Localization">Blazor Radzen Globalization and Localization</a></li><li><a href=/dotnet/2023-08-07-blazor-using-npm-packages/ title="Blazor Using NPM Packages">Blazor Using NPM Packages</a></li><li><a href=/dotnet/2023-08-05-blazor-generic-components/ title="Blazor Generic Components">Blazor Generic Components</a></li><li><a href=/dotnet/2023-08-02-blazor-rssfeed/ title="Blazor Expose a Feed as RSS">Blazor Expose a Feed as RSS</a></li><li><a href=/dotnet/2023-07-31-blazor-ef-multipledbproviders/ title="Blazor EF Migrations with Multiple Providers">Blazor EF Migrations with Multiple Providers</a></li><li><a href=/dotnet/2023-07-30-blazor-authentication-authorization/ title="Blazor Authentication and Authorization">Blazor Authentication and Authorization</a></li><li><a href=/dotnet/2023-07-26-blazor-radzen-crud/ title="Blazor Radzen CRUD">Blazor Radzen CRUD</a></li><li><a href=/dotnet/2023-07-21-blazor-radzen-searchcomponent/ title="Blazor Radzen SearchComponent">Blazor Radzen SearchComponent</a></li><li><a href=/dotnet/2023-07-20-blazor-videoplayer/ title="Video Player in Blazor">Video Player in Blazor</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/dotnet/2023-08-13-blazor-implementing-google-recaptcha-v2/blazor_dotnet.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/akif_hu0b098ee5eab0ebaed64b2691fffe1073_4640_120x120_fit_box_3.png alt="Author Image"><h5 class=author-name>Akif T.</h5><p>Sunday, August 13, 2023</p></div><div class=title><h1>Blazor Implementing Google reCAPTCHA v2</h1></div><div class=taxonomy-terms><ul style=padding-left:0><li class=rounded><a href=/tags/dotnet/ class="btn, btn-sm">Dotnet</a></li><li class=rounded><a href=/tags/implementing-google-recaptcha-v2/ class="btn, btn-sm">Implementing Google reCAPTCHA v2</a></li></ul></div><div class=post-content id=post-content><p style=text-align:center><img src=blazor_dotnet.jpg alt=blazor_dotnet title=blazor_dotnet><br><p><h4 id=blazor-implementing-google-recaptcha-v2><strong>Blazor Implementing Google reCAPTCHA v2</strong></h4><p>How to implement Google reCAPTCHA v2 in a Blazor application using C#. Google reCAPTCHA is a free service provided by Google that helps protect websites from spam and abuse. It uses advanced risk analysis techniques to distinguish between humans and bots.</p><p>Site Key: A unique key provided by Google when you register your website to use reCAPTCHA. It is used to identify your website when making API requests.</p><p>Secret Key: A unique key provided by Google when you register your website to use reCAPTCHA. It is used to authenticate your server-side API requests.</p><p>reCAPTCHA Response: The response generated by the reCAPTCHA widget when a user completes the reCAPTCHA challenge. This response is sent to the server for verification.</p><p>Verification Response: The response received from the Google reCAPTCHA API after verifying the reCAPTCHA response. It contains information about the success of the verification and any error codes, if applicable.</p><h5 id=googlerecaptchav3servicecs><strong>GooglereCAPTCHAv3Service.cs</strong></h5><p><code>GooglereCAPTCHAv2Service</code> class is responsible for verifying the reCAPTCHA response using the Google reCAPTCHA API. Let&rsquo;s break down the code structure:</p><pre tabindex=0><code>namespace BlazorAppreCAPTCHAv2.Data;
+
+public class GooglereCAPTCHAv2Service
+{
+    public async Task&lt;(bool Success, string[]? ErrorCodes)&gt; Post(string reCAPTCHAResponse)
+    {
+        var url = &#34;https://www.google.com/recaptcha/api/siteverify&#34;;
+        var content = new FormUrlEncodedContent(new Dictionary&lt;string, string&gt;
+            {
+                {&#34;secret&#34;, GooglereCAPTCHAv2Settings.SecretKey},
+                {&#34;response&#34;, reCAPTCHAResponse}
+            });
+
+        GooglereCAPTCHAv2Response? verificationResponse;
+        using (HttpClient httpClient = new HttpClient())
+        {
+            try
+            {
+                var response = await httpClient.PostAsync(url, content);
+                response.EnsureSuccessStatusCode();
+                verificationResponse = await response.Content.ReadFromJsonAsync&lt;GooglereCAPTCHAv2Response&gt;();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        if (verificationResponse is null || !verificationResponse.Success)
+            return (false, verificationResponse?.ErrorCodes.Select(err =&gt; err.Replace(&#39;-&#39;, &#39; &#39;)).ToArray());
+
+        return (Success: true, ErrorCodes: null);
+    }
+}
+</code></pre><p>The <code>Post</code> method takes the reCAPTCHA response as input and returns a tuple containing a boolean value indicating the success of the verification and an array of error codes, if any.</p><p>The <code>url</code> variable stores the URL of the Google reCAPTCHA API endpoint.</p><p>The <code>content</code> variable is created using the <code>FormUrlEncodedContent</code> class, which represents key-value pairs encoded in the <code>application/x-www-form-urlencoded</code> format. It contains the <code>secret key</code> (your server-side secret key) and the <code>response key</code> (the reCAPTCHA response).</p><p>The <code>verificationResponse</code> variable is used to store the response received from the Google reCAPTCHA API after verifying the reCAPTCHA response.</p><p>The <code>HttpClient</code> class is used to send an HTTP POST request to the Google reCAPTCHA API endpoint. The <code>PostAsync</code> method is called with the URL and content as parameters.</p><p>The <code>response.EnsureSuccessStatusCode()</code> method ensures that the HTTP response is successful (status code 200).</p><p>The <code>response.Content.ReadFromJsonAsync&lt;GooglereCAPTCHAv2Response>()</code> method reads the response content and deserializes it into an instance of the <code>GooglereCAPTCHAv2Response</code> class.</p><p>If the verification response is null or the verification was not successful, the method returns a tuple with the success value set to false and the error codes extracted from the verification response.</p><p>If the verification was successful, the method returns a tuple with the success value set to true and the error codes set to null.</p><h5 id=googlerecaptchav2settingscs><strong>GooglereCAPTCHAv2Settings.cs</strong></h5><p>To implement Google reCAPTCHA v2 in Blazor, we need to create a class called <code>GooglereCAPTCHAv2Settings</code> in the <code>BlazorAppreCAPTCHAv2.Data</code> namespace. This class will contain the site key and secret key provided by Google reCAPTCHA.</p><pre tabindex=0><code>namespace BlazorAppreCAPTCHAv2.Data;
+
+public class GooglereCAPTCHAv2Settings
+{
+    public const string SiteKey = &#34;YOUR_GOOGLE_reCAPTCHAv2_SITEKEY&#34;;
+    public const string SecretKey = &#34;YOUR_GOOGLE_reCAPTCHAv2_SECRETKEY&#34;;
+}
+</code></pre><h5 id=googlerecaptchav2responsecs><strong>GooglereCAPTCHAv2Response.cs</strong></h5><p><code>GooglereCAPTCHAv2Response.cs</code> file represents a C# class that models the response received from the Google reCAPTCHA API. Let&rsquo;s break down the code structure:</p><pre tabindex=0><code>using System.Text.Json.Serialization;
+
+namespace BlazorAppreCAPTCHAv2.Data;
+
+public class GooglereCAPTCHAv2Response
+{
+    public bool Success { get; set; }
+
+    // timestamp of the challenge load (ISO format yyyy-MM-dd&#39;T&#39;HH:mm:ssZZ)
+    [JsonPropertyName(&#34;challenge_ts&#34;)]
+    public DateTimeOffset ChallengeTimestamp { get; set; }
+
+    // the hostname of the site where the reCAPTCHA was solved
+    public string Hostname { get; set; }
+
+    [JsonPropertyName(&#34;error-codes&#34;)]
+    public string[] ErrorCodes { get; set; } = new string[0];
+}
+</code></pre><p>The <code>GooglereCAPTCHAv2Response</code> class has the following properties:</p><p>Success: A boolean property indicating whether the reCAPTCHA challenge was successfully completed by the user.</p><p>ChallengeTimestamp: A <code>DateTimeOffset</code> property representing the timestamp of the challenge load in ISO format.</p><p>Hostname: A string property representing the hostname of the site where the reCAPTCHA was solved.</p><p>ErrorCodes: An array of strings representing any error codes returned by the reCAPTCHA API. This property is initialized with an empty array by default.</p><h5 id=scriptjs><strong>script.js</strong></h5><p>a JavaScript module that provides functions for initializing and rendering the reCAPTCHA widget, as well as getting the user&rsquo;s response.</p><pre tabindex=0><code>var My;
+(function (My) {
+    var reCAPTCHA;
+    (function (reCAPTCHA) {
+        let scriptLoaded = null;
+        function waitScriptLoaded(resolve) {
+            if (typeof (grecaptcha) !== &#39;undefined&#39; &amp;&amp; typeof (grecaptcha.render) !== &#39;undefined&#39;)
+                resolve();
+            else
+                setTimeout(() =&gt; waitScriptLoaded(resolve), 100);
+        }
+        function init() {
+            const scripts = Array.from(document.getElementsByTagName(&#39;script&#39;));
+            if (!scripts.some(s =&gt; (s.src || &#39;&#39;).startsWith(&#39;https://www.google.com/recaptcha/api.js&#39;))) {
+                const script = document.createElement(&#39;script&#39;);
+                script.src = &#39;https://www.google.com/recaptcha/api.js?render=explicit&#39;;
+                script.async = true;
+                script.defer = true;
+                document.head.appendChild(script);
+            }
+            if (scriptLoaded === null)
+                scriptLoaded = new Promise(waitScriptLoaded);
+            return scriptLoaded;
+        }
+        reCAPTCHA.init = init;
+        function render(dotNetObj, selector, siteKey) {
+            return grecaptcha.render(selector, {
+                &#39;sitekey&#39;: siteKey,
+                &#39;callback&#39;: (response) =&gt; { dotNetObj.invokeMethodAsync(&#39;CallbackOnSuccess&#39;, response); },
+                &#39;expired-callback&#39;: () =&gt; { dotNetObj.invokeMethodAsync(&#39;CallbackOnExpired&#39;); }
+            });
+        }
+        reCAPTCHA.render = render;
+        function getResponse(widgetId) {
+            return grecaptcha.getResponse(widgetId);
+        }
+        reCAPTCHA.getResponse = getResponse;
+    })(reCAPTCHA = My.reCAPTCHA || (My.reCAPTCHA = {}));
+})(My || (My = {}));
+</code></pre><p>waitScriptLoaded: This function checks if the reCAPTCHA script has been loaded. If not, it waits for it to be loaded before resolving the promise.</p><p>init: This function initializes the reCAPTCHA script by adding it to the HTML document if it hasn&rsquo;t been added already. It returns a promise that resolves when the script has been loaded.</p><p>render: This function renders the reCAPTCHA widget using the provided <code>dotNetObj, selector, and siteKey</code>. It also handles the callback functions for success and expiration.</p><p>getResponse: This function gets the user&rsquo;s response from the reCAPTCHA widget using the provided <code>widgetId</code>.</p><h5 id=recaptchav2componentrazor><strong>ReCAPTCHAv2Component.razor</strong></h5><p>It is responsible for rendering the reCAPTCHA widget and handling the user&rsquo;s response. Let&rsquo;s break down the code structure:</p><pre tabindex=0><code>@using System.ComponentModel
+@inject IJSRuntime JS
+
+
+&lt;span&gt;@loadMessage&lt;/span&gt;
+&lt;div id=&#34;@UniqueId&#34;&gt;&lt;/div&gt;
+
+
+@code {
+
+    [Parameter]
+    public string SiteKey { get; set; }
+
+    [Parameter]
+    public EventCallback&lt;string&gt; OnSuccess { get; set; }
+
+    [Parameter]
+    public EventCallback OnExpired { get; set; }
+
+    private bool isLoadedScript = false;
+    private string loadMessage = &#34;Loading...&#34;;
+
+    private string UniqueId = Guid.NewGuid().ToString();
+
+    private int WidgetId;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            try
+            {
+                var timeoutTimeSpan = new TimeSpan(0, 0, 5); // 5 secs
+                var ress = await JS.InvokeAsync&lt;object&gt;(&#34;My.reCAPTCHA.init&#34;, timeout: timeoutTimeSpan);
+                this.WidgetId = await JS.InvokeAsync&lt;int&gt;(&#34;My.reCAPTCHA.render&#34;, timeout: timeoutTimeSpan, DotNetObjectReference.Create(this), UniqueId, SiteKey);
+                isLoadedScript = true;
+                loadMessage = &#34;&#34;;
+            }
+            catch (Exception ex)
+            {
+                loadMessage = &#34;Error on Load Captcha.&#34;;
+                isLoadedScript = false;
+            }
+
+            StateHasChanged();
+        }
+    }
+
+    [JSInvokable, EditorBrowsable(EditorBrowsableState.Never)]
+    public void CallbackOnSuccess(string response)
+    {
+        if (OnSuccess.HasDelegate)
+        {
+            OnSuccess.InvokeAsync(response);
+        }
+    }
+
+    [JSInvokable, EditorBrowsable(EditorBrowsableState.Never)]
+    public void CallbackOnExpired()
+    {
+        if (OnExpired.HasDelegate)
+        {
+            OnExpired.InvokeAsync(null);
+        }
+    }
+
+    public ValueTask&lt;string&gt; GetResponseAsync()
+    {
+        return JS.InvokeAsync&lt;string&gt;(&#34;My.reCAPTCHA.getResponse&#34;, WidgetId);
+    }
+}
+</code></pre><p>@using System.ComponentModel and @inject IJSRuntime JS: These directives import the necessary namespaces and inject the JavaScript runtime service into the component.</p><p>@code block: This block contains the C# code for the component.</p><p>SiteKey property: This property is used to pass the site key value to the component. The site key is required to initialize the reCAPTCHA widget.</p><p>OnSuccess and OnExpired event callbacks: These event callbacks are used to handle the success and expiration events of the reCAPTCHA widget.</p><p>UniqueId field: This field stores a unique identifier generated using the <code>Guid.NewGuid().ToString()</code> method. It is used to identify the reCAPTCHA widget on the web page.</p><p>OnAfterRenderAsync method: This method is called after the component has been rendered on the web page. It initializes the reCAPTCHA widget by invoking JavaScript functions and sets the <code>isLoadedScript and loadMessage</code> variables based on the success or failure of the initialization.</p><p>CallbackOnSuccess and CallbackOnExpired methods: These methods are invoked by the reCAPTCHA widget&rsquo;s JavaScript API when the user successfully completes the challenge or when the challenge expires. They invoke the respective event callbacks <code>(OnSuccess and OnExpired)</code> if they are subscribed to.</p><p>GetResponseAsync method: This method is used to retrieve the user&rsquo;s response from the reCAPTCHA widget. It invokes a JavaScript function to get the response and returns it as a <code>ValueTask&lt;string></code>.</p><h5 id=recaptchav2razor><strong>ReCAPTCHAv2.razor</strong></h5><pre tabindex=0><code>@page &#34;/ReCAPTCHAv2&#34;
+
+@using BlazorAppreCAPTCHAv2.Data;
+@using BlazorAppreCAPTCHAv2.ViewModels;
+@using BlazorAppreCAPTCHAv2.Components;
+
+@inject IJSRuntime JSRuntime
+@inject GooglereCAPTCHAv2Service GooglereCAPTCHAv2Service
+
+&lt;PageTitle&gt;reCAPTCHAv2&lt;/PageTitle&gt;
+
+&lt;EditForm Model=&#34;@blogPostViewModel&#34; OnValidSubmit=&#34;HandleValidSubmit&#34;&gt;
+    &lt;DataAnnotationsValidator /&gt;
+    &lt;ValidationSummary /&gt;
+
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;label class=&#34;control-label&#34;&gt;@nameof(BlogPostViewModel.Title)&lt;/label&gt;
+        &lt;InputText @bind-Value=&#34;blogPostViewModel.Title&#34; class=&#34;form-control&#34; /&gt;
+        &lt;ValidationMessage For=&#34;@(() =&gt; blogPostViewModel.Title)&#34; class=&#34;text-danger&#34; /&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;form-group mt-3&#34;&gt;
+        &lt;label class=&#34;control-label&#34;&gt;@nameof(BlogPostViewModel.Content)&lt;/label&gt;
+        &lt;InputText @bind-Value=&#34;blogPostViewModel.Content&#34; class=&#34;form-control&#34; /&gt;
+        &lt;ValidationMessage For=&#34;@(() =&gt; blogPostViewModel.Content)&#34; class=&#34;text-danger&#34; /&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;mt-3&#34;&gt;
+        &lt;ReCAPTCHAv2Component @ref=&#34;reCAPTCHAv2Component&#34; SiteKey=&#34;@GooglereCAPTCHAv2Settings.SiteKey&#34; OnSuccess=&#34;OnSuccess&#34; OnExpired=&#34;OnExpired&#34; /&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;form-group mt-3&#34;&gt;
+        &lt;input type=&#34;submit&#34; value=&#34;Send&#34; disabled=&#34;@DisablePostButton&#34; class=&#34;btn btn-primary&#34; /&gt;
+    &lt;/div&gt;
+
+&lt;/EditForm&gt;
+
+
+&lt;div class=&#34;form-group mt-3&#34;&gt;
+    &lt;label class=&#34;control-label text-primary&#34;&gt;&lt;strong&gt;
+            Result: @resultMessage
+    &lt;/strong&gt;&lt;/label&gt;
+&lt;/div&gt;
+
+
+@code {
+    BlogPostViewModel? blogPostViewModel;
+
+    private ReCAPTCHAv2Component? reCAPTCHAv2Component;
+
+    private bool ValidReCAPTCHA = false;
+
+    private bool DisablePostButton =&gt; !ValidReCAPTCHA;
+
+    private void OnSuccess() =&gt; ValidReCAPTCHA = true;
+
+    private void OnExpired() =&gt; ValidReCAPTCHA = false;
+
+    private string resultMessage = &#34;&#34;;
+
+    protected override void OnInitialized()
+    {
+        blogPostViewModel = new();
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        // verify ReCAPTCHAv2
+        bool verifiedResult = await CheckReCAPTCHA();
+        if (!verifiedResult)
+            return;
+
+        // verified actions
+        resultMessage = &#34;Success...&#34;;
+        StateHasChanged();
+    }
+
+    private async Task&lt;bool&gt; CheckReCAPTCHA()
+    {
+        bool serverVerified = false;
+        if (ValidReCAPTCHA)
+        {
+            var response = await reCAPTCHAv2Component.GetResponseAsync();
+            try
+            {
+                StateHasChanged();
+                var result = await GooglereCAPTCHAv2Service.Post(response);
+                if (result.Success)
+                {
+                    serverVerified = true;
+                }
+                else
+                {
+                    await JSRuntime.InvokeAsync&lt;object&gt;(&#34;alert&#34;, string.Join(&#34;, &#34;, result.ErrorCodes));
+                    serverVerified = false;
+                    StateHasChanged();
+                }
+            }
+            catch (HttpRequestException e)
+            {
+                await JSRuntime.InvokeAsync&lt;object&gt;(&#34;alert&#34;, e.Message);
+                serverVerified = false;
+                StateHasChanged();
+            }
+        }
+        return serverVerified;
+    }
+
+}
+</code></pre><p>The <code>OnSuccess</code> method is called when the user successfully completes the reCAPTCHA challenge. It sets the <code>ValidReCAPTCHA</code> flag to true.</p><p>The <code>OnExpired</code> method is called when the reCAPTCHA challenge expires. It sets the <code>ValidReCAPTCHA</code> flag to false.</p><p>The <code>HandleValidSubmit</code> method is called when the form is submitted and passes the validation. It first verifies the reCAPTCHA response by calling the <code>CheckReCAPTCHA</code> method. If the verification fails, the method returns. Otherwise, it performs the desired actions and updates the <code>resultMessage</code> variable.</p><p>The <code>CheckReCAPTCHA</code> method checks if the reCAPTCHA response is valid. If it is, it retrieves the response token from the reCAPTCHA component and sends it to the Google reCAPTCHA service for verification. If the verification is successful, the <code>serverVerified</code> flag is set to true. Otherwise, an alert is displayed with the error codes returned by the service.</p><p>We have learned how to implement Google reCAPTCHA v2 in a Blazor application. By following the code examples and understanding the key concepts, you can enhance the security of your forms and protect your website from spam and abuse. Remember to obtain a site key from Google reCAPTCHA and replace the placeholder in the code with your actual site key. Happy coding!</p><h4 id=source><strong>Source</strong></h4><p>Full source code is available at this repository in GitHub:
+<a href=https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppreCAPTCHAv2>https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppreCAPTCHAv2</a></p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-13-blazor-implementing-google-recaptcha-v2%2f" target=_blank><i class="fab fa-facebook"></i></a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-13-blazor-implementing-google-recaptcha-v2%2f&text=Blazor%20Implementing%20Google%20reCAPTCHA%20v2&via=akifmt" target=_blank><i class="fab fa-twitter"></i></a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-13-blazor-implementing-google-recaptcha-v2%2f&title=Blazor%20Implementing%20Google%20reCAPTCHA%20v2" target=_blank><i class="fab fa-reddit"></i></a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-13-blazor-implementing-google-recaptcha-v2%2f&title=Blazor%20Implementing%20Google%20reCAPTCHA%20v2" target=_blank><i class="fab fa-linkedin"></i></a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Blazor%20Implementing%20Google%20reCAPTCHA%20v2 https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-13-blazor-implementing-google-recaptcha-v2%2f" target=_blank><i class="fab fa-whatsapp"></i></a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Blazor%20Implementing%20Google%20reCAPTCHA%20v2&body=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-13-blazor-implementing-google-recaptcha-v2%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/akifmt/akifmt.github.io/edit/main/content/dotnet/2023-08-13-Blazor-Implementing-Google-reCAPTCHA-v2/index.md title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="akifmt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
+<a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#blazor-implementing-google-recaptcha-v2><strong>Blazor Implementing Google reCAPTCHA v2</strong></a><ul><li><a href=#googlerecaptchav3servicecs><strong>GooglereCAPTCHAv3Service.cs</strong></a></li><li><a href=#googlerecaptchav2settingscs><strong>GooglereCAPTCHAv2Settings.cs</strong></a></li><li><a href=#googlerecaptchav2responsecs><strong>GooglereCAPTCHAv2Response.cs</strong></a></li><li><a href=#scriptjs><strong>script.js</strong></a></li><li><a href=#recaptchav2componentrazor><strong>ReCAPTCHAv2Component.razor</strong></a></li><li><a href=#recaptchav2razor><strong>ReCAPTCHAv2.razor</strong></a></li></ul></li><li><a href=#source><strong>Source</strong></a></li></ul></li></ul></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts-dotnet>Recent Dotnet Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts>Recent Posts</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:akifmt@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>akifmt@gmail.com</span></a></li><li><a href=https://github.com/akifmt target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>akifmt</span></a></li></ul></div><div class="col-md-4 col-sm-12"><p>Stay up to date with email notification</p><form action="https://github.us1.list-manage.com/subscribe/post?u=19de52a4603135aae97163fd8&amp;amp;id=094a24c76e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div class=form-group><input type=email class=form-control id=mce-EMAIL name=EMAIL aria-describedby=emailHelp placeholder="Enter email">
+<small id=emailHelp class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small></div><button type=submit class="btn btn-info">Submit</button></form></div></div></div><hr><div class=container><p id=disclaimer><strong>Liability Notice:</strong> This theme is under MIT license. So, you can use it for non-commercial, commercial, or private uses. You can modify or distribute the theme without requiring any permission from the theme author. However, the theme author does not provide any warranty or takes any liability for any issue with the theme.</p></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2023 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script></body></html>
