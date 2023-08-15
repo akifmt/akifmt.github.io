@@ -1,0 +1,195 @@
+<!doctype html><html><head><title>Blazor Serilog Logging to Console, File and Database</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/google-fonts/Mulish/mulish.css><link rel=stylesheet href=/fontawesome/css/all.min.css><link rel=stylesheet href=/css/colortheme/colortheme.css><link rel=icon type=image/png href=/images/site/favicon_hu5e0469842f323d92977e05301135eda0_41440_42x0_resize_box_3.png><meta property="og:title" content="Blazor Serilog Logging to Console, File and Database"><meta property="og:description" content="Blazor Serilog Logging to Console, File and Database"><meta property="og:type" content="article"><meta property="og:url" content="https://akifmt.github.io/dotnet/2023-08-15-blazor-serilog-logging/"><meta property="article:section" content="dotnet"><meta property="article:published_time" content="2023-08-15T00:00:00+00:00"><meta property="article:modified_time" content="2023-08-15T00:00:00+00:00"><meta name=description content="Blazor Serilog Logging to Console, File and Database"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-78150589-1","auto"),ga("send","pageview"))</script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png alt=Logo>
+akifmt</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class=nav-item><a class=nav-link id=blog-link href=/posts/>Blog</a></li><li class=nav-item><a class=nav-link href=/dotnet/><img height=20 src=/images/dotnet-logo.png> dotnet Blog</a></li><div class=dropdown-divider id=top-navbar-divider></div><li class="nav-item dropdown"><div id=theme-initialization style=display:none default-theme=system></div><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# onclick=enableLightTheme()><img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()><img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()><img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_huaeac6b74eff06a7b4d6b563d4aa0a06e_40468_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/dotnet/ data-filter=all>dotnet</a></li><div class=subtree><li><a class=active href=/dotnet/2023-08-15-blazor-serilog-logging/ title="Blazor Serilog Logging to Console, File and Database">Blazor Serilog Logging to Console, File and Database</a></li><li><a href=/dotnet/2023-08-13-blazor-implementing-google-recaptcha-v2/ title="Blazor Implementing Google reCAPTCHA v2">Blazor Implementing Google reCAPTCHA v2</a></li><li><a href=/dotnet/2023-08-11-blazor-implementing-google-recaptcha-v3/ title="Blazor Implementing Google reCAPTCHA v3">Blazor Implementing Google reCAPTCHA v3</a></li><li><a href=/dotnet/2023-08-09-blazor-radzen-globalization-and-localization/ title="Blazor Radzen Globalization and Localization">Blazor Radzen Globalization and Localization</a></li><li><a href=/dotnet/2023-08-07-blazor-using-npm-packages/ title="Blazor Using NPM Packages">Blazor Using NPM Packages</a></li><li><a href=/dotnet/2023-08-05-blazor-generic-components/ title="Blazor Generic Components">Blazor Generic Components</a></li><li><a href=/dotnet/2023-08-02-blazor-rssfeed/ title="Blazor Expose a Feed as RSS">Blazor Expose a Feed as RSS</a></li><li><a href=/dotnet/2023-07-31-blazor-ef-multipledbproviders/ title="Blazor EF Migrations with Multiple Providers">Blazor EF Migrations with Multiple Providers</a></li><li><a href=/dotnet/2023-07-30-blazor-authentication-authorization/ title="Blazor Authentication and Authorization">Blazor Authentication and Authorization</a></li><li><a href=/dotnet/2023-07-26-blazor-radzen-crud/ title="Blazor Radzen CRUD">Blazor Radzen CRUD</a></li><li><a href=/dotnet/2023-07-21-blazor-radzen-searchcomponent/ title="Blazor Radzen SearchComponent">Blazor Radzen SearchComponent</a></li><li><a href=/dotnet/2023-07-20-blazor-videoplayer/ title="Video Player in Blazor">Video Player in Blazor</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/dotnet/2023-08-15-blazor-serilog-logging/blazor_dotnet.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/akif_hu0b098ee5eab0ebaed64b2691fffe1073_4640_120x120_fit_box_3.png alt="Author Image"><h5 class=author-name>Akif T.</h5><p>Tuesday, August 15, 2023</p></div><div class=title><h1>Blazor Serilog Logging to Console, File and Database</h1></div><div class=taxonomy-terms><ul style=padding-left:0><li class=rounded><a href=/tags/dotnet/ class="btn, btn-sm">Dotnet</a></li><li class=rounded><a href=/tags/blazor-serilog-logging-to-console-file-and-database/ class="btn, btn-sm">Blazor Serilog Logging to Console File and Database</a></li></ul></div><div class=post-content id=post-content><p style=text-align:center><img src=blazor_dotnet.jpg alt=blazor_dotnet title=blazor_dotnet><br><p><h4 id=blazor-serilog-logging-to-console-file-and-database><strong>Blazor Serilog Logging to Console, File and Database</strong></h4><p>Logging: Logging is the process of recording events, messages, or exceptions that occur during the execution of an application. It helps developers understand the behavior of the application, diagnose issues, and track its performance. Logging is an essential aspect of software development and plays a crucial role in maintaining and troubleshooting applications.</p><img src=serilog_logo.png alt=serilog_logo title=serilog_logo style=height:100px><p>Serilog: Serilog is a popular logging library for .NET applications. It provides a flexible and extensible logging framework that allows developers to capture and store log events for debugging, monitoring, and analysis purposes. Serilog supports various logging sinks, including console logging, file logging, and database logging.</p><p>Console Logging: Console logging is a type of logging where log messages are displayed in the console window. It is useful during development and debugging.</p><p>File Logging: File logging is a type of logging where log messages are written to a file. It helps in storing log data for future analysis and troubleshooting.</p><p>SQLite Database Logging: SQLite database logging is a type of logging where log messages are stored in an SQLite database. It provides a structured way to store and query log data.</p><h5 id=logcs><strong>Log.cs</strong></h5><p>The provided code defines a Log model class within the BlazorAppSerilogLogging.Models namespace. The Log class has the following properties:</p><pre tabindex=0><code>namespace BlazorAppSerilogLogging.Models;
+
+public class Log
+{
+    public int id { get; set; }
+    public DateTime Timestamp { get; set; }
+    public string Level { get; set; } = string.Empty;
+    public string Exception { get; set; } = string.Empty;
+    public string RenderedMessage { get; set; } = string.Empty;
+    public string Properties { get; set; } = string.Empty;
+}
+</code></pre><p>id: An integer property that represents the unique identifier of the log entry.</p><p>Timestamp: A DateTime property that stores the timestamp when the log entry was created.</p><p>Level: A string property that indicates the log level of the entry (e.g., Information, Warning, Error).</p><p>Exception: A string property that holds the exception details, if any, associated with the log entry.</p><p>RenderedMessage: A string property that contains the formatted log message.</p><p>Properties: A string property that stores additional properties or metadata related to the log entry.</p><h5 id=applicationloggerdbcontextcs><strong>ApplicationLoggerDbContext.cs</strong></h5><p>The <code>ApplicationLoggerDbContext</code> class is a C# code that represents the database context for logging in a Blazor application using Serilog. It is responsible for managing the connection to the database and providing access to the <code>Logs</code> table.</p><pre tabindex=0><code>using BlazorAppSerilogLogging.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace BlazorAppSerilogLogging.Data;
+
+public class ApplicationLoggerDbContext : DbContext
+{
+    public ApplicationLoggerDbContext(DbContextOptions&lt;ApplicationLoggerDbContext&gt; options)
+    : base(options)
+    {
+    }
+
+    public DbSet&lt;Log&gt; Logs =&gt; Set&lt;Log&gt;();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+    }
+}
+</code></pre><p>The <code>ApplicationLoggerDbContext</code> class is defined within the <code>BlazorAppSerilogLogging.Data</code> namespace. It extends the <code>DbContext</code> class provided by Entity Framework Core.</p><p>The class has a constructor that takes an instance of <code>DbContextOptions&lt;ApplicationLoggerDbContext></code> as a parameter. This allows the class to configure the database connection options.</p><p>The class also defines a property called <code>Logs</code> of type <code>DbSet&lt;Log></code>. This property represents the <code>Logs</code> table in the database and allows you to query and manipulate log data.</p><p>The <code>OnModelCreating</code> method is overridden but left empty in this code example. This method is used to configure the database model and define relationships between entities.</p><h5 id=loggerservicecs><strong>LoggerService.cs</strong></h5><p>The <code>LoggerService</code> class is defined within the <code>BlazorAppSerilogLogging.Data</code> namespace. It implements several methods for logging operations and interacts with the <code>ApplicationLoggerDbContext</code> class.</p><pre tabindex=0><code>using BlazorAppSerilogLogging.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace BlazorAppSerilogLogging.Data;
+
+public class LoggerService
+{
+    private readonly ILogger&lt;LoggerService&gt; _logger;
+    private readonly ApplicationLoggerDbContext _loggerDbContext;
+
+    public LoggerService(ILogger&lt;LoggerService&gt; logger, ApplicationLoggerDbContext loggerDbContext)
+    {
+        _logger = logger;
+        _loggerDbContext = loggerDbContext;
+    }
+
+    public async Task&lt;IEnumerable&lt;Log&gt;&gt; GetLogsAsync()
+    {
+        _logger.LogInformation($&#34;Called GetLogsAsync&#34;);
+        return await _loggerDbContext.Logs.OrderByDescending(x =&gt; x.Timestamp).ToListAsync();
+    }
+
+    public async Task&lt;Log?&gt; GetLogAsync(int id)
+    {
+        _logger.LogInformation($&#34;Called GetLogAsync&#34;, id);
+        return await _loggerDbContext.Logs.FirstOrDefaultAsync(x =&gt; x.id == id);
+    }
+
+    public async Task&lt;bool?&gt; DeleteLogsAsync()
+    {
+        _logger.LogInformation($&#34;Called DeleteLogsAsync&#34;);
+        var all = await _loggerDbContext.Logs.ToListAsync();
+        _loggerDbContext.Logs.RemoveRange(all); ;
+        await _loggerDbContext.SaveChangesAsync();
+        _logger.LogInformation($&#34;Deleted All Logs.&#34;);
+        return true;
+    }
+}
+</code></pre><p>The class has the following members:</p><p>_logger: An instance of the <code>ILogger&lt;LoggerService></code> interface, which is used for logging messages.</p><p>_loggerDbContext: An instance of the <code>ApplicationLoggerDbContext</code> class, which represents the database context for logging.</p><p>The constructor of the <code>LoggerService</code> class takes in an <code>ILogger&lt;LoggerService></code> instance and an <code>ApplicationLoggerDbContext</code> instance as parameters. These dependencies are injected into the class using dependency injection.</p><h5 id=indexrazor><strong>Index.razor</strong></h5><p>Index.razor is a Blazor component that displays logs retrieved from a logging service. It allows users to view and delete logs. The logs are fetched asynchronously and displayed in a table format.</p><pre tabindex=0><code>@page &#34;/Logs&#34;
+
+@using AutoMapper
+@using BlazorAppSerilogLogging.Data;
+@using BlazorAppSerilogLogging.Models;
+@using BlazorAppSerilogLogging.Services;
+@using BlazorAppSerilogLogging.ViewModels;
+
+@inject IMapper Mapper
+@inject NavigationManager NavigationManager
+@inject LoggerService LoggerService
+
+&lt;PageTitle&gt;Index&lt;/PageTitle&gt;
+
+&lt;h1&gt;Index&lt;/h1&gt;
+&lt;p&gt;
+    &lt;button class=&#34;btn btn-danger&#34; @onclick=&#34;() =&gt; DeleteAllLogs()&#34;&gt;Delete All Logs&lt;/button&gt;
+&lt;/p&gt;
+@if (logs == null)
+{
+    &lt;p&gt;&lt;em&gt;Loading...&lt;/em&gt;&lt;/p&gt;
+}
+else
+{
+    &lt;table class=&#34;table&#34;&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;@nameof(LogViewModel.id)&lt;/th&gt;
+                &lt;th&gt;@nameof(LogViewModel.Timestamp)&lt;/th&gt;
+                &lt;th&gt;@nameof(LogViewModel.Level)&lt;/th&gt;
+                &lt;th&gt;@nameof(LogViewModel.Exception)&lt;/th&gt;
+                &lt;th&gt;@nameof(LogViewModel.RenderedMessage)&lt;/th&gt;
+                &lt;th&gt;@nameof(LogViewModel.Properties)&lt;/th&gt;
+                &lt;th&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            @foreach (var log in logs)
+            {
+                &lt;tr&gt;
+                    &lt;td&gt;@log.id&lt;/td&gt;
+                    &lt;td&gt;@log.Timestamp&lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;span class=&#34;text-@Helpers.LogEventLevelHelper.GetBootstrapUIClass(log.Level)&#34;&gt;
+                            @log.Level
+                        &lt;/span&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt;@log.Exception&lt;/td&gt;
+                    &lt;td&gt;@log.RenderedMessage&lt;/td&gt;
+                    &lt;td&gt;@log.Properties&lt;/td&gt;
+                    &lt;td&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            }
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+}
+
+
+@code {
+    private IEnumerable&lt;LogViewModel&gt;? logs;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (logs == null)
+        {
+            var result = await LoggerService.GetLogsAsync();
+            logs = Mapper.Map&lt;IEnumerable&lt;Log&gt;, IEnumerable&lt;LogViewModel&gt;&gt;(result);
+        }
+    }
+
+    private async void DeleteAllLogs()
+    {
+        await LoggerService.DeleteLogsAsync();
+    }
+
+}
+</code></pre><p>This code block is executed when the component is initialized. It calls the <code>GetLogsAsync</code> method of the <code>LoggerService</code> to fetch the logs asynchronously. The retrieved logs are then mapped to <code>LogViewModel</code> objects using <code>AutoMapper</code>. The <code>logs</code> variable is assigned the mapped logs.</p><h5 id=programcs><strong>Program.cs</strong></h5><pre tabindex=0><code>builder.Host.UseSerilog((ctx, lc) =&gt; lc
+	.MinimumLevel.Information()
+	//.WriteTo.Console(new JsonFormatter(), restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information)
+	.WriteTo.Console(restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information)
+	.WriteTo.Seq(&#34;http://localhost:5001&#34;, restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information)
+	.WriteTo.File(serilogFileLoggerFilePath,
+					restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Verbose,
+					rollingInterval: RollingInterval.Hour,
+					encoding: System.Text.Encoding.UTF8)
+	.WriteTo.SQLite(sqliteDbFilePath,
+					tableName: &#34;Logs&#34;,
+					restrictedToMinimumLevel:
+						builder.Environment.IsDevelopment() ? Serilog.Events.LogEventLevel.Information : Serilog.Events.LogEventLevel.Warning,
+					storeTimestampInUtc: false,
+					batchSize:
+						builder.Environment.IsDevelopment() ? (uint)1 : (uint)100,
+					retentionPeriod: new TimeSpan(0, 1, 0, 0, 0),
+					maxDatabaseSize: 10)
+);
+</code></pre><p>Retrieves the connection string for the <code>SQLite logger</code> from the configuration file and modifies it to include the current directory path.</p><p>Configures Serilog with various log sinks, including <code>console logging, Seq logging, file logging, and SQLite database logging</code>. It sets the minimum log level based on the application environment.</p><p>Registers the <code>ApplicationLoggerDbContext</code> and <code>ApplicationDbContext</code> services in the dependency injection container. It configures the <code>ApplicationLoggerDbContext</code> to use the <code>SQLite logger connection</code> string and the <code>ApplicationDbContext</code> to use an in-memory database.</p><p>We discussed the key concepts of <code>logging, console logging, file logging, and SQLite database logging</code>. We also examined the code structure and provided code examples to illustrate the configuration process. By understanding this code, developers can effectively set up logging in their Blazor applications using Serilog.</p><h4 id=source><strong>Source</strong></h4><p>Full source code is available at this repository in GitHub:
+<a href=https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppSerilogLogging>https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppSerilogLogging</a></p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-15-blazor-serilog-logging%2f" target=_blank><i class="fab fa-facebook"></i></a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-15-blazor-serilog-logging%2f&text=Blazor%20Serilog%20Logging%20to%20Console%2c%20File%20and%20Database&via=akifmt" target=_blank><i class="fab fa-twitter"></i></a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-15-blazor-serilog-logging%2f&title=Blazor%20Serilog%20Logging%20to%20Console%2c%20File%20and%20Database" target=_blank><i class="fab fa-reddit"></i></a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-15-blazor-serilog-logging%2f&title=Blazor%20Serilog%20Logging%20to%20Console%2c%20File%20and%20Database" target=_blank><i class="fab fa-linkedin"></i></a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Blazor%20Serilog%20Logging%20to%20Console%2c%20File%20and%20Database https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-15-blazor-serilog-logging%2f" target=_blank><i class="fab fa-whatsapp"></i></a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Blazor%20Serilog%20Logging%20to%20Console%2c%20File%20and%20Database&body=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-15-blazor-serilog-logging%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/akifmt/akifmt.github.io/edit/main/content/dotnet/2023-08-15-Blazor-Serilog-Logging/index.md title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="akifmt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
+<a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#blazor-serilog-logging-to-console-file-and-database><strong>Blazor Serilog Logging to Console, File and Database</strong></a><ul><li><a href=#logcs><strong>Log.cs</strong></a></li><li><a href=#applicationloggerdbcontextcs><strong>ApplicationLoggerDbContext.cs</strong></a></li><li><a href=#loggerservicecs><strong>LoggerService.cs</strong></a></li><li><a href=#indexrazor><strong>Index.razor</strong></a></li><li><a href=#programcs><strong>Program.cs</strong></a></li></ul></li><li><a href=#source><strong>Source</strong></a></li></ul></li></ul></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts-dotnet>Recent Dotnet Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts>Recent Posts</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:akifmt@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>akifmt@gmail.com</span></a></li><li><a href=https://github.com/akifmt target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>akifmt</span></a></li></ul></div><div class="col-md-4 col-sm-12"><p>Stay up to date with email notification</p><form action="https://github.us1.list-manage.com/subscribe/post?u=19de52a4603135aae97163fd8&amp;amp;id=094a24c76e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div class=form-group><input type=email class=form-control id=mce-EMAIL name=EMAIL aria-describedby=emailHelp placeholder="Enter email">
+<small id=emailHelp class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small></div><button type=submit class="btn btn-info">Submit</button></form></div></div></div><hr><div class=container><p id=disclaimer><strong>Liability Notice:</strong> This theme is under MIT license. So, you can use it for non-commercial, commercial, or private uses. You can modify or distribute the theme without requiring any permission from the theme author. However, the theme author does not provide any warranty or takes any liability for any issue with the theme.</p></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2023 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script></body></html>
