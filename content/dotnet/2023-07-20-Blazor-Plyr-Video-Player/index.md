@@ -1,28 +1,28 @@
 ---
-title: "Video Player in Blazor"
+title: "Blazor Plyr Video Player"
 date: 2023-07-20T00:00:00+00:00
-hero: video_player_in_blazor.png
-description: Video Player in Blazor
+hero: blazor_plyr.png
+description: Blazor Plyr Video Player
 menu:
   dotnet:
-    name: Video Player in Blazor
-    identifier: video-player-in-blazor
+    name: Blazor Plyr Video Player
+    identifier: blazor-plyr-video-player
     weight: -20230720
-tags: [ Dotnet, Video Player in Blazor]
-categories: [ Dotnet, Video Player in Blazor]
+tags: [Dotnet, Blazor Plyr Video Player]
+categories: [Dotnet, Blazor Plyr Video Player]
 
 author:
   name: Akif T.
 ---
 
 <p style="text-align: center;">
-<img src="video_player_in_blazor.png" alt="video_player_in_blazor" title="video_player_in_blazor"><br>
+<img src="blazor_plyr.png" alt="blazor_plyr" title="blazor_plyr"><br>
 <p>
 
-##### **Video Player in Blazor**
+##### **Blazor Plyr Video Player**
 
 <p style="text-align: center;">
-<img src="videoplayer.PNG" alt="videoplayer" title="videoplayer"><br>
+<img src="plyr_player.png" alt="plyr_player" title="plyr_player"><br>
 <p>
 
 This code provides a video player component in a Blazor application. It allows users to watch videos with controls and captions. The video player is customizable using the Plyr.io library.
