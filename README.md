@@ -13,7 +13,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Tue%20Aug%2015%202023%2022%3A51%3A22%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Thu%20Aug%2017%202023%2022%3A47%3A09%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [Edit posts](https://github.com/akifmt/akifmt.github.io/commit/bad86de106ec5de5591e53a909f7cfb9604da849) - 2023-08-17T22:41:54Z 
 - :page_facing_up: [added new post Blazor Serilog Logging to Console File and Database](https://github.com/akifmt/akifmt.github.io/commit/f374dc9b5ee7378f06957ebbf0309e02910e3d5b) - 2023-08-15T22:44:46Z 
 - :page_facing_up: [added new post Blazor Implementing Google reCAPTCHA v2](https://github.com/akifmt/akifmt.github.io/commit/dde9010f7489979703d7139fc27d46899015ef44) - 2023-08-14T19:11:59Z 
 - :page_facing_up: [added new post Blazor Implementing Google reCAPTCHA v3](https://github.com/akifmt/akifmt.github.io/commit/ec51a147dd53f84e82fc8a79243252699a9460df) - 2023-08-12T10:52:09Z 
@@ -23,7 +24,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor Expose a Feed as RSS](https://github.com/akifmt/akifmt.github.io/commit/be92e2d7f9ee4e8e0443bda6645b2d7250c7e3cc) - 2023-08-04T03:25:47Z 
 - :page_facing_up: [added new post Blazor EF Migrations with Multiple Providers](https://github.com/akifmt/akifmt.github.io/commit/a5bc13165692ae5c9f898e3691cee47d1e189fea) - 2023-08-01T23:52:19Z 
 - :page_facing_up: [added new post Blazor Authentication and Authorization](https://github.com/akifmt/akifmt.github.io/commit/77c9eabecd86e149cd15bb6cdcd61f2b845b6bb0) - 2023-07-30T20:22:03Z 
-- :page_facing_up: [Update update-readme.yaml](https://github.com/akifmt/akifmt.github.io/commit/d7a4f9c56d399e1a92a8a4a8f6c1b55ad48076b9) - 2023-07-26T23:25:04Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
