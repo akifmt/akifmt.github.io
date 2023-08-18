@@ -1,0 +1,348 @@
+<!doctype html><html><head><title>Blazor Scheduling with Quartz.NET</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/google-fonts/Mulish/mulish.css><link rel=stylesheet href=/fontawesome/css/all.min.css><link rel=stylesheet href=/css/colortheme/colortheme.css><link rel=icon type=image/png href=/images/site/favicon_hu5e0469842f323d92977e05301135eda0_41440_42x0_resize_box_3.png><meta property="og:title" content="Blazor Scheduling with Quartz.NET"><meta property="og:description" content="Blazor Scheduling with Quartz.NET"><meta property="og:type" content="article"><meta property="og:url" content="https://akifmt.github.io/dotnet/2023-08-18-blazor-scheduling-with-quartz.net/"><meta property="article:section" content="dotnet"><meta property="article:published_time" content="2023-08-18T00:00:00+00:00"><meta property="article:modified_time" content="2023-08-18T00:00:00+00:00"><meta name=description content="Blazor Scheduling with Quartz.NET"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-78150589-1","auto"),ga("send","pageview"))</script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png alt=Logo>
+akifmt</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class=nav-item><a class=nav-link id=blog-link href=/posts/>Blog</a></li><li class=nav-item><a class=nav-link href=/dotnet/><img height=20 src=/images/dotnet-logo.png> dotnet Blog</a></li><div class=dropdown-divider id=top-navbar-divider></div><li class="nav-item dropdown"><div id=theme-initialization style=display:none default-theme=system></div><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# onclick=enableLightTheme()><img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()><img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()><img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_huaeac6b74eff06a7b4d6b563d4aa0a06e_40468_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/dotnet/ data-filter=all>dotnet</a></li><div class=subtree><li><a class=active href=/dotnet/2023-08-18-blazor-scheduling-with-quartz.net/ title="Blazor Scheduling with Quartz.NET">Blazor Scheduling with Quartz.NET</a></li><li><a href=/dotnet/2023-08-15-blazor-serilog-logging/ title="Blazor Serilog Logging to Console, File and Database">Blazor Serilog Logging to Console, File and Database</a></li><li><a href=/dotnet/2023-08-13-blazor-implementing-google-recaptcha-v2/ title="Blazor Implementing Google reCAPTCHA v2">Blazor Implementing Google reCAPTCHA v2</a></li><li><a href=/dotnet/2023-08-11-blazor-implementing-google-recaptcha-v3/ title="Blazor Implementing Google reCAPTCHA v3">Blazor Implementing Google reCAPTCHA v3</a></li><li><a href=/dotnet/2023-08-09-blazor-radzen-globalization-and-localization/ title="Blazor Radzen Globalization and Localization">Blazor Radzen Globalization and Localization</a></li><li><a href=/dotnet/2023-08-07-blazor-using-npm-packages/ title="Blazor Using NPM Packages">Blazor Using NPM Packages</a></li><li><a href=/dotnet/2023-08-05-blazor-generic-components/ title="Blazor Generic Components">Blazor Generic Components</a></li><li><a href=/dotnet/2023-08-02-blazor-rssfeed/ title="Blazor Expose a Feed as RSS">Blazor Expose a Feed as RSS</a></li><li><a href=/dotnet/2023-07-31-blazor-ef-multipledbproviders/ title="Blazor EF Migrations with Multiple Providers">Blazor EF Migrations with Multiple Providers</a></li><li><a href=/dotnet/2023-07-30-blazor-authentication-authorization/ title="Blazor Authentication and Authorization">Blazor Authentication and Authorization</a></li><li><a href=/dotnet/2023-07-26-blazor-radzen-crud/ title="Blazor Radzen CRUD">Blazor Radzen CRUD</a></li><li><a href=/dotnet/2023-07-21-blazor-radzen-searchcomponent/ title="Blazor Radzen SearchComponent">Blazor Radzen SearchComponent</a></li><li><a href=/dotnet/2023-07-20-blazor-plyr-video-player/ title="Blazor Plyr Video Player">Blazor Plyr Video Player</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/dotnet/2023-08-18-blazor-scheduling-with-quartz.net/blazor_dotnet.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/akif_hu0b098ee5eab0ebaed64b2691fffe1073_4640_120x120_fit_box_3.png alt="Author Image"><h5 class=author-name>Akif T.</h5><p>Friday, August 18, 2023</p></div><div class=title><h1>Blazor Scheduling with Quartz.NET</h1></div><div class=taxonomy-terms><ul style=padding-left:0><li class=rounded><a href=/tags/dotnet/ class="btn, btn-sm">Dotnet</a></li><li class=rounded><a href=/tags/blazor-scheduling-with-quartz.net/ class="btn, btn-sm">Blazor Scheduling with Quartz.NET</a></li></ul></div><div class=post-content id=post-content><p style=text-align:center><img src=blazor_dotnet.jpg alt=blazor_dotnet title=blazor_dotnet><br><p><h4 id=blazor-scheduling-with-quartznet><strong>Blazor Scheduling with Quartz.NET</strong></h4><p>Blazor: Blazor is a web framework that allows developers to build interactive web UIs using C# instead of JavaScript. It enables full-stack development with .NET.</p><img src=quartz_logo.png alt=quartz_logo title=quartz_logo style=height:100px><p>Quartz.NET: Quartz.NET is a popular open-source job scheduling library for .NET applications. It provides a flexible and powerful way to schedule and execute jobs at specified intervals.</p><p>Scheduling: Scheduling refers to the process of defining when and how often a job or task should be executed. In this code, we use Quartz.NET to schedule jobs to be executed at specific times or intervals.</p><p>Jobs: In the context of this application, a job refers to a specific task or action that needs to be executed at a scheduled time or interval. Jobs can be created, paused, resumed, and deleted.</p><p>Triggers: Triggers are used to define when and how often a job should be executed. They specify the schedule, start time, end time, and other parameters for a job.</p><p>Job Class: A job class in Quartz.NET represents a unit of work that needs to be executed by the scheduler. It implements the <code>IJob</code> interface and defines the logic to be executed when the job is triggered.</p><h5 id=addrandomblogpostjobcs><strong>AddRandomBlogPostJob.cs</strong></h5><p>The <code>AddRandomBlogPostJob</code> class is defined in the <code>BlazorAppQuartzNETScheduler.Jobs</code> namespace. It implements the <code>IJob</code> interface provided by Quartz.NET. The class is marked with the <code>[DisallowConcurrentExecution]</code> attribute, which ensures that the job will not be executed concurrently.</p><pre tabindex=0><code>using BlazorAppQuartzNETScheduler.Data;
+using BlazorAppQuartzNETScheduler.Models;
+using BlazorAppQuartzNETScheduler.Services;
+using Quartz;
+
+namespace BlazorAppQuartzNETScheduler.Jobs;
+
+[DisallowConcurrentExecution]
+public class AddRandomBlogPostJob : IJob
+{
+    private readonly ILogger&lt;AddRandomBlogPostJob&gt; _logger;
+    private readonly BlogPostService _blogPostService;
+
+    public AddRandomBlogPostJob(ILogger&lt;AddRandomBlogPostJob&gt; logger, BlogPostService blogPostService)
+    {
+        _logger = logger;
+        _blogPostService = blogPostService;
+    }
+
+    public async Task Execute(IJobExecutionContext context)
+    {
+        BlogPost model = SeedData.GetRandomPost();
+        await _blogPostService.AddBlogPostAsync(model);
+    }
+}
+</code></pre><p>The class has two dependencies injected through its constructor: <code>ILogger&lt;AddRandomBlogPostJob></code> and <code>BlogPostService</code>. The <code>ILogger</code> is used for logging purposes, while the <code>BlogPostService</code> is a service responsible for adding blog posts to the application.</p><p>The <code>Execute</code> method is the main entry point for the job execution. It is called by the Quartz.NET scheduler when the job is triggered. Inside the <code>Execute</code> method, a random blog post model is obtained using the <code>SeedData.GetRandomPost()</code> method. Then, the <code>AddBlogPostAsync</code> method of the <code>BlogPostService</code> is called to add the blog post to the application.</p><h5 id=programcs><strong>Program.cs</strong></h5><p>Setting up the Quartz database:</p><pre tabindex=0><code>string quartzConnectionString = builder.Configuration.GetConnectionString(&#34;QuartzConnectionString&#34;);
+SqliteConnectionStringBuilder quartzSqliteConnectionStringBuilder = new SqliteConnectionStringBuilder(
+    quartzConnectionString);
+CheckandCreateQuartzDatabase(quartzSqliteConnectionStringBuilder).GetAwaiter().GetResult();
+</code></pre><p>We retrieve the connection string for the Quartz database from the application&rsquo;s configuration. We then create a <code>SqliteConnectionStringBuilder</code> object using the connection string and pass it to the <code>CheckandCreateQuartzDatabase</code> method to check and create the Quartz database if necessary.</p><p>Adding Quartz services:</p><pre tabindex=0><code>builder.Services.AddDbContext&lt;QuartzDbContext&gt;(options =&gt;
+{
+    options.UseSqlite(quartzConnectionString);
+});
+builder.Services.AddQuartz(q =&gt;
+{
+    q.UsePersistentStore(per =&gt;
+    {
+        per.UseSQLite(quartzSqliteConnectionStringBuilder.ConnectionString);
+        per.UseJsonSerializer();
+    });
+    q.UseMicrosoftDependencyInjectionJobFactory();
+});
+builder.Services.AddQuartzHostedService(opt =&gt;
+{
+    opt.WaitForJobsToComplete = true;
+});
+</code></pre><p>We add the necessary Quartz services to the <code>application's service</code> collection. We configure the Quartz database context using the <code>SQLite connection string</code>, enable persistent storage for <code>Quartz jobs</code> using SQLite, and specify the job factory to use <code>Microsoft Dependency Injection</code>. We also configure the Quartz hosted service to wait for jobs to complete before shutting down.</p><p>Checking and creating jobs:</p><pre tabindex=0><code>public static async Task CheckandCreateJobs(this IServiceCollection services)
+{
+    using (IServiceScope tmp = services.BuildServiceProvider().CreateScope())
+    {
+        await using var _context = tmp.ServiceProvider.GetRequiredService&lt;ApplicationDbContext&gt;();
+        var seedData = tmp.ServiceProvider.GetRequiredService&lt;SeedData&gt;();
+        await seedData.CheckandCreateJobsData();
+    }
+}
+</code></pre><p>This code defines an extension method <code>CheckandCreateJobs</code> for the <code>IServiceCollection</code> interface. It creates a new scope using the application&rsquo;s service provider and retrieves the necessary services (<code>ApplicationDbContext</code> and <code>SeedData</code>). It then calls the <code>CheckandCreateJobsData</code> method to check and create the necessary jobs.</p><h5 id=quartznet-models><strong>Quartz.NET Models</strong></h5><p>Quartz.NET provides various models and classes to represent different entities involved in scheduling, such as triggers, jobs, and schedulers. These models help in configuring and managing the scheduling process.</p><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzBlobTrigger
+{
+    public string SchedName { get; set; } = null!;
+    public string TriggerName { get; set; } = null!;
+    public string TriggerGroup { get; set; } = null!;
+    public byte[]? BlobData { get; set; }
+
+    public virtual QrtzTrigger QrtzTrigger { get; set; } = null!;
+}
+</code></pre><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzCalendar
+{
+    public string SchedName { get; set; } = null!;
+    public string CalendarName { get; set; } = null!;
+    public byte[] Calendar { get; set; } = null!;
+}
+</code></pre><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzCronTrigger
+{
+    public string SchedName { get; set; } = null!;
+    public string TriggerName { get; set; } = null!;
+    public string TriggerGroup { get; set; } = null!;
+    public string CronExpression { get; set; } = null!;
+    public string? TimeZoneId { get; set; }
+
+    public virtual QrtzTrigger QrtzTrigger { get; set; } = null!;
+}
+</code></pre><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzFiredTrigger
+{
+    public string SchedName { get; set; } = null!;
+    public string EntryId { get; set; } = null!;
+    public string TriggerName { get; set; } = null!;
+    public string TriggerGroup { get; set; } = null!;
+    public string InstanceName { get; set; } = null!;
+    public long FiredTime { get; set; }
+    public long SchedTime { get; set; }
+    public long Priority { get; set; }
+    public string State { get; set; } = null!;
+    public string? JobName { get; set; }
+    public string? JobGroup { get; set; }
+    public byte[]? IsNonconcurrent { get; set; }
+    public byte[]? RequestsRecovery { get; set; }
+}
+</code></pre><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzJobDetail
+{
+    public QrtzJobDetail()
+    {
+        QrtzTriggers = new HashSet&lt;QrtzTrigger&gt;();
+    }
+
+    public string SchedName { get; set; } = null!;
+    public string JobName { get; set; } = null!;
+    public string JobGroup { get; set; } = null!;
+    public string? Description { get; set; }
+    public string JobClassName { get; set; } = null!;
+    public byte[] IsDurable { get; set; } = null!;
+    public byte[] IsNonconcurrent { get; set; } = null!;
+    public byte[] IsUpdateData { get; set; } = null!;
+    public byte[] RequestsRecovery { get; set; } = null!;
+    public byte[]? JobData { get; set; }
+
+    public virtual ICollection&lt;QrtzTrigger&gt; QrtzTriggers { get; set; }
+}
+</code></pre><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzLock
+{
+    public string SchedName { get; set; } = null!;
+    public string LockName { get; set; } = null!;
+}
+</code></pre><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzPausedTriggerGrp
+{
+    public string SchedName { get; set; } = null!;
+    public string TriggerGroup { get; set; } = null!;
+}
+</code></pre><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzSchedulerState
+{
+    public string SchedName { get; set; } = null!;
+    public string InstanceName { get; set; } = null!;
+    public long LastCheckinTime { get; set; }
+    public long CheckinInterval { get; set; }
+}
+</code></pre><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzSimpleTrigger
+{
+    public string SchedName { get; set; } = null!;
+    public string TriggerName { get; set; } = null!;
+    public string TriggerGroup { get; set; } = null!;
+    public long RepeatCount { get; set; }
+    public long RepeatInterval { get; set; }
+    public long TimesTriggered { get; set; }
+
+    public virtual QrtzTrigger QrtzTrigger { get; set; } = null!;
+}
+</code></pre><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzSimpropTrigger
+{
+    public string SchedName { get; set; } = null!;
+    public string TriggerName { get; set; } = null!;
+    public string TriggerGroup { get; set; } = null!;
+    public string? StrProp1 { get; set; }
+    public string? StrProp2 { get; set; }
+    public string? StrProp3 { get; set; }
+    public long? IntProp1 { get; set; }
+    public long? IntProp2 { get; set; }
+    public long? LongProp1 { get; set; }
+    public long? LongProp2 { get; set; }
+    public byte[]? DecProp1 { get; set; }
+    public byte[]? DecProp2 { get; set; }
+    public byte[]? BoolProp1 { get; set; }
+    public byte[]? BoolProp2 { get; set; }
+    public string? TimeZoneId { get; set; }
+
+    public virtual QrtzTrigger QrtzTrigger { get; set; } = null!;
+}
+</code></pre><pre tabindex=0><code>namespace BlazorAppQuartzNETScheduler.Models.Quartz;
+
+public partial class QrtzTrigger
+{
+    public string SchedName { get; set; } = null!;
+    public string TriggerName { get; set; } = null!;
+    public string TriggerGroup { get; set; } = null!;
+    public string JobName { get; set; } = null!;
+    public string JobGroup { get; set; } = null!;
+    public string? Description { get; set; }
+    public long? NextFireTime { get; set; }
+    public long? PrevFireTime { get; set; }
+    public long? Priority { get; set; }
+    public string TriggerState { get; set; } = null!;
+    public string TriggerType { get; set; } = null!;
+    public long StartTime { get; set; }
+    public long? EndTime { get; set; }
+    public string? CalendarName { get; set; }
+    public long? MisfireInstr { get; set; }
+    public byte[]? JobData { get; set; }
+
+    public virtual QrtzJobDetail QrtzJobDetail { get; set; } = null!;
+    public virtual QrtzBlobTrigger? QrtzBlobTrigger { get; set; }
+    public virtual QrtzCronTrigger? QrtzCronTrigger { get; set; }
+    public virtual QrtzSimpleTrigger? QrtzSimpleTrigger { get; set; }
+    public virtual QrtzSimpropTrigger? QrtzSimpropTrigger { get; set; }
+}
+</code></pre><h5 id=quartzdbcontextcs><strong>QuartzDbContext.cs</strong></h5><p>The <code>QuartzDbContext</code> class is defined in the <code>BlazorAppQuartzNETScheduler.Data</code> namespace. It extends the <code>DbContext</code> class and overrides the <code>OnModelCreating</code> method to configure the database schema.</p><p>The class includes properties for each of the <code>Quartz.NET</code> entities, such as <code>QrtzBlobTrigger, QrtzCalendar, QrtzCronTrigger,</code> etc. These properties represent database tables and are used to query and manipulate data related to <code>Quartz.NET</code> scheduling.</p><pre tabindex=0><code>using BlazorAppQuartzNETScheduler.Models.Quartz;
+using Microsoft.EntityFrameworkCore;
+
+namespace BlazorAppQuartzNETScheduler.Data;
+
+public partial class QuartzDbContext : DbContext
+{
+    public QuartzDbContext(DbContextOptions&lt;QuartzDbContext&gt; options)
+        : base(options)
+    {
+    }
+
+    public virtual DbSet&lt;QrtzBlobTrigger&gt; QrtzBlobTriggers { get; set; } = null!;
+    public virtual DbSet&lt;QrtzCalendar&gt; QrtzCalendars { get; set; } = null!;
+    public virtual DbSet&lt;QrtzCronTrigger&gt; QrtzCronTriggers { get; set; } = null!;
+    public virtual DbSet&lt;QrtzFiredTrigger&gt; QrtzFiredTriggers { get; set; } = null!;
+    public virtual DbSet&lt;QrtzJobDetail&gt; QrtzJobDetails { get; set; } = null!;
+    public virtual DbSet&lt;QrtzLock&gt; QrtzLocks { get; set; } = null!;
+    public virtual DbSet&lt;QrtzPausedTriggerGrp&gt; QrtzPausedTriggerGrps { get; set; } = null!;
+    public virtual DbSet&lt;QrtzSchedulerState&gt; QrtzSchedulerStates { get; set; } = null!;
+    public virtual DbSet&lt;QrtzSimpleTrigger&gt; QrtzSimpleTriggers { get; set; } = null!;
+    public virtual DbSet&lt;QrtzSimpropTrigger&gt; QrtzSimpropTriggers { get; set; } = null!;
+    public virtual DbSet&lt;QrtzTrigger&gt; QrtzTriggers { get; set; } = null!;
+
+}
+</code></pre><p>the <code>QuartzDbContext</code> class is defined with a constructor that accepts <code>DbContextOptions&lt;QuartzDbContext></code> as a parameter. This allows the class to be configured with the necessary options for connecting to the database.</p><p>The class includes properties for each of the Quartz.NET entities, such as <code>QrtzBlobTriggers, QrtzCalendars,</code> etc. These properties are used to query and manipulate data related to Quartz.NET scheduling.</p><p>The <code>OnModelCreating</code> method is overridden to configure the database schema using the <code>ModelBuilder</code> object. In this example, the configuration for the <code>QrtzBlobTrigger</code> entity is provided, including the table name, column mappings, and foreign key relationship.</p><h5 id=jobsrazor><strong>Jobs.razor</strong></h5><p>the Jobs page component demonstrates how to display a list of jobs and their <code>trigger</code> states, as well as how to <code>pause or resume all jobs</code>. With this application, users can easily schedule and manage their jobs with ease and efficiency.</p><pre tabindex=0><code>@page &#34;/Jobs&#34;
+
+@using BlazorAppQuartzNETScheduler.Models.Quartz
+@using BlazorAppQuartzNETScheduler.Data
+@using Microsoft.EntityFrameworkCore;
+@using Quartz;
+
+@inject QuartzDbContext QuartzDbContext
+@inject ISchedulerFactory SchedulerFactory
+@inject NavigationManager NavigationManager
+
+&lt;PageTitle&gt;Index&lt;/PageTitle&gt;
+
+&lt;h1&gt;Index&lt;/h1&gt;
+&lt;p&gt;
+    &lt;button class=&#34;btn btn-primary&#34; @onclick=&#34;() =&gt; ResumeAllJobs()&#34;&gt;Resume All Jobs&lt;/button&gt;
+    &lt;button class=&#34;btn btn-danger&#34; @onclick=&#34;() =&gt; PauseAllJobs()&#34;&gt;Pause All Jobs&lt;/button&gt;
+&lt;/p&gt;
+@if (jobs == null)
+{
+    &lt;p&gt;&lt;em&gt;Loading...&lt;/em&gt;&lt;/p&gt;
+}
+else
+{
+    &lt;table class=&#34;table&#34;&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;@nameof(QrtzJobDetail.JobName)&lt;/th&gt;
+                &lt;th&gt;@nameof(QrtzJobDetail.JobGroup)&lt;/th&gt;
+                &lt;th&gt;TriggerState&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            @foreach (var job in jobs)
+            {
+                &lt;tr&gt;
+                    &lt;td&gt;@job.JobName&lt;/td&gt;
+                    &lt;td&gt;@job.JobGroup&lt;/td&gt;
+                    &lt;td&gt;
+                        @foreach (var trigger in job.QrtzTriggers)
+                        {
+                            &lt;p&gt;
+                                TriggerState: @($&#34;{trigger.TriggerState}&#34;)
+                            &lt;/p&gt;
+                        }
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            }
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+}
+
+@code {
+    private IEnumerable&lt;QrtzJobDetail&gt;? jobs;
+    private IScheduler? scheduler;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (jobs is null)
+            await LoadData();
+
+        scheduler = await SchedulerFactory.GetScheduler();
+    }
+
+    private async Task LoadData()
+    {
+        jobs = await QuartzDbContext.QrtzJobDetails.Include(x =&gt; x.QrtzTriggers).ToListAsync();
+    }
+
+    async void ResumeAllJobs()
+    {
+        await scheduler.ResumeAll();
+        NavigationManager.NavigateTo(&#34;/Jobs&#34;, true);
+    }
+
+    async void PauseAllJobs()
+    {
+        await scheduler.PauseAll();
+        NavigationManager.NavigateTo(&#34;/Jobs&#34;, true);
+    }
+}
+</code></pre><h4 id=source><strong>Source</strong></h4><p>Full source code is available at this repository in GitHub:
+<a href=https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppQuartzNETScheduler>https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppQuartzNETScheduler</a></p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-18-blazor-scheduling-with-quartz.net%2f" target=_blank><i class="fab fa-facebook"></i></a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-18-blazor-scheduling-with-quartz.net%2f&text=Blazor%20Scheduling%20with%20Quartz.NET&via=akifmt" target=_blank><i class="fab fa-twitter"></i></a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-18-blazor-scheduling-with-quartz.net%2f&title=Blazor%20Scheduling%20with%20Quartz.NET" target=_blank><i class="fab fa-reddit"></i></a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-18-blazor-scheduling-with-quartz.net%2f&title=Blazor%20Scheduling%20with%20Quartz.NET" target=_blank><i class="fab fa-linkedin"></i></a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Blazor%20Scheduling%20with%20Quartz.NET https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-18-blazor-scheduling-with-quartz.net%2f" target=_blank><i class="fab fa-whatsapp"></i></a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Blazor%20Scheduling%20with%20Quartz.NET&body=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-08-18-blazor-scheduling-with-quartz.net%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/akifmt/akifmt.github.io/edit/main/content/dotnet/2023-08-18-Blazor-Scheduling-with-Quartz.NET/index.md title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="akifmt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
+<a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#blazor-scheduling-with-quartznet><strong>Blazor Scheduling with Quartz.NET</strong></a><ul><li><a href=#addrandomblogpostjobcs><strong>AddRandomBlogPostJob.cs</strong></a></li><li><a href=#programcs><strong>Program.cs</strong></a></li><li><a href=#quartznet-models><strong>Quartz.NET Models</strong></a></li><li><a href=#quartzdbcontextcs><strong>QuartzDbContext.cs</strong></a></li><li><a href=#jobsrazor><strong>Jobs.razor</strong></a></li></ul></li><li><a href=#source><strong>Source</strong></a></li></ul></li></ul></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts-dotnet>Recent Dotnet Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts>Recent Posts</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:akifmt@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>akifmt@gmail.com</span></a></li><li><a href=https://github.com/akifmt target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>akifmt</span></a></li></ul></div><div class="col-md-4 col-sm-12"><p>Stay up to date with email notification</p><form action="https://github.us1.list-manage.com/subscribe/post?u=19de52a4603135aae97163fd8&amp;amp;id=094a24c76e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div class=form-group><input type=email class=form-control id=mce-EMAIL name=EMAIL aria-describedby=emailHelp placeholder="Enter email">
+<small id=emailHelp class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small></div><button type=submit class="btn btn-info">Submit</button></form></div></div></div><hr><div class=container><p id=disclaimer><strong>Liability Notice:</strong> This theme is under MIT license. So, you can use it for non-commercial, commercial, or private uses. You can modify or distribute the theme without requiring any permission from the theme author. However, the theme author does not provide any warranty or takes any liability for any issue with the theme.</p></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2023 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script></body></html>
