@@ -13,7 +13,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Fri%20Aug%2025%202023%2021%3A34%3A56%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Wed%20Aug%2030%202023%2021%3A53%3A35%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Redis as Backplane (with Master and Slave)](https://github.com/akifmt/akifmt.github.io/commit/017c8152922eb3e2adb8820e56d9c90d9a53091d) - 2023-08-30T21:48:07Z 
 - :page_facing_up: [added new post Blazor Resize and Upload Images](https://github.com/akifmt/akifmt.github.io/commit/da79d4ff6294cc8b3325bd6cbf88c3ba49519075) - 2023-08-25T21:29:32Z 
 - :page_facing_up: [added new post Blazor Scheduling with Quartz.NET](https://github.com/akifmt/akifmt.github.io/commit/5f9313b6b8903c281e6d4577c209b849ccaa8efb) - 2023-08-18T22:18:00Z 
 - :page_facing_up: [added new rss format for dotnet pages](https://github.com/akifmt/akifmt.github.io/commit/e094e8f730d9766840c46a1cd02abffe1d7d8dbf) - 2023-08-18T22:14:15Z 
@@ -23,7 +24,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor Implementing Google reCAPTCHA v3](https://github.com/akifmt/akifmt.github.io/commit/ec51a147dd53f84e82fc8a79243252699a9460df) - 2023-08-12T10:52:09Z 
 - :page_facing_up: [added new post Blazor Radzen Globalization and Localization](https://github.com/akifmt/akifmt.github.io/commit/198b11bfb6b5fcc6684ae8457ca2b4f0dc595ea3) - 2023-08-09T21:50:41Z 
 - :page_facing_up: [added new post Blazor Using NPM Packages](https://github.com/akifmt/akifmt.github.io/commit/d4e7058d402eb4eabc94161a0243220bf6d69d10) - 2023-08-07T22:57:32Z 
-- :page_facing_up: [added new post Blazor Generic Components](https://github.com/akifmt/akifmt.github.io/commit/22a6e9677b9bdcb4c14293c3eabaeb8fc2aa6d46) - 2023-08-05T21:24:55Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
