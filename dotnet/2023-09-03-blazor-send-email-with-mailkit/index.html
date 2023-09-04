@@ -1,0 +1,215 @@
+<!doctype html><html><head><title>Blazor Send Email with MailKit</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/google-fonts/Mulish/mulish.css><link rel=stylesheet href=/fontawesome/css/all.min.css><link rel=stylesheet href=/css/colortheme/colortheme.css><link rel=icon type=image/png href=/images/site/favicon_hu5e0469842f323d92977e05301135eda0_41440_42x0_resize_box_3.png><meta property="og:title" content="Blazor Send Email with MailKit"><meta property="og:description" content="Blazor Send Email with MailKit"><meta property="og:type" content="article"><meta property="og:url" content="https://akifmt.github.io/dotnet/2023-09-03-blazor-send-email-with-mailkit/"><meta property="article:section" content="dotnet"><meta property="article:published_time" content="2023-09-03T00:00:00+00:00"><meta property="article:modified_time" content="2023-09-03T00:00:00+00:00"><meta name=description content="Blazor Send Email with MailKit"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-78150589-1","auto"),ga("send","pageview"))</script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png alt=Logo>
+akifmt</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class=nav-item><a class=nav-link id=blog-link href=/posts/>Blog</a></li><li class=nav-item><a class=nav-link href=/dotnet/><img height=20 src=/images/dotnet-logo.png> dotnet Blog</a></li><div class=dropdown-divider id=top-navbar-divider></div><li class="nav-item dropdown"><div id=theme-initialization style=display:none default-theme=system></div><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# onclick=enableLightTheme()><img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()><img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()><img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_huaeac6b74eff06a7b4d6b563d4aa0a06e_40468_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/dotnet/ data-filter=all>dotnet</a></li><div class=subtree><li><a class=active href=/dotnet/2023-09-03-blazor-send-email-with-mailkit/ title="Blazor Send Email with MailKit">Blazor Send Email with MailKit</a></li><li><a href=/dotnet/2023-08-30-blazor-redis-as-backplane/ title="Blazor Redis as Backplane">Blazor Redis as Backplane</a></li><li><a href=/dotnet/2023-08-25-blazor-resize-and-upload-images/ title="Blazor Resize and Upload Images">Blazor Resize and Upload Images</a></li><li><a href=/dotnet/2023-08-18-blazor-scheduling-with-quartz.net/ title="Blazor Scheduling with Quartz.NET">Blazor Scheduling with Quartz.NET</a></li><li><a href=/dotnet/2023-08-15-blazor-serilog-logging/ title="Blazor Serilog Logging to Console, File and Database">Blazor Serilog Logging to Console, File and Database</a></li><li><a href=/dotnet/2023-08-13-blazor-implementing-google-recaptcha-v2/ title="Blazor Implementing Google reCAPTCHA v2">Blazor Implementing Google reCAPTCHA v2</a></li><li><a href=/dotnet/2023-08-11-blazor-implementing-google-recaptcha-v3/ title="Blazor Implementing Google reCAPTCHA v3">Blazor Implementing Google reCAPTCHA v3</a></li><li><a href=/dotnet/2023-08-09-blazor-radzen-globalization-and-localization/ title="Blazor Radzen Globalization and Localization">Blazor Radzen Globalization and Localization</a></li><li><a href=/dotnet/2023-08-07-blazor-using-npm-packages/ title="Blazor Using NPM Packages">Blazor Using NPM Packages</a></li><li><a href=/dotnet/2023-08-05-blazor-generic-components/ title="Blazor Generic Components">Blazor Generic Components</a></li><li><a href=/dotnet/2023-08-02-blazor-rssfeed/ title="Blazor Expose a Feed as RSS">Blazor Expose a Feed as RSS</a></li><li><a href=/dotnet/2023-07-31-blazor-ef-multipledbproviders/ title="Blazor EF Migrations with Multiple Providers">Blazor EF Migrations with Multiple Providers</a></li><li><a href=/dotnet/2023-07-30-blazor-authentication-authorization/ title="Blazor Authentication and Authorization">Blazor Authentication and Authorization</a></li><li><a href=/dotnet/2023-07-26-blazor-radzen-crud/ title="Blazor Radzen CRUD">Blazor Radzen CRUD</a></li><li><a href=/dotnet/2023-07-21-blazor-radzen-searchcomponent/ title="Blazor Radzen SearchComponent">Blazor Radzen SearchComponent</a></li><li><a href=/dotnet/2023-07-20-blazor-plyr-video-player/ title="Blazor Plyr Video Player">Blazor Plyr Video Player</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/dotnet/2023-09-03-blazor-send-email-with-mailkit/blazor_dotnet.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/akif_hu0b098ee5eab0ebaed64b2691fffe1073_4640_120x120_fit_box_3.png alt="Author Image"><h5 class=author-name>Akif T.</h5><p>Sunday, September 3, 2023</p></div><div class=title><h1>Blazor Send Email with MailKit</h1></div><div class=taxonomy-terms><ul style=padding-left:0><li class=rounded><a href=/tags/dotnet/ class="btn, btn-sm">Dotnet</a></li><li class=rounded><a href=/tags/blazor-send-email-with-mailkit/ class="btn, btn-sm">Blazor Send Email with MailKit</a></li></ul></div><div class=post-content id=post-content><p style=text-align:center><img src=blazor_dotnet.jpg alt=blazor_dotnet title=blazor_dotnet><br><p><h4 id=blazor-send-email-with-mailkit><strong>Blazor Send Email with MailKit</strong></h4><p>How to send emails using MailKit in a Blazor application. MailKit is a cross-platform .NET library that provides a simple and efficient way to send and receive emails. We will create a class called EmailConfiguration to store the email server configuration settings.</p><p>MailKit: MailKit is an open-source .NET library that provides a high-level API for sending and receiving emails using various protocols such as SMTP, POP3, and IMAP.</p><p>SMTP: Simple Mail Transfer Protocol (SMTP) is a standard protocol used for sending emails over the internet. It is responsible for transferring the email from the sender&rsquo;s mail server to the recipient&rsquo;s mail server.</p><p>Blazor: Blazor is a web framework for building interactive client-side web applications using C# instead of JavaScript. It allows developers to write code that runs on the client-side in the browser.</p><p>ethereal.email: <a href=https://ethereal.email/>https://ethereal.email/</a> is a service that allows developers to test email functionality in web applications by providing temporary email addresses and capturing the sent emails for inspection on their website. It is a useful tool for ensuring the proper functioning of email features without the need for real email accounts.</p><h5 id=emailconfigurationcs><strong>EmailConfiguration.cs</strong></h5><p>A class called <code>EmailConfiguration</code> that represents the <code>email server configuration</code> settings. It has the following properties:</p><pre tabindex=0><code>namespace BlazorAppSendEmailwithMailKit.Data;
+public class EmailConfiguration
+{
+    public string Host { get; set; } = string.Empty;
+    public int Port { get; set; }
+    public string Username { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
+    public string From { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
+    public bool EnableSSL { get; set; }
+}
+</code></pre><p>Host: The hostname or <code>IP address</code> of the email server.</p><p>Port: The <code>port</code> number to connect to the email server.</p><p>Username: The <code>username</code> to authenticate with the email server.</p><p>Password: The <code>password</code> to authenticate with the email server.</p><p>From: The email address from which the email will be sent.</p><p>Name: The name associated with the email address.</p><p>EnableSSL: A boolean value indicating whether to <code>use SSL/TLS encryption</code> for the connection.</p><h5 id=emailmessagecs><strong>EmailMessage.cs</strong></h5><p>EmailMessage class is defined within the BlazorAppSendEmailwithMailKit.Data namespace. It contains three properties: <code>Email, Subject, and Message</code>.</p><pre tabindex=0><code>using System.ComponentModel.DataAnnotations;
+
+namespace BlazorAppSendEmailwithMailKit.Data;
+
+public class EmailMessage
+{
+    [EmailAddress]
+    public string Email { get; set; } = string.Empty;
+
+    [Required]
+    public string Subject { get; set; } = string.Empty;
+
+    [Required]
+    public string Message { get; set; } = string.Empty;
+}
+</code></pre><h5 id=iemailsendercs><strong>IEmailSender.cs</strong></h5><p>We define an interface called <code>IEmailSender</code> with a single method <code>SendEmailAsync</code>. This method takes three parameters: <code>email (the recipient's email address)</code>, <code>subject (the subject of the email)</code>, and <code>htmlMessage (the HTML content of the email)</code>.</p><pre tabindex=0><code>namespace BlazorAppSendEmailwithMailKit.Data;
+
+public interface IEmailSender
+{
+    Task SendEmailAsync(string email, string subject, string htmlMessage);
+}
+</code></pre><p>This interface will serve as the contract for sending emails.</p><h5 id=emailsendermailkitcs><strong>EmailSenderMailKit.cs</strong></h5><p>The <code>EmailSenderMailKit</code> class implements the <code>IEmailSender</code> interface, which requires the implementation of the <code>SendEmailAsync</code> method. This method takes the <code>recipient's email address</code>, <code>subject</code>, and <code>HTML message</code> as parameters.</p><pre tabindex=0><code>using MailKit.Net.Smtp;
+using Microsoft.Extensions.Options;
+using MimeKit;
+using MimeKit.Text;
+
+namespace BlazorAppSendEmailwithMailKit.Data;
+
+public class EmailSenderMailKit : IEmailSender
+{
+    private readonly EmailConfiguration _emailConfiguration;
+
+    public EmailSenderMailKit(IOptions&lt;EmailConfiguration&gt; emailConfiguration)
+    {
+        this._emailConfiguration = emailConfiguration.Value;
+    }
+
+    public Task SendEmailAsync(string email, string subject, string htmlMessage)
+    {
+        return Execute(email, subject, htmlMessage);
+    }
+
+    private async Task Execute(string to, string subject, string htmlMessage)
+    {
+        string host = _emailConfiguration.Host;
+        int port = _emailConfiguration.Port;
+        string username = _emailConfiguration.Username;
+        string password = _emailConfiguration.Password;
+        string from = _emailConfiguration.From;
+        string name = _emailConfiguration.Name;
+        bool enableSsl = _emailConfiguration.EnableSSL;
+
+        var email = new MimeMessage();
+
+        var sender = MailboxAddress.Parse(from);
+        if (!string.IsNullOrEmpty(name))
+            sender.Name = name;
+        email.Sender = sender;
+        email.From.Add(sender);
+        email.To.Add(MailboxAddress.Parse(to));
+        email.Subject = subject;
+        email.Body = new TextPart(TextFormat.Html) { Text = htmlMessage };
+
+        using (var smtp = new SmtpClient())
+        {
+            smtp.Timeout = 10000; // 10secs
+            try
+            {
+                await smtp.ConnectAsync(host, port, enableSsl);
+                if (!string.IsNullOrEmpty(username))
+                    smtp.Authenticate(username, password);
+                await smtp.SendAsync(email);
+                await smtp.DisconnectAsync(true);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+    }
+}
+</code></pre><p>The <code>EmailSenderMailKit</code> class also has a constructor that accepts an instance of <code>IOptions&lt;EmailConfiguration></code>. This allows us to retrieve the email server configuration settings from the <code>appsettings.json</code> file or any other configuration source.</p><p>Inside the <code>Execute</code> method, we retrieve the email server configuration settings from the <code>_emailConfiguration</code> object. We then create a new <code>MimeMessage</code> object and set the <code>sender, recipient, subject, and body</code> of the email.</p><p>Next, we create an instance of <code>SmtpClient</code> and set its timeout to 10 seconds. We then connect to the email server using the <code>ConnectAsync</code> method, authenticate if a username and password are provided, send the email using the <code>SendAsync</code> method, and finally disconnect from the server using the <code>DisconnectAsync</code> method.</p><h5 id=appsettingsjson><strong>appsettings.json</strong></h5><p><code>appsettings.json</code> file is a configuration file used in <code>ASP.NET Core</code> applications to store application settings. It follows a <code>JSON format</code> and can be used to store various settings, including email configuration.</p><pre tabindex=0><code>{
+  &#34;Email&#34;: {
+    &#34;Host&#34;: &#34;HOST_ADDRESS&#34;,
+    &#34;Port&#34;: 587,
+    &#34;Username&#34;: &#34;USERNAME&#34;,
+    &#34;Password&#34;: &#34;PASSWORD&#34;,
+    &#34;From&#34;: &#34;FROM_EMAIL&#34;,
+    &#34;Name&#34;: &#34;FROM_NAME&#34;,
+    &#34;EnableSSL&#34;: true
+  },
+  &#34;Logging&#34;: {
+    &#34;LogLevel&#34;: {
+      &#34;Default&#34;: &#34;Information&#34;,
+      &#34;Microsoft.AspNetCore&#34;: &#34;Warning&#34;
+    }
+  },
+  &#34;AllowedHosts&#34;: &#34;*&#34;
+}
+</code></pre><p>Email: This section contains the email configuration settings such as the host address, port number, username, password, from email address, from name, and whether to enable SSL.</p><h5 id=programcs><strong>Program.cs</strong></h5><p>In the <code>program.cs</code> file sets up the email sending functionality using MailKit in a Blazor application. Let&rsquo;s break down the code and understand its structure:</p><pre tabindex=0><code>// Add services to the container.
+builder.Services.AddTransient&lt;IEmailSender, EmailSenderMailKit&gt;();
+builder.Services.Configure&lt;EmailConfiguration&gt;(options =&gt;
+{
+    builder.Configuration.GetSection(&#34;Email&#34;).Bind(options);
+});
+</code></pre><p>The <code>builder.Services.AddTransient&lt;IEmailSender, EmailSenderMailKit>()</code> line registers the <code>EmailSenderMailKit</code> class as the implementation for the <code>IEmailSender</code> interface. This allows us to inject the <code>IEmailSender</code> interface wherever we need to send emails.</p><p>The <code>builder.Services.Configure&lt;EmailConfiguration>(options => { ... })</code> line configures the <code>EmailConfiguration</code> class by binding the configuration settings from the <code>appsettings.json</code> file. This allows us to retrieve the email configuration settings easily.</p><h5 id=sendemailrazor><strong>SendEmail.razor</strong></h5><p>Blazor component named <code>SendEmail.razor</code>. It allows users to enter <code>an email address, subject, and message, and then sends</code> the email using the <code>IEmailSender</code> service.</p><pre tabindex=0><code>@page &#34;/sendemail&#34;
+
+@using BlazorAppSendEmailwithMailKit.Data
+@inject IEmailSender EmailSender
+
+&lt;PageTitle&gt;Send Email&lt;/PageTitle&gt;
+
+@if (emailMessage is null)
+{
+    &lt;p&gt;Loading...&lt;/p&gt;
+}
+else
+{
+    &lt;EditForm Model=@emailMessage OnValidSubmit=@ValidFormSubmitted&gt;
+        &lt;DataAnnotationsValidator /&gt;
+        &lt;ValidationSummary /&gt;
+        &lt;p&gt;Send Email&lt;/p&gt;
+        &lt;div class=&#34;form-group&#34;&gt;
+            &lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt;
+            &lt;InputText @bind-Value=emailMessage.Email class=&#34;form-control&#34; id=&#34;email&#34; /&gt;
+            &lt;ValidationMessage For=&#34;() =&gt; emailMessage.Email&#34; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;form-group&#34;&gt;
+            &lt;label for=&#34;subject&#34;&gt;Subject&lt;/label&gt;
+            &lt;InputText @bind-Value=emailMessage.Subject class=&#34;form-control&#34; id=&#34;subject&#34; /&gt;
+            &lt;ValidationMessage For=&#34;() =&gt; emailMessage.Subject&#34; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;form-group&#34;&gt;
+            &lt;label for=&#34;message&#34;&gt;Message&lt;/label&gt;
+            &lt;InputTextArea @bind-Value=emailMessage.Message class=&#34;form-control&#34; id=&#34;message&#34; /&gt;
+            &lt;ValidationMessage For=&#34;() =&gt; emailMessage.Message&#34; /&gt;
+        &lt;/div&gt;
+
+        &lt;input type=&#34;submit&#34; class=&#34;btn btn-primary&#34; value=&#34;Send&#34; /&gt;
+
+    &lt;/EditForm&gt;
+
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;label for=&#34;result&#34;&gt;Result:&lt;/label&gt;
+        &lt;input type=&#34;text&#34; value=@result readonly class=&#34;form-control&#34; id=&#34;result&#34; /&gt;
+    &lt;/div&gt;
+}
+
+@code {
+    private string result = string.Empty;
+    private EmailMessage? emailMessage;
+
+    protected override void OnInitialized()
+    {
+        emailMessage = new();
+    }
+
+    private async Task ValidFormSubmitted()
+    {
+        if (emailMessage is null) return;
+        try
+        {
+            result = &#34;sending...&#34;;
+            await EmailSender.SendEmailAsync(emailMessage.Email, emailMessage.Subject, emailMessage.Message);
+            result = &#34;success&#34;;
+        }
+        catch (Exception ex)
+        {
+            result = ex.Message;
+        }
+    }
+
+}
+</code></pre><p>The code is structured as follows:</p><p>Page Directive: The <code>@page</code> directive specifies the URL route for the component.</p><p>Using Directive: The <code>@using</code> directive imports the necessary namespaces for the component.</p><p>Dependency Injection: The <code>@inject</code> directive injects the <code>IEmailSender</code> service into the component.</p><p>PageTitle: The <code>PageTitle</code> component sets the page title.</p><p>Conditional Rendering: The code uses conditional rendering to display a loading message while the email message is being loaded, and the email form once the message is loaded.</p><p>EditForm: The <code>EditForm</code> component wraps the email form and handles form submission and validation.</p><p>DataAnnotationsValidator: The <code>DataAnnotationsValidator</code> component performs validation based on data annotations applied to the <code>EmailMessage</code> model.</p><p>ValidationSummary: The <code>ValidationSummary</code> component displays a summary of validation errors.</p><p>Form Fields: The code defines form fields for <code>email, subject, and message</code> using <code>Blazor's InputText</code> and <code>InputTextArea</code> components. It also includes validation messages for each field.</p><p>Submit Button: The code includes a submit button that triggers the <code>ValidFormSubmitted</code> method when clicked.</p><p>Result Display: The code displays the result of the email sending operation.</p><p>Code Block: The @code block contains the C# code for the component. It initializes the result variable, handles form submission, and sends the email using the EmailSender service.</p><h4 id=source><strong>Source</strong></h4><p>Full source code is available at this repository in GitHub:
+<a href=https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppSendEmailwithMailKit>https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppSendEmailwithMailKit</a></p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-03-blazor-send-email-with-mailkit%2f" target=_blank><i class="fab fa-facebook"></i></a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-03-blazor-send-email-with-mailkit%2f&text=Blazor%20Send%20Email%20with%20MailKit&via=akifmt" target=_blank><i class="fab fa-twitter"></i></a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-03-blazor-send-email-with-mailkit%2f&title=Blazor%20Send%20Email%20with%20MailKit" target=_blank><i class="fab fa-reddit"></i></a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-03-blazor-send-email-with-mailkit%2f&title=Blazor%20Send%20Email%20with%20MailKit" target=_blank><i class="fab fa-linkedin"></i></a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Blazor%20Send%20Email%20with%20MailKit https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-03-blazor-send-email-with-mailkit%2f" target=_blank><i class="fab fa-whatsapp"></i></a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Blazor%20Send%20Email%20with%20MailKit&body=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-03-blazor-send-email-with-mailkit%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/akifmt/akifmt.github.io/edit/main/content/dotnet/2023-09-03-Blazor-Send-Email-with-MailKit/index.md title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="akifmt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
+<a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#blazor-send-email-with-mailkit><strong>Blazor Send Email with MailKit</strong></a><ul><li><a href=#emailconfigurationcs><strong>EmailConfiguration.cs</strong></a></li><li><a href=#emailmessagecs><strong>EmailMessage.cs</strong></a></li><li><a href=#iemailsendercs><strong>IEmailSender.cs</strong></a></li><li><a href=#emailsendermailkitcs><strong>EmailSenderMailKit.cs</strong></a></li><li><a href=#appsettingsjson><strong>appsettings.json</strong></a></li><li><a href=#programcs><strong>Program.cs</strong></a></li><li><a href=#sendemailrazor><strong>SendEmail.razor</strong></a></li></ul></li><li><a href=#source><strong>Source</strong></a></li></ul></li></ul></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts-dotnet>Recent Dotnet Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts>Recent Posts</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:akifmt@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>akifmt@gmail.com</span></a></li><li><a href=https://github.com/akifmt target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>akifmt</span></a></li></ul></div><div class="col-md-4 col-sm-12"><p>Stay up to date with email notification</p><form action="https://github.us1.list-manage.com/subscribe/post?u=19de52a4603135aae97163fd8&amp;amp;id=094a24c76e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div class=form-group><input type=email class=form-control id=mce-EMAIL name=EMAIL aria-describedby=emailHelp placeholder="Enter email">
+<small id=emailHelp class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small></div><button type=submit class="btn btn-info">Submit</button></form></div></div></div><hr><div class=container><p id=disclaimer><strong>Liability Notice:</strong> This theme is under MIT license. So, you can use it for non-commercial, commercial, or private uses. You can modify or distribute the theme without requiring any permission from the theme author. However, the theme author does not provide any warranty or takes any liability for any issue with the theme.</p></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2023 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script></body></html>
