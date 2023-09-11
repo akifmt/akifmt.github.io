@@ -1,0 +1,587 @@
+<!doctype html><html><head><title>Blazor Radzen Loading on Page</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/google-fonts/Mulish/mulish.css><link rel=stylesheet href=/fontawesome/css/all.min.css><link rel=stylesheet href=/css/colortheme/colortheme.css><link rel=icon type=image/png href=/images/site/favicon_hu5e0469842f323d92977e05301135eda0_41440_42x0_resize_box_3.png><meta property="og:title" content="Blazor Radzen Loading on Page"><meta property="og:description" content="Blazor Radzen Loading on Page"><meta property="og:type" content="article"><meta property="og:url" content="https://akifmt.github.io/dotnet/2023-09-10-blazor-radzen-loading-on-page/"><meta property="article:section" content="dotnet"><meta property="article:published_time" content="2023-09-10T00:00:00+00:00"><meta property="article:modified_time" content="2023-09-10T00:00:00+00:00"><meta name=description content="Blazor Radzen Loading on Page"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-78150589-1","auto"),ga("send","pageview"))</script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png alt=Logo>
+akifmt</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class=nav-item><a class=nav-link id=blog-link href=/posts/>Blog</a></li><li class=nav-item><a class=nav-link href=/dotnet/><img height=20 src=/images/dotnet-logo.png> dotnet Blog</a></li><div class=dropdown-divider id=top-navbar-divider></div><li class="nav-item dropdown"><div id=theme-initialization style=display:none default-theme=system></div><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# onclick=enableLightTheme()><img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()><img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()><img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_huaeac6b74eff06a7b4d6b563d4aa0a06e_40468_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/dotnet/ data-filter=all>dotnet</a></li><div class=subtree><li><a class=active href=/dotnet/2023-09-10-blazor-radzen-loading-on-page/ title="Blazor Radzen Loading on Page">Blazor Radzen Loading on Page</a></li><li><a href=/dotnet/2023-09-03-blazor-send-email-with-mailkit/ title="Blazor Send Email with MailKit">Blazor Send Email with MailKit</a></li><li><a href=/dotnet/2023-08-30-blazor-redis-as-backplane/ title="Blazor Redis as Backplane">Blazor Redis as Backplane</a></li><li><a href=/dotnet/2023-08-25-blazor-resize-and-upload-images/ title="Blazor Resize and Upload Images">Blazor Resize and Upload Images</a></li><li><a href=/dotnet/2023-08-18-blazor-scheduling-with-quartz.net/ title="Blazor Scheduling with Quartz.NET">Blazor Scheduling with Quartz.NET</a></li><li><a href=/dotnet/2023-08-15-blazor-serilog-logging/ title="Blazor Serilog Logging to Console, File and Database">Blazor Serilog Logging to Console, File and Database</a></li><li><a href=/dotnet/2023-08-13-blazor-implementing-google-recaptcha-v2/ title="Blazor Implementing Google reCAPTCHA v2">Blazor Implementing Google reCAPTCHA v2</a></li><li><a href=/dotnet/2023-08-11-blazor-implementing-google-recaptcha-v3/ title="Blazor Implementing Google reCAPTCHA v3">Blazor Implementing Google reCAPTCHA v3</a></li><li><a href=/dotnet/2023-08-09-blazor-radzen-globalization-and-localization/ title="Blazor Radzen Globalization and Localization">Blazor Radzen Globalization and Localization</a></li><li><a href=/dotnet/2023-08-07-blazor-using-npm-packages/ title="Blazor Using NPM Packages">Blazor Using NPM Packages</a></li><li><a href=/dotnet/2023-08-05-blazor-generic-components/ title="Blazor Generic Components">Blazor Generic Components</a></li><li><a href=/dotnet/2023-08-02-blazor-rssfeed/ title="Blazor Expose a Feed as RSS">Blazor Expose a Feed as RSS</a></li><li><a href=/dotnet/2023-07-31-blazor-ef-multipledbproviders/ title="Blazor EF Migrations with Multiple Providers">Blazor EF Migrations with Multiple Providers</a></li><li><a href=/dotnet/2023-07-30-blazor-authentication-authorization/ title="Blazor Authentication and Authorization">Blazor Authentication and Authorization</a></li><li><a href=/dotnet/2023-07-26-blazor-radzen-crud/ title="Blazor Radzen CRUD">Blazor Radzen CRUD</a></li><li><a href=/dotnet/2023-07-21-blazor-radzen-searchcomponent/ title="Blazor Radzen SearchComponent">Blazor Radzen SearchComponent</a></li><li><a href=/dotnet/2023-07-20-blazor-plyr-video-player/ title="Blazor Plyr Video Player">Blazor Plyr Video Player</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/dotnet/2023-09-10-blazor-radzen-loading-on-page/blazor_radzen_dotnet.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/akif_hu0b098ee5eab0ebaed64b2691fffe1073_4640_120x120_fit_box_3.png alt="Author Image"><h5 class=author-name>Akif T.</h5><p>Sunday, September 10, 2023</p></div><div class=title><h1>Blazor Radzen Loading on Page</h1></div><div class=taxonomy-terms><ul style=padding-left:0><li class=rounded><a href=/tags/dotnet/ class="btn, btn-sm">Dotnet</a></li><li class=rounded><a href=/tags/blazor-radzen-loading-on-page/ class="btn, btn-sm">Blazor Radzen Loading on Page</a></li></ul></div><div class=post-content id=post-content><p style=text-align:center><img src=blazor_radzen_dotnet.jpg alt=blazor_radzen_dotnet title=blazor_radzen_dotnet><br><p><h4 id=blazor-radzen-loading-on-page><strong>Blazor Radzen Loading on Page</strong></h4><p style=text-align:center><img src=loading.jpg alt=loading title=loading><br><p><p>Blazor: Blazor is a web framework that allows developers to build interactive web UIs using C# instead of JavaScript. It enables full-stack development with .NET.</p><p>Radzen: Radzen is a set of UI components for Blazor that provides ready-to-use components for building responsive and user-friendly web applications.</p><p>Loading Indicator: A loading indicator is a visual element that indicates the progress of an ongoing operation, such as data loading or processing.</p><p>ProgressBarCircular: ProgressBarCircular is a Radzen component that displays a circular progress bar. It can be customized to show the current step number and percentage.</p><h5 id=loadingindicatoroptionscs><strong>LoadingIndicatorOptions.cs</strong></h5><p>LoadingIndicatorOptions class is a C# code that defines the options for a loading indicator component in a Blazor application. This code provides a way to customize the behavior and appearance of the loading indicator.</p><pre tabindex=0><code>namespace BlazorAppRadzenLoading.Components;
+
+public class LoadingIndicatorOptions
+{
+    public LoadingIndicatorOptions(
+        bool startAfterRender = true,
+        bool showStepNumbers = false, bool showPercentage = true,
+        int currentStep = 0, int totalSteps = 1)
+    {
+        StartAfterRender = startAfterRender;
+        ShowStepNumbers = showStepNumbers;
+        ShowPercentage = showPercentage;
+        CurrentStep = currentStep;
+        TotalSteps = totalSteps;
+    }
+
+    public Action? UpdateAction { get; set; }
+
+    private bool startAfterRender;
+
+    public bool StartAfterRender
+    {
+        get =&gt; startAfterRender;
+        set
+        {
+            startAfterRender = value;
+            if (UpdateAction is not null) UpdateAction.Invoke();
+        }
+    }
+
+    private bool showStepNumbers;
+
+    public bool ShowStepNumbers
+    {
+        get =&gt; showStepNumbers;
+        set
+        {
+            showStepNumbers = value;
+            if (UpdateAction is not null) UpdateAction.Invoke();
+        }
+    }
+
+    private bool showPercentage;
+
+    public bool ShowPercentage
+    {
+        get =&gt; showPercentage;
+        set
+        {
+            showPercentage = value;
+            if (UpdateAction is not null) UpdateAction.Invoke();
+        }
+    }
+
+    private int currentStep;
+
+    public int CurrentStep
+    {
+        get =&gt; currentStep;
+        set
+        {
+            currentStep = value;
+            CurrentPercent = (int)(((float)currentStep / (float)totalSteps) * 100);
+            if (UpdateAction is not null) UpdateAction.Invoke();
+        }
+    }
+
+    private int currentPercent;
+
+    public int CurrentPercent
+    {
+        get =&gt; currentPercent;
+        set
+        {
+            currentPercent = value;
+            if (UpdateAction is not null) UpdateAction.Invoke();
+        }
+    }
+
+    private int totalSteps = 1;
+
+    public int TotalSteps
+    {
+        get =&gt; totalSteps;
+        set
+        {
+            totalSteps = value;
+            if (UpdateAction is not null) UpdateAction.Invoke();
+        }
+    }
+}
+</code></pre><p><code>LoadingIndicatorOptions</code> class: This class represents the options for the <code>loading indicator</code>. It contains properties and methods to control various aspects of the loading indicator, such as when to <code>start rendering</code>, whether <code>to show step numbers or percentage</code>, <code>the current step</code>, and <code>the total number of steps</code>.</p><p>Constructor: The <code>LoadingIndicatorOptions</code> class has a constructor that initializes the properties of the class. It takes several optional parameters that allow you to customize the initial state of the loading indicator.</p><p>Properties:</p><p>StartAfterRender: A <code>boolean</code> property that determines whether the <code>loading indicator</code> should start rendering after the component has finished rendering.</p><p>ShowStepNumbers: A <code>boolean</code> property that determines whether to <code>show step numbers</code> in the loading indicator.</p><p>ShowPercentage: A <code>boolean</code> property that determines whether to <code>show the percentage of completion</code> in the loading indicator.</p><p>CurrentStep: An <code>integer</code> property that represents the <code>current step</code> of the loading process.</p><p>TotalSteps: An <code>integer</code> property that represents the <code>total number of steps</code> in the loading process.</p><p>UpdateAction: An <code>optional action delegate</code> that is invoked whenever a property is updated. This allows you to perform additional actions when the loading indicator options change.</p><p>Property Setters: The properties of the <code>LoadingIndicatorOptions</code> class have custom setters that update the corresponding property value and invoke the <code>UpdateAction</code> delegate if it is not null. This ensures that any changes to the <code>options trigger a refresh</code> of the loading indicator.</p><h5 id=loadingindicatorrenderfragmentrazor><strong>LoadingIndicatorRenderFragment.razor</strong></h5><p>It consists of a RadzenStack component that contains a RadzenProgressBarCircular and a RadzenText component. The RadzenProgressBarCircular is used to display the loading progress, while the RadzenText component shows a loading message.</p><pre tabindex=0><code>&lt;RadzenStack Orientation=&#34;Orientation.Vertical&#34; AlignItems=&#34;AlignItems.Center&#34; JustifyContent=&#34;JustifyContent.Center&#34; Wrap=&#34;FlexWrap.Wrap&#34; Class=&#34;rz-m-12&#34; Gap=&#34;2rem&#34;&gt;
+    &lt;RadzenProgressBarCircular ShowValue=&#34;true&#34; Mode=&#34;ProgressBarMode.Indeterminate&#34; Size=&#34;ProgressBarCircularSize.Large&#34;&gt;
+        &lt;Template&gt;
+            @if (Option.ShowStepNumbers)
+            {
+                @($&#34;{Option.CurrentStep} / {Option.TotalSteps}&#34;)
+            }
+            @if (Option.ShowPercentage)
+            {
+                @($&#34;{Option.CurrentPercent}%&#34;)
+            }
+        &lt;/Template&gt;
+    &lt;/RadzenProgressBarCircular&gt;
+    &lt;RadzenText TextStyle=&#34;TextStyle.H6&#34;&gt;Loading, please wait...&lt;/RadzenText&gt;
+&lt;/RadzenStack&gt;
+
+@code {
+
+    [Parameter]
+    public LoadingIndicatorOptions Option { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Option.UpdateAction = StateHasChanged;
+    }
+
+}
+</code></pre><h5 id=loadingindicatorrazor><strong>LoadingIndicator.razor</strong></h5><pre tabindex=0><code>@inject DialogService DialogService
+
+@code {
+
+    [Parameter, EditorRequired]
+    public EventCallback DoLoadDataCallback { get; set; }
+
+    [Parameter, EditorRequired]
+    public LoadingIndicatorOptions Option { get; set; }
+
+    private CancellationTokenSource? cts;
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            if (Option.StartAfterRender)
+                await this.Run();
+    }
+
+    public async Task Run()
+    {
+        await this.ShowLoadingDialog();
+        await DoLoadDataCallback.InvokeAsync();
+        Option.CurrentStep = Option.TotalSteps;
+        await this.HideDialog();
+    }
+
+    private async Task ShowLoadingDialog()
+    {
+        cts = new CancellationTokenSource();
+        _ = InvokeAsync(async () =&gt; await LoadingDialog());
+        await Task.Run(() =&gt; CheckForHide(), cts.Token);
+    }
+
+    private async Task HideDialog()
+    {
+        if (cts is not null)
+            cts.Cancel();
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async void CheckForHide()
+    {
+        if (cts is null) return;
+
+        while (!cts.IsCancellationRequested)
+            await Task.Delay(500);
+        await InvokeAsync(() =&gt; DialogService.Close());
+    }
+
+    private async Task LoadingDialog()
+    {
+        await DialogService.OpenAsync&lt;LoadingIndicatorRenderFragment&gt;(&#34;&#34;, new Dictionary&lt;string, object&gt; { { &#34;Option&#34;, Option } },
+                new DialogOptions() { ShowTitle = false, Style = &#34;min-height:auto;min-width:auto;width:auto&#34;, CloseDialogOnEsc = false });
+    }
+
+}
+</code></pre><p>Dependency Injection: The <code>@inject</code> directive is used to inject the DialogService into the component. This service is provided by <code>Radzen</code> and allows us to interact with the dialog components.</p><p>Component Parameters: The component defines two parameters: <code>DoLoadDataCallback and Option</code>. These parameters are used to pass the necessary <code>data and options</code> to the component.</p><p>Lifecycle Method: The <code>OnAfterRenderAsync</code> method is overridden to execute code after the component has been rendered. In this method, we check if it&rsquo;s the first render and if the <code>StartAfterRender</code> option is enabled. If so, we call the <code>Run</code> method.</p><p>Run Method: The <code>Run method</code> is responsible for displaying the loading dialog, invoking the <code>DoLoadDataCallback</code> method to load the data, updating the current step, and hiding the dialog.</p><p>ShowLoadingDialog Method: This method creates a new <code>CancellationTokenSource</code> and invokes the <code>LoadingDialog</code> method asynchronously. It also starts <code>a background task</code> to check for cancellation and hide the dialog.</p><p>HideDialog Method: This method cancels the <code>CancellationTokenSource</code> and updates the <code>component's state</code> to trigger a re-render.</p><p>CheckForHide Method: This method continuously checks if the <code>cancellation token</code> has been requested and hides the dialog when it&rsquo;s canceled.</p><p>LoadingDialog Method: This method opens the loading indicator dialog using the <code>DialogService</code>. It passes the <code>Option</code> parameter and customizes the dialog options.</p><h5 id=pagewithloadingrazor><strong>PagewithLoading.razor</strong></h5><p>Blazor page with a loading indicator component and some UI elements. It fetches data from the GitHub API and updates the page content accordingly.</p><pre tabindex=0><code>@page &#34;/pagewithloading&#34;
+@using System.Text.Json.Serialization;
+@using BlazorAppRadzenLoading.Models;
+
+@inject DialogService DialogService
+
+&lt;PageTitle&gt;Index&lt;/PageTitle&gt;
+
+&lt;!-- LOADING COMPONENT --&gt;
+&lt;BlazorAppRadzenLoading.Components.LoadingIndicator DoLoadDataCallback=&#34;LoadDataAsync&#34;
+                                                    Option=&#34;options&#34; /&gt;
+
+&lt;RadzenContent Container=&#34;main&#34;&gt;
+    &lt;RadzenIcon Icon=&#34;assessment&#34; /&gt;
+    &lt;RadzenHeading Size=&#34;H1&#34; style=&#34;display: inline-block&#34; Text=&#34;Dashboard&#34; /&gt;
+    &lt;RadzenHeading Size=&#34;H2&#34; Text=&#34;Stats&#34; /&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-md-12 col-xl-3 col-lg-6&#34;&gt;
+            &lt;RadzenCard style=&#34;margin-bottom: 16px&#34;&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-4 col-4&#34;&gt;
+                        &lt;RadzenIcon Icon=&#34;badge&#34; style=&#34;color: #68d5c8; font-size: 48px; height: 64px; width: 100%&#34; /&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-8 col-8&#34;&gt;
+                        &lt;RadzenHeading Size=&#34;H4&#34; style=&#34;margin-bottom: 0px; text-align: right&#34; /&gt;
+                        &lt;RadzenHeading Text=&#34;Organization&#34;
+                                       Size=&#34;H4&#34; style=&#34;color: #88989b; font-size: 12px; margin-bottom: 0px; text-align: right&#34; /&gt;
+                        &lt;RadzenHeading Text=&#34;@organization?.Name&#34;
+                                       Size=&#34;H4&#34; style=&#34;color: #68d5c8; font-size: 16px; margin-bottom: 0px; margin-top: 13px; text-align: right&#34; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/RadzenCard&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-md-12 col-xl-3 col-lg-6&#34;&gt;
+            &lt;RadzenCard style=&#34;margin-bottom: 16px&#34;&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-4 col-4&#34;&gt;
+                        &lt;RadzenIcon Icon=&#34;functions&#34; style=&#34;color: #f9777f; font-size: 48px; height: 64px; width: 100%&#34; /&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-8 col-8&#34;&gt;
+                        &lt;RadzenHeading Size=&#34;H4&#34; style=&#34;margin-bottom: 0px; text-align: right&#34; /&gt;
+                        &lt;RadzenHeading Text=&#34;Total Repos&#34;
+                                       Size=&#34;H4&#34; style=&#34;color: #88989b; font-size: 12px; margin-bottom: 0px; text-align: right&#34; /&gt;
+                        &lt;RadzenHeading Text=&#34;@organization?.TotalPublicRepos.ToString()&#34;
+                                       Size=&#34;H4&#34; style=&#34;color: #f9777f; font-size: 24px; margin-bottom: 0px; margin-top: 13px; text-align: right&#34; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/RadzenCard&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-md-12 col-xl-3 col-lg-6&#34;&gt;
+            &lt;RadzenCard style=&#34;margin-bottom: 16px&#34;&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-4 col-4&#34;&gt;
+                        &lt;RadzenIcon Icon=&#34;thumb_up&#34; style=&#34;color: #ff6d41; font-size: 48px; height: 64px; width: 100%&#34; /&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-8 col-8&#34;&gt;
+                        &lt;RadzenHeading Size=&#34;H4&#34; style=&#34;margin-bottom: 0px; text-align: right&#34; /&gt;
+                        &lt;RadzenHeading Text=&#34;Total Followers&#34;
+                                       Size=&#34;H4&#34; style=&#34;color: #88989b; font-size: 12px; margin-bottom: 0px; text-align: right&#34; /&gt;
+                        &lt;RadzenHeading Text=&#34;@organization?.TotalFollowers.ToString()&#34;
+                                       Size=&#34;H4&#34; style=&#34;color: #ff6d41; font-size: 24px; margin-bottom: 0px; margin-top: 13px; text-align: right&#34; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/RadzenCard&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-md-12 col-xl-3 col-lg-6&#34;&gt;
+            &lt;RadzenCard style=&#34;margin-bottom: 16px&#34;&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-4 col-4&#34;&gt;
+                        &lt;RadzenIcon Icon=&#34;thumbs_up_down&#34; style=&#34;color: #479cc8; font-size: 48px; height: 64px; width: 100%&#34; /&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-8 col-8&#34;&gt;
+                        &lt;RadzenHeading Size=&#34;H4&#34; style=&#34;margin-bottom: 0px; text-align: right&#34; /&gt;
+                        &lt;RadzenHeading Text=&#34;Total Followings&#34;
+                                       Size=&#34;H4&#34; style=&#34;color: #88989b; font-size: 12px; margin-bottom: 0px; text-align: right&#34; /&gt;
+                        &lt;RadzenHeading Text=&#34;@organization?.TotalFollowings.ToString()&#34;
+                                       Size=&#34;H4&#34; style=&#34;color: #479cc8; font-size: 24px; margin-bottom: 0px; margin-top: 13px; text-align: right&#34; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/RadzenCard&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-md-12&#34;&gt;
+            &lt;RadzenHeading Size=&#34;H2&#34; Text=&#34;Repo Stats (aspnetcore)&#34; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-md-12&#34;&gt;
+            &lt;div class=&#34;row&#34;&gt;
+                &lt;div class=&#34;col-md-12 col-lg-6 col-xl-4&#34;&gt;
+                    &lt;RadzenCard style=&#34;margin-bottom: 16px&#34;&gt;
+                        &lt;RadzenChart ColorScheme=&#34;ColorScheme.Pastel&#34;&gt;
+                            &lt;RadzenColumnSeries Title=&#34;Issues by Label&#34;
+                                                CategoryProperty=&#34;@(nameof(IssueGroupbyLabel.LabelName))&#34;
+                                                TItem=&#34;IssueGroupbyLabel&#34;
+                                                Data=&#34;@issueGroupsbyLabel&#34;
+                                                ValueProperty=&#34;@(nameof(IssueGroupbyLabel.Count))&#34; /&gt;
+                        &lt;/RadzenChart&gt;
+                    &lt;/RadzenCard&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;col-md-12 col-lg-6 col-xl-4&#34;&gt;
+                    &lt;RadzenCard style=&#34;margin-bottom: 16px&#34;&gt;
+                        &lt;RadzenChart ColorScheme=&#34;ColorScheme.Pastel&#34;&gt;
+                            @if (issueGroupsbyLabelandCreatedAt is not null)
+                            {
+                                @foreach (var key in issueGroupsbyLabelandCreatedAt.Keys)
+                                {
+                                    IEnumerable&lt;IssueGroupbyLabel&gt; list = issueGroupsbyLabelandCreatedAt[key].AsEnumerable();
+                                    &lt;RadzenLineSeries Title=&#34;@key&#34;
+                                                      CategoryProperty=&#34;@(nameof(IssueGroupbyLabel.CreatedAtString))&#34;
+                                                      TItem=&#34;IssueGroupbyLabel&#34;
+                                                      Data=&#34;@list&#34;
+                                                      ValueProperty=&#34;@(nameof(IssueGroupbyLabel.Count))&#34; /&gt;
+                                }
+                            }
+                        &lt;/RadzenChart&gt;
+                    &lt;/RadzenCard&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;col-md-12 col-lg-6 col-xl-4&#34;&gt;
+                    &lt;RadzenCard style=&#34;margin-bottom: 16px&#34;&gt;
+                        &lt;RadzenChart ColorScheme=&#34;ColorScheme.Pastel&#34;&gt;
+                            &lt;RadzenBarSeries Title=&#34;Issues by Date&#34;
+                                             CategoryProperty=&#34;@(nameof(IssueGroup.CreatedAtString))&#34;
+                                             TItem=&#34;IssueGroup&#34;
+                                             Data=&#34;@issueGroupsCreatedAt&#34;
+                                             ValueProperty=&#34;@(nameof(IssueGroup.Count))&#34; /&gt;
+                        &lt;/RadzenChart&gt;
+                    &lt;/RadzenCard&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-md-12&#34;&gt;
+            &lt;RadzenHeading Size=&#34;H2&#34; Text=&#34;Repositories&#34; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-md-12 col-xl-6&#34;&gt;
+            &lt;RadzenCard&gt;
+                &lt;RadzenHeading Size=&#34;H3&#34; Text=&#34;Last Updated Repos&#34; /&gt;
+                &lt;RadzenDataGrid Data=&#34;@reposLastUpdated&#34; TItem=&#34;Repo&#34;
+                                AllowFiltering=&#34;false&#34; AllowColumnResize=&#34;true&#34; AllowAlternatingRows=&#34;false&#34; AllowSorting=&#34;true&#34;&gt;
+                    &lt;Columns&gt;
+                        &lt;RadzenDataGridColumn TItem=&#34;Repo&#34;
+                                              Property=&#34;@nameof(Repo.Name)&#34; Title=&#34;@nameof(Repo.Name)&#34; /&gt;
+                        &lt;RadzenDataGridColumn TItem=&#34;Repo&#34;
+                                              Property=&#34;@nameof(Repo.UpdatedAt)&#34; Title=&#34;@nameof(Repo.UpdatedAt)&#34; /&gt;
+                    &lt;/Columns&gt;
+                &lt;/RadzenDataGrid&gt;
+            &lt;/RadzenCard&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-md-12 col-xl-6&#34;&gt;
+            &lt;RadzenCard&gt;
+                &lt;RadzenHeading Size=&#34;H3&#34; Text=&#34;Last Issues (aspnetcore)&#34; /&gt;
+                &lt;RadzenDataGrid Data=&#34;@issuesLastUpdated&#34; TItem=&#34;Issue&#34;
+                                AllowFiltering=&#34;false&#34; AllowColumnResize=&#34;true&#34; AllowAlternatingRows=&#34;false&#34; AllowSorting=&#34;true&#34;&gt;
+                    &lt;Columns&gt;
+                        &lt;RadzenDataGridColumn TItem=&#34;Issue&#34;
+                                              Property=&#34;@nameof(Issue.Title)&#34; Title=&#34;@nameof(Issue.Title)&#34; /&gt;
+                        &lt;RadzenDataGridColumn TItem=&#34;Issue&#34;
+                                              Property=&#34;@nameof(Issue.State)&#34; Title=&#34;@nameof(Issue.State)&#34; /&gt;
+                        &lt;RadzenDataGridColumn TItem=&#34;Issue&#34;
+                                              Property=&#34;@nameof(Issue.UpdatedAt)&#34; Title=&#34;@nameof(Issue.UpdatedAt)&#34; /&gt;
+                    &lt;/Columns&gt;
+                &lt;/RadzenDataGrid&gt;
+            &lt;/RadzenCard&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/RadzenContent&gt;
+
+@code {
+    BlazorAppRadzenLoading.Components.LoadingIndicatorOptions options =
+                        new(true, false, true, 0, 6);
+
+    Organization? organization;
+    IEnumerable&lt;Repo&gt;? reposLastUpdated;
+    IEnumerable&lt;IssueGroupbyLabel&gt;? issueGroupsbyLabel;
+    Dictionary&lt;string, List&lt;IssueGroupbyLabel&gt;&gt;? issueGroupsbyLabelandCreatedAt;
+    IEnumerable&lt;Issue&gt;? issuesLastUpdated;
+    IEnumerable&lt;IssueGroup&gt;? issueGroupsCreatedAt;
+
+    private async Task LoadDataAsync()
+    {
+        //Thread.Sleep(5000); // testing
+        organization = await GetOrganization();
+        await InvokeAsync(StateHasChanged); // update this page
+        options.CurrentStep = 1; // property updates loading component
+
+        //Thread.Sleep(5000); // testing
+        issueGroupsbyLabel = await GetIssueGroupsbyLabel();
+        await InvokeAsync(StateHasChanged); // update this page
+        options.CurrentStep = 2; // property updates loading component
+
+        //Thread.Sleep(5000); // testing
+        issueGroupsbyLabelandCreatedAt = await GetIssueGroupsbyLabelandCreatedAt();
+        await InvokeAsync(StateHasChanged); // update this page
+        options.CurrentStep = 3; // property updates loading component
+
+        //Thread.Sleep(5000); // testing
+        issueGroupsCreatedAt = await GetIssueGroupsCreatedAt();
+        await InvokeAsync(StateHasChanged); // update this page
+        options.CurrentStep = 4; // property updates loading component
+
+        //Thread.Sleep(5000); // testing
+        reposLastUpdated = await GetReposLastUpdated();
+        await InvokeAsync(StateHasChanged); // update this page
+        options.CurrentStep = 5; // property updates loading component
+
+        //Thread.Sleep(5000); // testing
+        issuesLastUpdated = await GetIssuesLastUpdated();
+        await InvokeAsync(StateHasChanged); // update this page
+        options.CurrentStep = 6; // property updates loading component
+    }
+
+    private async Task&lt;Organization&gt; GetOrganization()
+    {
+        using var request = new HttpRequestMessage(HttpMethod.Get,
+            &#34;https://api.github.com/orgs/dotnet&#34;);
+
+        using HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(&#34;dotnetcoding&#34;);
+
+        var response = await client.SendAsync(request);
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadFromJsonAsync&lt;Organization&gt;();
+            if (result is not null)
+            {
+                return result;
+            }
+        }
+        return new();
+    }
+
+    private async Task&lt;IEnumerable&lt;IssueGroupbyLabel&gt;&gt; GetIssueGroupsbyLabel()
+    {
+        List&lt;IssueGroupbyLabel&gt; res = new List&lt;IssueGroupbyLabel&gt;();
+
+        using var request = new HttpRequestMessage(HttpMethod.Get,
+            $&#34;https://api.github.com/repos/dotnet/aspnetcore/issues?per_page=100&amp;sort=created&amp;order=desc&#34;);
+
+        using HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(&#34;dotnetcoding&#34;);
+
+        using var response = await client.SendAsync(request);
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadFromJsonAsync&lt;IEnumerable&lt;Issue&gt;&gt;();
+            if (result is not null &amp;&amp; result.Count() &gt; 0)
+            {
+                foreach (var item in result)
+                {
+                    foreach (var label in item.Labels)
+                    {
+                        var cont = res.FirstOrDefault(x =&gt; x.LabelName == label.Name);
+                        if (cont is null)
+                        {
+                            cont = new IssueGroupbyLabel { LabelName = label.Name, Count = 1 };
+                            res.Add(cont);
+                        }
+                        else
+                        {
+                            cont.Count++;
+                        }
+                    }
+                }
+                res = res.OrderByDescending(x =&gt; x.Count).Take(10).ToList();
+            }
+        }
+        return res;
+    }
+
+    private async Task&lt;Dictionary&lt;string, List&lt;IssueGroupbyLabel&gt;&gt;&gt; GetIssueGroupsbyLabelandCreatedAt()
+    {
+        Dictionary&lt;string, List&lt;IssueGroupbyLabel&gt;&gt; dict = new Dictionary&lt;string, List&lt;IssueGroupbyLabel&gt;&gt;();
+
+        using var request = new HttpRequestMessage(HttpMethod.Get,
+            $&#34;https://api.github.com/repos/dotnet/aspnetcore/issues?per_page=100&amp;sort=created&amp;order=desc&#34;);
+
+        using HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(&#34;dotnetcoding&#34;);
+
+        using var response = await client.SendAsync(request);
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadFromJsonAsync&lt;IEnumerable&lt;Issue&gt;&gt;();
+            if (result is not null &amp;&amp; result.Count() &gt; 0)
+            {
+                foreach (var item in result)
+                {
+                    foreach (var label in item.Labels)
+                    {
+                        if (!dict.ContainsKey(label.Name))
+                            dict.Add(label.Name, new List&lt;IssueGroupbyLabel&gt;());
+
+                        var contain = dict[label.Name].FirstOrDefault(x =&gt; x.LabelName == label.Name &amp;&amp; x.CreatedAt.Date == item.CreatedAt.Date);
+                        if (contain is not null)
+                        {
+                            contain.Count++;
+                        }
+                        else
+                        {
+                            dict[label.Name].Add(new IssueGroupbyLabel { LabelName = label.Name, CreatedAt = item.CreatedAt.Date, Count = 1 });
+                        }
+
+                    }
+                }
+                dict = dict.OrderByDescending(x =&gt; x.Value.Count).Take(5).ToDictionary(x =&gt; x.Key, x =&gt; x.Value);
+            }
+        }
+        return dict;
+    }
+
+    private async Task&lt;IEnumerable&lt;IssueGroup&gt;&gt; GetIssueGroupsCreatedAt()
+    {
+        using var request = new HttpRequestMessage(HttpMethod.Get,
+            $&#34;https://api.github.com/repos/dotnet/aspnetcore/issues?per_page=100&amp;sort=created&amp;order=desc&#34;);
+
+        using HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(&#34;dotnetcoding&#34;);
+
+        using var response = await client.SendAsync(request);
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadFromJsonAsync&lt;IEnumerable&lt;Issue&gt;&gt;();
+            if (result is not null &amp;&amp; result.Count() &gt; 0)
+            {
+                return result.GroupBy(x =&gt; new DateTime(x.CreatedAt.Year, x.CreatedAt.Month, x.CreatedAt.Day),
+                                      x =&gt; x,
+                                      (key, g) =&gt; new IssueGroup { CreatedAt = key, Count = g.Count() })
+                             .Take(10);
+            }
+        }
+        return new List&lt;IssueGroup&gt;();
+    }
+
+    private async Task&lt;IEnumerable&lt;Repo&gt;&gt; GetReposLastUpdated()
+    {
+        using var request = new HttpRequestMessage(HttpMethod.Get,
+            &#34;https://api.github.com/orgs/dotnet/repos?per_page=10&amp;sort=updated&amp;order=desc&#34;);
+
+        using HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(&#34;dotnetcoding&#34;);
+
+        var response = await client.SendAsync(request);
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadFromJsonAsync&lt;IEnumerable&lt;Repo&gt;&gt;();
+            if (result is not null)
+            {
+                return result;
+            }
+        }
+        return new List&lt;Repo&gt;();
+    }
+
+    private async Task&lt;IEnumerable&lt;Issue&gt;&gt; GetIssuesLastUpdated()
+    {
+        using var request = new HttpRequestMessage(HttpMethod.Get,
+            &#34;https://api.github.com/repos/dotnet/aspnetcore/issues?per_page=10&amp;sort=updated&amp;order=desc&#34;);
+
+        using HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(&#34;dotnetcoding&#34;);
+
+        var response = await client.SendAsync(request);
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadFromJsonAsync&lt;IEnumerable&lt;Issue&gt;&gt;();
+            if (result is not null)
+            {
+                return result;
+            }
+        }
+        return new List&lt;Issue&gt;();
+    }
+
+}
+</code></pre><p>Loading indicator component in the Blazor page. It specifies a callback method LoadDataAsync to be executed when the loading indicator is triggered. It also passes an options object to customize the loading indicator&rsquo;s behavior.</p><p><code>Page with Loading Indicator</code> is a Blazor page that demonstrates the use of a loading indicator component to show the progress of data fetching. It fetches organization data from the GitHub API and updates the page content accordingly. This code can be customized and extended to fetch and display other data as well.</p><h4 id=source><strong>Source</strong></h4><p>Full source code is available at this repository in GitHub:
+<a href=https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppRadzenLoading>https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppRadzenLoading</a></p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-10-blazor-radzen-loading-on-page%2f" target=_blank><i class="fab fa-facebook"></i></a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-10-blazor-radzen-loading-on-page%2f&text=Blazor%20Radzen%20Loading%20on%20Page&via=akifmt" target=_blank><i class="fab fa-twitter"></i></a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-10-blazor-radzen-loading-on-page%2f&title=Blazor%20Radzen%20Loading%20on%20Page" target=_blank><i class="fab fa-reddit"></i></a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-10-blazor-radzen-loading-on-page%2f&title=Blazor%20Radzen%20Loading%20on%20Page" target=_blank><i class="fab fa-linkedin"></i></a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Blazor%20Radzen%20Loading%20on%20Page https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-10-blazor-radzen-loading-on-page%2f" target=_blank><i class="fab fa-whatsapp"></i></a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Blazor%20Radzen%20Loading%20on%20Page&body=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-09-10-blazor-radzen-loading-on-page%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/akifmt/akifmt.github.io/edit/main/content/dotnet/2023-09-10-Blazor-Radzen-Loading-on-Page/index.md title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="akifmt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
+<a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#blazor-radzen-loading-on-page><strong>Blazor Radzen Loading on Page</strong></a><ul><li><a href=#loadingindicatoroptionscs><strong>LoadingIndicatorOptions.cs</strong></a></li><li><a href=#loadingindicatorrenderfragmentrazor><strong>LoadingIndicatorRenderFragment.razor</strong></a></li><li><a href=#loadingindicatorrazor><strong>LoadingIndicator.razor</strong></a></li><li><a href=#pagewithloadingrazor><strong>PagewithLoading.razor</strong></a></li></ul></li><li><a href=#source><strong>Source</strong></a></li></ul></li></ul></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts-dotnet>Recent Dotnet Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts>Recent Posts</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:akifmt@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>akifmt@gmail.com</span></a></li><li><a href=https://github.com/akifmt target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>akifmt</span></a></li></ul></div><div class="col-md-4 col-sm-12"><p>Stay up to date with email notification</p><form action="https://github.us1.list-manage.com/subscribe/post?u=19de52a4603135aae97163fd8&amp;amp;id=094a24c76e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div class=form-group><input type=email class=form-control id=mce-EMAIL name=EMAIL aria-describedby=emailHelp placeholder="Enter email">
+<small id=emailHelp class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small></div><button type=submit class="btn btn-info">Submit</button></form></div></div></div><hr><div class=container><p id=disclaimer><strong>Liability Notice:</strong> This theme is under MIT license. So, you can use it for non-commercial, commercial, or private uses. You can modify or distribute the theme without requiring any permission from the theme author. However, the theme author does not provide any warranty or takes any liability for any issue with the theme.</p></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2023 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script></body></html>
