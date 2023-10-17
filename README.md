@@ -13,7 +13,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Tue%20Sep%2026%202023%2004%3A05%3A45%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Tue%20Oct%2017%202023%2023%3A15%3A26%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Infinite Scrolling](https://github.com/akifmt/akifmt.github.io/commit/3d054657af2f2aeffd3197cadd40298cd8603025) - 2023-10-17T23:09:18Z 
 - :page_facing_up: [added new post Blazor Export Data to Word, Excel, PDF, CSV](https://github.com/akifmt/akifmt.github.io/commit/16f29342dc51a84886d8079dbe6e79b95829682d) - 2023-09-26T03:59:52Z 
 - :page_facing_up: [added new post Blazor External Login Identity Provider Google, Facebook, Microsoft, Twitter](https://github.com/akifmt/akifmt.github.io/commit/88d7f7bcab99c68d6eefb57c3e5f85ea4abe2936) - 2023-09-21T21:45:15Z 
 - :page_facing_up: [added new post Blazor Radzen Loading on Page](https://github.com/akifmt/akifmt.github.io/commit/324cd7e0618edb65f8ffd9917dbae30dd7529004) - 2023-09-11T00:12:08Z 
@@ -23,7 +24,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor Scheduling with Quartz.NET](https://github.com/akifmt/akifmt.github.io/commit/5f9313b6b8903c281e6d4577c209b849ccaa8efb) - 2023-08-18T22:18:00Z 
 - :page_facing_up: [added new rss format for dotnet pages](https://github.com/akifmt/akifmt.github.io/commit/e094e8f730d9766840c46a1cd02abffe1d7d8dbf) - 2023-08-18T22:14:15Z 
 - :page_facing_up: [Edit posts](https://github.com/akifmt/akifmt.github.io/commit/bad86de106ec5de5591e53a909f7cfb9604da849) - 2023-08-17T22:41:54Z 
-- :page_facing_up: [added new post Blazor Serilog Logging to Console File and Database](https://github.com/akifmt/akifmt.github.io/commit/f374dc9b5ee7378f06957ebbf0309e02910e3d5b) - 2023-08-15T22:44:46Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
