@@ -1,0 +1,207 @@
+<!doctype html><html><head><title>Blazor Infinite Scrolling</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/google-fonts/Mulish/mulish.css><link rel=stylesheet href=/fontawesome/css/all.min.css><link rel=stylesheet href=/css/colortheme/colortheme.css><link rel=icon type=image/png href=/images/site/favicon_hu5e0469842f323d92977e05301135eda0_41440_42x0_resize_box_3.png><meta property="og:title" content="Blazor Infinite Scrolling"><meta property="og:description" content="Blazor Infinite Scrolling"><meta property="og:type" content="article"><meta property="og:url" content="https://akifmt.github.io/dotnet/2023-10-16-blazor-infinite-scrolling/"><meta property="article:section" content="dotnet"><meta property="article:published_time" content="2023-10-16T00:00:00+00:00"><meta property="article:modified_time" content="2023-10-16T00:00:00+00:00"><meta name=description content="Blazor Infinite Scrolling"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-78150589-1","auto"),ga("send","pageview"))</script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png alt=Logo>
+akifmt</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class=nav-item><a class=nav-link id=blog-link href=/posts/>Blog</a></li><li class=nav-item><a class=nav-link href=/dotnet/><img height=20 src=/images/dotnet-logo.png> dotnet Blog</a></li><div class=dropdown-divider id=top-navbar-divider></div><li class="nav-item dropdown"><div id=theme-initialization style=display:none default-theme=system></div><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# onclick=enableLightTheme()><img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()><img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()><img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_huaeac6b74eff06a7b4d6b563d4aa0a06e_40468_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/dotnet/ data-filter=all>dotnet</a></li><div class=subtree><li><a class=active href=/dotnet/2023-10-16-blazor-infinite-scrolling/ title="Blazor Infinite Scrolling">Blazor Infinite Scrolling</a></li><li><a href=/dotnet/2023-09-26-blazor-export-data-to-word-excel-pdf-csv/ title="Blazor Export Data to Word, Excel, PDF, CSV">Blazor Export Data to Word, Excel, PDF, CSV</a></li><li><a href=/dotnet/2023-09-21-blazor-external-login-identity-provider/ title="Blazor External Login Identity Provider Google, Facebook, Microsoft, Twitter">Blazor External Login Identity Provider Google, Facebook, Microsoft, Twitter</a></li><li><a href=/dotnet/2023-09-10-blazor-radzen-loading-on-page/ title="Blazor Radzen Loading on Page">Blazor Radzen Loading on Page</a></li><li><a href=/dotnet/2023-09-03-blazor-send-email-with-mailkit/ title="Blazor Send Email with MailKit">Blazor Send Email with MailKit</a></li><li><a href=/dotnet/2023-08-30-blazor-redis-as-backplane/ title="Blazor Redis as Backplane">Blazor Redis as Backplane</a></li><li><a href=/dotnet/2023-08-25-blazor-resize-and-upload-images/ title="Blazor Resize and Upload Images">Blazor Resize and Upload Images</a></li><li><a href=/dotnet/2023-08-18-blazor-scheduling-with-quartz.net/ title="Blazor Scheduling with Quartz.NET">Blazor Scheduling with Quartz.NET</a></li><li><a href=/dotnet/2023-08-15-blazor-serilog-logging/ title="Blazor Serilog Logging to Console, File and Database">Blazor Serilog Logging to Console, File and Database</a></li><li><a href=/dotnet/2023-08-13-blazor-implementing-google-recaptcha-v2/ title="Blazor Implementing Google reCAPTCHA v2">Blazor Implementing Google reCAPTCHA v2</a></li><li><a href=/dotnet/2023-08-11-blazor-implementing-google-recaptcha-v3/ title="Blazor Implementing Google reCAPTCHA v3">Blazor Implementing Google reCAPTCHA v3</a></li><li><a href=/dotnet/2023-08-09-blazor-radzen-globalization-and-localization/ title="Blazor Radzen Globalization and Localization">Blazor Radzen Globalization and Localization</a></li><li><a href=/dotnet/2023-08-07-blazor-using-npm-packages/ title="Blazor Using NPM Packages">Blazor Using NPM Packages</a></li><li><a href=/dotnet/2023-08-05-blazor-generic-components/ title="Blazor Generic Components">Blazor Generic Components</a></li><li><a href=/dotnet/2023-08-02-blazor-rssfeed/ title="Blazor Expose a Feed as RSS">Blazor Expose a Feed as RSS</a></li><li><a href=/dotnet/2023-07-31-blazor-ef-multipledbproviders/ title="Blazor EF Migrations with Multiple Providers">Blazor EF Migrations with Multiple Providers</a></li><li><a href=/dotnet/2023-07-30-blazor-authentication-authorization/ title="Blazor Authentication and Authorization">Blazor Authentication and Authorization</a></li><li><a href=/dotnet/2023-07-26-blazor-radzen-crud/ title="Blazor Radzen CRUD">Blazor Radzen CRUD</a></li><li><a href=/dotnet/2023-07-21-blazor-radzen-searchcomponent/ title="Blazor Radzen SearchComponent">Blazor Radzen SearchComponent</a></li><li><a href=/dotnet/2023-07-20-blazor-plyr-video-player/ title="Blazor Plyr Video Player">Blazor Plyr Video Player</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/dotnet/2023-10-16-blazor-infinite-scrolling/blazor_dotnet.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/akif_hu0b098ee5eab0ebaed64b2691fffe1073_4640_120x120_fit_box_3.png alt="Author Image"><h5 class=author-name>Akif T.</h5><p>Monday, October 16, 2023</p></div><div class=title><h1>Blazor Infinite Scrolling</h1></div><div class=taxonomy-terms><ul style=padding-left:0><li class=rounded><a href=/tags/dotnet/ class="btn, btn-sm">Dotnet</a></li><li class=rounded><a href=/tags/blazor-infinite-scrolling/ class="btn, btn-sm">Blazor Infinite Scrolling</a></li></ul></div><div class=post-content id=post-content><p style=text-align:center><img src=blazor_dotnet.jpg alt=blazor_dotnet title=blazor_dotnet style=border-radius:20px><br><p><h4 id=blazor-infinite-scrolling><strong>Blazor Infinite Scrolling</strong></h4><p>Blazor: Blazor is a web framework developed by Microsoft that allows developers to build interactive web UIs using C# instead of JavaScript. It enables full-stack web development with .NET.</p><p>Infinite Scrolling: Infinite scrolling is a technique where new data is loaded and displayed as the user scrolls down the page. It provides a smooth and continuous browsing experience without the need for manual pagination.</p><p>Razor Components: Razor Components is a part of Blazor that allows developers to build reusable UI components using a combination of HTML and C#. These components can be used to create dynamic and interactive web applications.</p><h5 id=infinitescrollingitemsproviderrequestcs><strong>InfiniteScrollingItemsProviderRequest.cs</strong></h5><p>The <code>InfiniteScrollingItemsProviderRequest</code> class is defined within the <code>BlazorAppInfiniteScrolling.Components</code> namespace. It is a sealed class, meaning it cannot be inherited from. The class has two properties: <code>StartIndex</code> and <code>CancellationToken</code>.</p><pre tabindex=0><code>namespace BlazorAppInfiniteScrolling.Components;
+
+public sealed class InfiniteScrollingItemsProviderRequest
+{
+    public InfiniteScrollingItemsProviderRequest(int startIndex, CancellationToken cancellationToken)
+    {
+        StartIndex = startIndex;
+        CancellationToken = cancellationToken;
+    }
+
+    public int StartIndex { get; }
+    public CancellationToken CancellationToken { get; }
+}
+
+public delegate Task&lt;IEnumerable&lt;int&gt;&gt; ItemsProviderRequestDelegate(InfiniteScrollingItemsProviderRequest request);
+
+public delegate Task&lt;IEnumerable&lt;T&gt;&gt; ItemsProviderRequestDelegate&lt;T&gt;(InfiniteScrollingItemsProviderRequest request);
+</code></pre><p>The <code>InfiniteScrollingItemsProviderRequest</code> class has a constructor that takes two parameters: <code>startIndex</code> and <code>cancellationToken</code>. The <code>startIndex</code> parameter represents the index from which the data should be loaded, and the <code>cancellationToken</code> parameter is used to cancel the data loading operation if needed.</p><p>The class also has two properties: <code>StartIndex</code> and <code>CancellationToken</code>. The <code>StartIndex</code> property is a read-only property that returns the value passed in the constructor. The <code>CancellationToken</code> property is also read-only and returns the <code>cancellation token</code> passed in the constructor.</p><h5 id=infinitescrollingrazor><strong>InfiniteScrolling.razor</strong></h5><p>Several <code>classes</code> and <code>delegates</code> that are essential for implementing infinite scrolling in Blazor.</p><pre tabindex=0><code>@namespace BlazorAppInfiniteScrolling.Components
+
+@typeparam T
+
+@foreach (var item in _items)
+{
+    @ItemTemplate(item)
+}
+@if (_loading)
+{
+    @LoadingTemplate
+}
+
+@if (!_enumerationCompleted)
+{
+    &lt;div @ref=&#34;_lastItemIndicator&#34; style=&#34;height:1px;flex-shrink:0&#34;&gt;&lt;/div&gt;
+}
+</code></pre><p>The <code>InfiniteScrollingItemsProviderRequest</code> class represents a request for fetching items for infinite scrolling. It takes the <code>start index</code> and a <code>cancellation token</code> as parameters.</p><p>The <code>ItemsProviderRequestDelegate</code> delegate defines a method signature for fetching items based on the <code>InfiniteScrollingItemsProviderRequest</code>. It can be used to provide a custom implementation for fetching data.</p><h5 id=infinitescrollingrazorcs><strong>InfiniteScrolling.razor.cs</strong></h5><p>The <code>InfiniteScrolling</code> component is a generic component that takes a type parameter <code>T</code>, which represents the type of the items to be displayed. It inherits from the <code>ComponentBase</code> class and implements the <code>IAsyncDisposable</code> interface.</p><pre tabindex=0><code>using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
+
+namespace BlazorAppInfiniteScrolling.Components;
+
+public partial class InfiniteScrolling&lt;T&gt; : ComponentBase, IAsyncDisposable
+{
+    private List&lt;T&gt; _items = new();
+    private ElementReference _lastItemIndicator;
+    private DotNetObjectReference&lt;InfiniteScrolling&lt;T&gt;&gt;? _currentComponentReference;
+    private IJSObjectReference? _module;
+    private IJSObjectReference? _instance;
+    private bool _loading = false;
+    private bool _enumerationCompleted = false;
+    private CancellationTokenSource? _loadItemsCts;
+
+    [Inject]
+    private IJSRuntime? JSRuntime { get; set; }
+
+    [Parameter]
+    public ItemsProviderRequestDelegate&lt;T&gt;? ItemsProvider { get; set; }
+
+    [Parameter]
+    public RenderFragment&lt;T&gt;? ItemTemplate { get; set; }
+
+    [Parameter]
+    public RenderFragment? LoadingTemplate { get; set; }
+
+    [JSInvokable]
+    public async Task LoadMoreItems()
+    {
+        if (_loading)
+            return;
+
+        _loading = true;
+        try
+        {
+            _loadItemsCts ??= new CancellationTokenSource();
+
+            StateHasChanged();
+            try
+            {
+                var newItems = await ItemsProvider(new InfiniteScrollingItemsProviderRequest(_items.Count, _loadItemsCts.Token));
+
+                var previousCount = _items.Count;
+                _items.AddRange(newItems);
+
+                if (_items.Count == previousCount)
+                {
+                    _enumerationCompleted = true;
+                }
+                else
+                {
+                    await _instance.InvokeVoidAsync(&#34;onNewItems&#34;);
+                }
+            }
+            catch (OperationCanceledException oce) when (oce.CancellationToken == _loadItemsCts.Token)
+            {
+            }
+        }
+        finally
+        {
+            _loading = false;
+        }
+
+        StateHasChanged();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            _module = await JSRuntime.InvokeAsync&lt;IJSObjectReference&gt;(&#34;import&#34;, &#34;./infinite-scrolling.js&#34;);
+            _currentComponentReference = DotNetObjectReference.Create(this);
+            _instance = await _module.InvokeAsync&lt;IJSObjectReference&gt;(&#34;initialize&#34;, _lastItemIndicator, _currentComponentReference);
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (_loadItemsCts != null)
+        {
+            _loadItemsCts.Dispose();
+            _loadItemsCts = null;
+        }
+
+        if (_instance != null)
+        {
+            await _instance.InvokeVoidAsync(&#34;dispose&#34;);
+            await _instance.DisposeAsync();
+            _instance = null;
+        }
+
+        if (_module != null)
+        {
+            await _module.DisposeAsync();
+        }
+
+        _currentComponentReference?.Dispose();
+    }
+}
+</code></pre><p>The <code>component</code> has several private fields, including a list of items <code>_items</code>, a reference to the last item indicator <code>_lastItemIndicator</code>, a reference to the current component <code>_currentComponentReference</code>, and references to the JavaScript module <code>_module</code> and instance <code>_instance</code>. It also has boolean flags _loading and <code>_enumerationCompleted</code> to track the loading state and whether the enumeration of items is completed.</p><p>The component has several properties, including an injected <code>IJSRuntime</code> for JavaScript interop, a <code>ItemsProvider</code> delegate for providing the items, an ItemTemplate for rendering the items, and a <code>LoadingTemplate</code> for rendering the loading indicator.</p><p>The component also defines the <code>LoadMoreItems</code> method, which is invoked when the user scrolls to the end of the list or grid. It handles the loading of more items by calling the <code>ItemsProvider</code> delegate and updating the UI.</p><p>The <code>OnAfterRenderAsync</code> method is overridden to initialize the <code>JavaScript</code> module and instance when the component is first rendered. It imports the JavaScript module, creates a reference to the current component, and initializes the JavaScript instance with the last item indicator and the component reference.</p><p>The <code>DisposeAsync</code> method is implemented to dispose of any resources used by the component, such as <code>cancellation tokens</code>, JavaScript instances, and references.</p><h5 id=infinite-scrollingjs><strong>infinite-scrolling.js</strong></h5><p>The <code>initialize</code> function takes two parameters: <code>lastItemIndicator</code> and <code>componentInstance</code>. The <code>lastItemIndicator</code> is the element that indicates the last item in the list, and the <code>componentInstance</code> is the instance of the Blazor component.</p><pre tabindex=0><code>export function initialize(lastItemIndicator, componentInstance) {
+    const options = {
+        root: findClosestScrollContainer(lastItemIndicator),
+        rootMargin: &#39;0px&#39;,
+        threshold: 0,
+    };
+
+    const observer = new IntersectionObserver(async (entries) =&gt; {
+        for (const entry of entries) {
+            if (entry.isIntersecting) {
+                observer.unobserve(lastItemIndicator);
+                await componentInstance.invokeMethodAsync(&#34;LoadMoreItems&#34;);
+            }
+        }
+    }, options);
+
+    observer.observe(lastItemIndicator);
+
+    return {
+        dispose: () =&gt; dispose(observer),
+        onNewItems: () =&gt; {
+            observer.unobserve(lastItemIndicator);
+            observer.observe(lastItemIndicator);
+        },
+    };
+}
+
+function dispose(observer) {
+    observer.disconnect();
+}
+
+function findClosestScrollContainer(element) {
+    while (element) {
+        const style = getComputedStyle(element);
+        if (style.overflowY !== &#39;visible&#39;) {
+            return element;
+        }
+        element = element.parentElement;
+    }
+    return null;
+}
+</code></pre><p>The <code>initialize</code> function creates an <code>Intersection Observer</code> with the specified options and attaches a <code>callback function</code> to it. When the last item indicator element intersects with the <code>viewport</code>, the callback function is <code>triggered</code>. It then unobserves the <code>last item indicator</code>, and asynchronously invokes the <code>LoadMoreItems</code> method on the Blazor component instance.</p><p>The <code>dispose function</code> is used to disconnect the <code>Intersection Observer</code> when it is no longer needed. The <code>findClosestScrollContainer</code> function is a helper function that finds the closest <code>scrollable container</code> element for the given element.</p><h4 id=source><strong>Source</strong></h4><p>Full source code is available at this repository in GitHub:
+<a href=https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppInfiniteScrolling>https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppInfiniteScrolling</a></p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-10-16-blazor-infinite-scrolling%2f" target=_blank><i class="fab fa-facebook"></i></a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-10-16-blazor-infinite-scrolling%2f&text=Blazor%20Infinite%20Scrolling&via=akifmt" target=_blank><i class="fab fa-twitter"></i></a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-10-16-blazor-infinite-scrolling%2f&title=Blazor%20Infinite%20Scrolling" target=_blank><i class="fab fa-reddit"></i></a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-10-16-blazor-infinite-scrolling%2f&title=Blazor%20Infinite%20Scrolling" target=_blank><i class="fab fa-linkedin"></i></a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Blazor%20Infinite%20Scrolling https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-10-16-blazor-infinite-scrolling%2f" target=_blank><i class="fab fa-whatsapp"></i></a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Blazor%20Infinite%20Scrolling&body=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2023-10-16-blazor-infinite-scrolling%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/akifmt/akifmt.github.io/edit/main/content/dotnet/2023-10-16-Blazor-Infinite-Scrolling/index.md title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="akifmt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
+<a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#blazor-infinite-scrolling><strong>Blazor Infinite Scrolling</strong></a><ul><li><a href=#infinitescrollingitemsproviderrequestcs><strong>InfiniteScrollingItemsProviderRequest.cs</strong></a></li><li><a href=#infinitescrollingrazor><strong>InfiniteScrolling.razor</strong></a></li><li><a href=#infinitescrollingrazorcs><strong>InfiniteScrolling.razor.cs</strong></a></li><li><a href=#infinite-scrollingjs><strong>infinite-scrolling.js</strong></a></li></ul></li><li><a href=#source><strong>Source</strong></a></li></ul></li></ul></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts-dotnet>Recent Dotnet Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts>Recent Posts</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:akifmt@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>akifmt@gmail.com</span></a></li><li><a href=https://github.com/akifmt target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>akifmt</span></a></li></ul></div><div class="col-md-4 col-sm-12"><p>Stay up to date with email notification</p><form action="https://github.us1.list-manage.com/subscribe/post?u=19de52a4603135aae97163fd8&amp;amp;id=094a24c76e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div class=form-group><input type=email class=form-control id=mce-EMAIL name=EMAIL aria-describedby=emailHelp placeholder="Enter email">
+<small id=emailHelp class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small></div><button type=submit class="btn btn-info">Submit</button></form></div></div></div><hr><div class=container><p id=disclaimer><strong>Liability Notice:</strong> This theme is under MIT license. So, you can use it for non-commercial, commercial, or private uses. You can modify or distribute the theme without requiring any permission from the theme author. However, the theme author does not provide any warranty or takes any liability for any issue with the theme.</p></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2023 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script></body></html>
