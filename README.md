@@ -13,7 +13,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Mon%20Jan%2015%202024%2009%3A08%3A24%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Wed%20Jan%2017%202024%2021%3A51%3A03%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor .NET8 Server-side Rendering (SSR)](https://github.com/akifmt/akifmt.github.io/commit/f8907e873806ead1bdb01f5dd35dda60ee7559bf) - 2024-01-17T21:49:38Z 
 - :page_facing_up: [added new post Blazor .NET 8 Hosting Models](https://github.com/akifmt/akifmt.github.io/commit/e0bb99196a6a463734eb7c53856e13748d9f67c2) - 2024-01-15T09:04:44Z 
 - :page_facing_up: [added new post Blazor Infinite Scrolling](https://github.com/akifmt/akifmt.github.io/commit/3d054657af2f2aeffd3197cadd40298cd8603025) - 2023-10-17T23:09:18Z 
 - :page_facing_up: [added new post Blazor Export Data to Word, Excel, PDF, CSV](https://github.com/akifmt/akifmt.github.io/commit/16f29342dc51a84886d8079dbe6e79b95829682d) - 2023-09-26T03:59:52Z 
@@ -23,7 +24,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor Redis as Backplane (with Master and Slave)](https://github.com/akifmt/akifmt.github.io/commit/017c8152922eb3e2adb8820e56d9c90d9a53091d) - 2023-08-30T21:48:07Z 
 - :page_facing_up: [added new post Blazor Resize and Upload Images](https://github.com/akifmt/akifmt.github.io/commit/da79d4ff6294cc8b3325bd6cbf88c3ba49519075) - 2023-08-25T21:29:32Z 
 - :page_facing_up: [added new post Blazor Scheduling with Quartz.NET](https://github.com/akifmt/akifmt.github.io/commit/5f9313b6b8903c281e6d4577c209b849ccaa8efb) - 2023-08-18T22:18:00Z 
-- :page_facing_up: [added new rss format for dotnet pages](https://github.com/akifmt/akifmt.github.io/commit/e094e8f730d9766840c46a1cd02abffe1d7d8dbf) - 2023-08-18T22:14:15Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
