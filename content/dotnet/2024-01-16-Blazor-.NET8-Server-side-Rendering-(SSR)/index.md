@@ -1,7 +1,7 @@
 ---
 title: "Blazor .NET8 Server-side Rendering (SSR)"
 date: 2024-01-16T00:00:00+00:00
-hero: blazor_dotnet.jpg
+hero: blazor_dotnet8.jpg
 description: Blazor .NET8 Server-side Rendering (SSR)
 menu:
   dotnet:
@@ -16,7 +16,7 @@ author:
 ---
 
 <p style="text-align: center;">
-<img src="blazor_dotnet.jpg" alt="blazor_dotnet" title="blazor_dotnet" style="border-radius: 20px;"><br>
+<img src="blazor_dotnet8.jpg" alt="blazor_dotnet8" title="blazor_dotnet8" style="border-radius: 20px;"><br>
 <p>
 
 #### **Blazor .NET8 Server-side Rendering (SSR)**
