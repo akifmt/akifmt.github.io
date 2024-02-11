@@ -13,7 +13,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Fri%20Feb%2009%202024%2009%3A40%3A54%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Sun%20Feb%2011%202024%2013%3A42%3A26%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Setting up Teamcity Hassle-Free CI/CD Tool on Self-hosted Server](https://github.com/akifmt/akifmt.github.io/commit/bd235f7aba436be199cd922136034211c2cb33f8) - 2024-02-11T13:40:29Z 
 - :page_facing_up: [added new post Blazor .NET 8 Object Mapping with AutoMapper](https://github.com/akifmt/akifmt.github.io/commit/05516b0fc6e325cf5b29361722bcad85aa2b857a) - 2024-02-09T09:38:44Z 
 - :page_facing_up: [added new post Blazor .NET 8 Object Mapping with Mapster](https://github.com/akifmt/akifmt.github.io/commit/a1b19e2b0c7f55a0af38bac38004c17dd7451111) - 2024-01-28T10:35:04Z 
 - :page_facing_up: [added new post Blazor .NET 8 Migrating app from .NET 6 or .NET 7 to .NET 8](https://github.com/akifmt/akifmt.github.io/commit/3ebc882b9d742f1b18959e2f8e442267e9f5f18c) - 2024-01-25T08:00:48Z 
@@ -23,7 +24,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor .NET 8 Hosting Models](https://github.com/akifmt/akifmt.github.io/commit/e0bb99196a6a463734eb7c53856e13748d9f67c2) - 2024-01-15T09:04:44Z 
 - :page_facing_up: [added new post Blazor Infinite Scrolling](https://github.com/akifmt/akifmt.github.io/commit/3d054657af2f2aeffd3197cadd40298cd8603025) - 2023-10-17T23:09:18Z 
 - :page_facing_up: [added new post Blazor Export Data to Word, Excel, PDF, CSV](https://github.com/akifmt/akifmt.github.io/commit/16f29342dc51a84886d8079dbe6e79b95829682d) - 2023-09-26T03:59:52Z 
-- :page_facing_up: [added new post Blazor External Login Identity Provider Google, Facebook, Microsoft, Twitter](https://github.com/akifmt/akifmt.github.io/commit/88d7f7bcab99c68d6eefb57c3e5f85ea4abe2936) - 2023-09-21T21:45:15Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
