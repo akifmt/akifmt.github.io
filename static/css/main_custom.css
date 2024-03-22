@@ -1,0 +1,5 @@
+
+pre > code {
+  padding: 10px !important;
+  max-height: 300px;
+}
