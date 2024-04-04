@@ -1,4 +1,4 @@
-name:Deploy gh-pages workflows
+name: Deploy gh-pages workflows
 
 # run when a commit is pushed to "source" branch
 on:
