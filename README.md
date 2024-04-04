@@ -13,7 +13,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Thu%20Apr%2004%202024%2020%3A50%3A20%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Thu%20Apr%2004%202024%2021%3A07%3A09%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [Update and rename merge-to-main.yaml to deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/ab68c8f5eca5f64c5aaf1456883336e5c1ca05da) - 2024-04-04T21:07:00Z 
 - :page_facing_up: [Update update-readme.yaml](https://github.com/akifmt/akifmt.github.io/commit/fef4bc34f64612620ce6efb2d8e54deece4ee943) - 2024-04-04T20:50:11Z 
 - :page_facing_up: [first version of v4](https://github.com/akifmt/akifmt.github.io/commit/c93ca8b8eb1c4dceab8ef9c720cfe0f9e64c3664) - 2024-04-04T20:45:25Z 
 - :page_facing_up: [Update merge-to-main.yaml](https://github.com/akifmt/akifmt.github.io/commit/0767c37126c7115eb476d9a9fa38dfcc390b772e) - 2024-04-04T20:39:45Z 
@@ -23,7 +24,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [updated codeblock height](https://github.com/akifmt/akifmt.github.io/commit/e52ca8c5c3c7c61739f228b289dbc37a08c48238) - 2024-03-22T08:34:04Z 
 - :page_facing_up: [added new post Blazor .NET 8 and Minimal APIs Native AOT CRUD](https://github.com/akifmt/akifmt.github.io/commit/70f8b6644e1f8ea614e1bc62abbca65d2a33c6d4) - 2024-02-14T09:25:50Z 
 - :page_facing_up: [added new post Setting up Teamcity Hassle-Free CI/CD Tool on Self-hosted Server](https://github.com/akifmt/akifmt.github.io/commit/bd235f7aba436be199cd922136034211c2cb33f8) - 2024-02-11T13:40:29Z 
-- :page_facing_up: [added new post Blazor .NET 8 Object Mapping with AutoMapper](https://github.com/akifmt/akifmt.github.io/commit/05516b0fc6e325cf5b29361722bcad85aa2b857a) - 2024-02-09T09:38:44Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
