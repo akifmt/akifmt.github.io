@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_plyr.png" alt="blazor_plyr" title="blazor_plyr"><br>
 <p>
 
@@ -45,5 +45,5 @@ The `OnAfterRenderAsync` method is called after the component has been rendered.
 The provided code demonstrates how to create a video player component in a Blazor application using the Plyr.io library. It allows users to watch videos with controls and captions. The code can be customized further to meet specific requirements and integrate additional features.
 
 ###### **Source**
-Full source code is available at this repository in GitHub: 
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppVideoPlayer

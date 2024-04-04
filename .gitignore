@@ -1,6 +1,11 @@
 resources/*
+node_modules/*
+
 hugo.exe
 HUGO_RUN.bat
+RUN/*
+RUN.bat
+
 
 # Hugo default output directory
 /public

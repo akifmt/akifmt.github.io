@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    <title>{{ .Page.Title }}</title>
+    <!------ ADD COMMON HEADERS -------->
+    {{- partial "header.html" . -}}
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    <!------ ADD PAGE SPECIFIC HEADERS ------->
+    {{ block "header" . }} {{ end }}
+
+    <!--================= add analytics if enabled =========================-->
+    {{- partial "analytics.html" . -}}
+    <script>
+      theme = localStorage.getItem('darkmode:color-scheme') || 'system';
+      if (theme == 'system') {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
+  </head>
+
+  <body class="type-{{ .Page.Type }} kind-{{ .Page.Kind }}" data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
+      <!----- ADD NAVBAR --------------->
+      {{ block "navbar" . }} {{ end }}
+
+      <!----- ADD SIDEBAR --------------->
+      {{ block "sidebar" . }} {{ end }}
+
+      <!----- ADD PAGE CONTENT --------->
+      {{ block "content" . }} {{ end }}
+
+      <!----- ADD TABLE OF CONTENTS ----------->
+      {{ block "toc" . }} {{ end }}
+    </div>
+
+    <!------- ADD FOOTER ------------>
+    {{ $footerTemplate:= site.Params.footer.template | default "footer.html" }}
+    {{- partial $footerTemplate . -}}
+
+    <!------- ADD COMMON SCRIPTS ------->
+    {{ partial "scripts.html" . }}
+
+    <!------- ADD PAGE SPECIFIC SCRIPTS ------>
+    {{ block "scripts" . }} {{ end }}
+
+    <!------ IF WANTED, ADD SUPPORT LINKS -------->
+    {{- partial "misc/support.html" . -}}
+
+
+
+	<!------ ADD COOKIE CONSENT -------->
+	{{ partial "consent.html" . }}
+
+
+  </body>
+</html>

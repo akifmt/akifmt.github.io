@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet8.jpg" alt="blazor_dotnet8" title="blazor_dotnet8" style="border-radius: 20px;"><br>
 <p>
 
@@ -420,5 +420,5 @@ Service Registration: This code registers the ```TodoClientService``` as a ```sc
 
 
 #### **Source**
-Full source code is available at this repository in GitHub:
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppandMinimalAPIsNativeAOTCRUD

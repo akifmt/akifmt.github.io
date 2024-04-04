@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_radzen_dotnet.jpg" alt="blazor_radzen_dotnet" title="blazor_radzen_dotnet"><br>
 <p>
 
@@ -655,5 +655,5 @@ Loading indicator component in the Blazor page. It specifies a callback method L
 
 
 #### **Source**
-Full source code is available at this repository in GitHub:
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppRadzenLoading

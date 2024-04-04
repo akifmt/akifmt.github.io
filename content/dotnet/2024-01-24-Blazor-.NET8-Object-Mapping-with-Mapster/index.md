@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet8_mapster.jpg" alt="blazor_dotnet8_mapster" title="blazor_dotnet8_mapster" style="border-radius: 20px;"><br>
 <p>
 
@@ -245,5 +245,5 @@ The ```HandleValidSubmit``` method that is called when the form is submitted and
 
 
 #### **Source**
-Full source code is available at this repository in GitHub:
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppObjectMappingwithMapster

@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_radzen_dotnet.jpg" alt="blazor_radzen_dotnet" title="blazor_radzen_dotnet"><br>
 <p>
 
@@ -127,5 +127,5 @@ Finally, the ```LocalRedirect``` method is called to redirect the user to the sp
 
 
 ##### **Source**
-Full source code is available at this repository in GitHub: 
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppRadzenGlobalizationLocalization

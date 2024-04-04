@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet.jpg" alt="blazor_dotnet" title="blazor_dotnet"><br>
 <p>
 
@@ -109,5 +109,5 @@ Configuring multiple database providers in a Blazor application is essential whe
 This example demonstrates how to implement multiple database providers in a Blazor application using C#. By configuring the services and connection string based on the specified provider, you can easily switch between different databases. The code also shows how to use migrations and seed data to manage the database schema and initial data.
 
 ###### **Source**
-Full source code is available at this repository in GitHub: 
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppEFMultipleDBProviders

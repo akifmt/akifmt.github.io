@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet.jpg" alt="blazor_dotnet" title="blazor_dotnet"><br>
 <p>
 
@@ -265,5 +265,5 @@ Registers the ```ApplicationLoggerDbContext``` and ```ApplicationDbContext``` se
 We discussed the key concepts of ```logging, console logging, file logging, and SQLite database logging```. We also examined the code structure and provided code examples to illustrate the configuration process. By understanding this code, developers can effectively set up logging in their Blazor applications using Serilog.
 
 #### **Source**
-Full source code is available at this repository in GitHub: 
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppSerilogLogging

@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet8_automapper.jpg" alt="blazor_dotnet8_automapper" title="blazor_dotnet8_automapper" style="border-radius: 20px;"><br>
 <p>
 
@@ -78,5 +78,5 @@ By following the steps outlined in this article, you can easily implement ```obj
 
 
 #### **Source**
-Full source code is available at this repository in GitHub:
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppObjectMappingwithAutoMapper

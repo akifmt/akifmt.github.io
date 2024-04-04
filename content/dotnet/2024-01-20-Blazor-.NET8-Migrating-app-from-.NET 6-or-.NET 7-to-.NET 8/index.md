@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet8.jpg" alt="blazor_dotnet8" title="blazor_dotnet8" style="border-radius: 20px;"><br>
 <p>
 
@@ -203,10 +203,8 @@ In the old ```_Host.cshtml``` file, the Blazor component was rendered. In the ne
 </html>
 ```
 
-
-
 {{< alert type="info" >}}
-ℹ️ Information
+Information
 - Remove ```@page``` directives
 - Update base links: from ```"~/"``` to ```"/"```
 - Update render-mode to ```"<HeadOutlet/>"```
@@ -221,7 +219,7 @@ In the old ```_Host.cshtml``` file, the Blazor component was rendered. In the ne
 {{< /alert >}}
 
 {{< alert type="info" >}}
-ℹ️ Project Structure
+Project Structure
 - <kbd>OLD</kbd>
 	- Data
 	- Pages
@@ -235,6 +233,8 @@ In the old ```_Host.cshtml``` file, the Blazor component was rendered. In the ne
 	- Properties
 	- wwwroot
 {{< /alert >}}
+
+
 
 Remember to back up your code and project files before starting the migration process. This allows you to revert to the previous version if any issues arise during the migration.
 

@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet8.jpg" alt="blazor_dotnet8" title="blazor_dotnet8" style="border-radius: 20px;"><br>
 <p>
 
@@ -824,6 +824,6 @@ public class WeatherForecastApiService : IWeatherForecastApiService
 The ```WeatherForecastApiService``` class in the Blazor .NET 8 Microservices Blazor Client project provides methods to interact with a weather forecast API. It allows for retrieving, adding, updating, and deleting weather forecasts using HTTP requests. By utilizing the IHttpClientFactory and IHttpContextAccessor, it ensures efficient and secure communication with the API.
 
 #### **Source**
-Full source code is available at this repository in GitHub:
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/Microser
 

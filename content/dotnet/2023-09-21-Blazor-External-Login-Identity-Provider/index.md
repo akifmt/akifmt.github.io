@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet.jpg" alt="blazor_dotnet" title="blazor_dotnet" style="border-radius: 20px;"><br>
 <p>
 
@@ -218,5 +218,5 @@ private void FillExternalProviderUserInfo(ApplicationUser user, ExternalLoginInf
 Configuring ```external login``` identity providers in a Blazor application is essential to provide users with the option to authenticate using their existing credentials from popular platforms like ```Google, Facebook, Microsoft, or Twitter```. By using the ```appsettings.json``` file, you can easily configure these providers by specifying the required ```client IDs and client secrets```.
 
 #### **Source**
-Full source code is available at this repository in GitHub:
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppExternalLogin

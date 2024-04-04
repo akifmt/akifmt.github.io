@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet_redis.jpg" alt="blazor_dotnet_redis" title="blazor_dotnet_redis"><br>
 <p>
 
@@ -422,6 +422,6 @@ public class BlogPostService
 
 
 #### **Source**
-Full source code is available at this repository in GitHub:
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppwithRedis
 

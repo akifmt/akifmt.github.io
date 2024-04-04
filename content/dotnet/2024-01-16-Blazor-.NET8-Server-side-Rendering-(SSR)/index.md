@@ -1,11 +1,11 @@
 ---
-title: "Blazor .NET8 Server-side Rendering (SSR)"
+title: "Blazor .NET 8 Server-side Rendering (SSR)"
 date: 2024-01-16T00:00:00+00:00
 hero: blazor_dotnet8.jpg
-description: Blazor .NET8 Server-side Rendering (SSR)
+description: Blazor .NET 8 Server-side Rendering (SSR)
 menu:
   dotnet:
-    name: Blazor .NET8 Server-side Rendering (SSR)
+    name: Blazor .NET 8 Server-side Rendering (SSR)
     identifier: blazor-dotnet8-server-side-rendering-SSR
     weight: -20240116
 tags: [dotnet8, .NET8, Blazor, Server-side Rendering, SSR]
@@ -15,11 +15,11 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet8.jpg" alt="blazor_dotnet8" title="blazor_dotnet8" style="border-radius: 20px;"><br>
 <p>
 
-#### **Blazor .NET8 Server-side Rendering (SSR)**
+#### **Blazor .NET 8 Server-side Rendering (SSR)**
 Blazor .NET 8 offers several rendering options, including Server-side Rendering (SSR). SSR allows the initial rendering of a Blazor application to be performed on the server before being sent to the client. This approach provides benefits such as improved performance, SEO-friendliness, and better accessibility.
 
 In Blazor .NET 8, there are two main ways to implement SSR: Global SSR with Prerendering and Per Page/Component SSR with Prerendering.
@@ -129,7 +129,7 @@ In the code snippet above, we define a Blazor page with the ```@page``` directiv
 the ```HeadOutlet``` component and the Routes component are rendered based on the ```RenderModeForPage``` property. The ```RenderModeForPage``` property is determined by the current path of the HTTP request. If the path starts with "/Account", the render mode is set to ```null```, which means the ```default``` render mode will be used.
 
 {{< alert type="info" >}}
-ℹ️ Information
+Information
 - The default render mode is ```Static```.
 - The default prerender mode is ```True```.
 - The default StreamRendering attribute parameter is ```True```.

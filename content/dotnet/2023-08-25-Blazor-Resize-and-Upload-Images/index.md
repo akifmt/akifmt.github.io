@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet.jpg" alt="blazor_dotnet" title="blazor_dotnet"><br>
 <p>
 
@@ -151,5 +151,5 @@ We explored how to ```upload and save images``` in a ```Blazor application``` us
 
 
 #### **Source**
-Full source code is available at this repository in GitHub:
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppResizeUploadImages

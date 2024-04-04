@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_radzen_searchcomponent.jpg" alt="blazor_radzen_searchcomponent" title="blazor_radzen_searchcomponent"><br>
 <p>
 
@@ -84,5 +84,5 @@ In the above example, the `SearchComponent` is used with the `SearchButtonCli
 
 
 ###### **Source**
-Full source code is available at this repository in GitHub: 
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppRadzenSearch

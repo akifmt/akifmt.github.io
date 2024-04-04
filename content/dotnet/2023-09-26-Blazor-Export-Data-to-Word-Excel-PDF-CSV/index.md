@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="blazor_dotnet.jpg" alt="blazor_dotnet" title="blazor_dotnet" style="border-radius: 20px;"><br>
 <p>
 
@@ -632,5 +632,5 @@ The ```ExportCustom``` method is called when the user clicks on the "Export Cust
 Exporting data to different file formats can greatly enhance the usability and accessibility of your Blazor application. Whether it's generating reports, sharing data with others, or archiving information, the ability to export data in different formats is a valuable feature to have.
 
 #### **Source**
-Full source code is available at this repository in GitHub:
+Full source code is available at this repository in GitHub:  
 https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppExport

@@ -15,7 +15,7 @@ author:
   name: Akif T.
 ---
 
-<p style="text-align: center;">
+<p class="d-flex justify-content-center">
 <img src="teamcity.jpg" alt="teamcity" title="teamcity" style="border-radius: 20px;"><br>
 <p>
 
@@ -30,7 +30,7 @@ TeamCity, developed by ```JetBrains```, is a continuous integration and continuo
 - Select the ```desired version``` and click ```"Download."```
 
 {{< alert type="info" >}}
-ℹ️ Information
+Information
 - TeamCity Professional (Free forever, even for commercial use)
 {{< /alert >}}
 
@@ -52,8 +52,6 @@ TeamCity, developed by ```JetBrains```, is a continuous integration and continuo
 
 
 {{< alert type="info" >}}
-ℹ️ Information
-
 Configuring TeamCity Server Startup Properties;
 - Navigate to the ```TeamCity_Home\conf``` directory
 - Open ```teamcity-startup.properties```
@@ -62,6 +60,7 @@ teamcity.data.path=TEAMCITY_DATA_PATH
 teamcity.server.git.executable.path=CUSTOM_GIT_PATH\\git.exe
 ```
 
-More Information: https://www.jetbrains.com/help/teamcity/teamcity-documentation.html
+More Information:  
+https://www.jetbrains.com/help/teamcity/teamcity-documentation.html
 
 {{< /alert >}}
