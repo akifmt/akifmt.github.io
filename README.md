@@ -1,9 +1,7 @@
 ## akifmt.github.io
 
-[![pages-build-deployment](https://github.com/akifmt/akifmt.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/akifmt/akifmt.github.io/actions/workflows/pages/pages-build-deployment)
-[![Deploy to Github Pages](https://github.com/akifmt/akifmt.github.io/actions/workflows/deploy-to-gh-pages.yaml/badge.svg)](https://github.com/akifmt/akifmt.github.io/actions/workflows/deploy-to-gh-pages.yaml)
-[![GitHub issues](https://img.shields.io/github/issues/akifmt/akifmt.github.io)](https://github.com/akifmt/akifmt.github.io/issues)
-[![GitHub forks](https://img.shields.io/github/forks/akifmt/akifmt.github.io)](https://github.com/akifmt/akifmt.github.io/network)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fakifmt%2Fakifmt.github.io%2Fbadge%3Fref%3Dsource-v4&style=flat)](https://actions-badge.atrox.dev/akifmt/akifmt.github.io/goto?ref=source-v4) [![Deploy to Github Pages](https://github.com/akifmt/akifmt.github.io/actions/workflows/deploy-to-gh-pages.yaml/badge.svg)](https://github.com/akifmt/akifmt.github.io/actions/workflows/deploy-to-gh-pages.yaml)
+[![GitHub issues](https://img.shields.io/github/issues/akifmt/akifmt.github.io)](https://github.com/akifmt/akifmt.github.io/issues) ![Last Commit](https://img.shields.io/github/last-commit/hugo-toha/hugo-toha.github.io) [![GitHub forks](https://img.shields.io/github/forks/akifmt/akifmt.github.io)](https://github.com/akifmt/akifmt.github.io/network)
 [![GitHub stars](https://img.shields.io/github/stars/akifmt/akifmt.github.io)](https://github.com/akifmt/akifmt.github.io/stargazers)
 [![GitHub license](https://img.shields.io/github/license/akifmt/akifmt.github.io)](https://github.com/akifmt/akifmt.github.io/blob/master/LICENSE)
 
