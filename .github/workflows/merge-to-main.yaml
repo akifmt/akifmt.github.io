@@ -4,7 +4,7 @@ name: Merge to main workflows
 on:
   push:
     branches:
-    - source
+    - source-v4
 
 jobs:
   deploy-to-gh-pages:
