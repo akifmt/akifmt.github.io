@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Thu%20Apr%2004%202024%2021%3A11%3A11%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Fri%20Apr%2005%202024%2018%3A00%3A45%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor .NET 8 Microservices 2 Blazor Client Ocelot Gateway and Securing API with Duende Identity Server](https://github.com/akifmt/akifmt.github.io/commit/2f8b7ec112c84ed4da91a1f43b42fded7ab0dfcf) - 2024-04-05T18:00:16Z 
 - :page_facing_up: [Update deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/c74a85f900bbb72f1be921001cab07049aea5715) - 2024-04-04T21:11:01Z 
 - :page_facing_up: [Update and rename merge-to-main.yaml to deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/ab68c8f5eca5f64c5aaf1456883336e5c1ca05da) - 2024-04-04T21:07:00Z 
 - :page_facing_up: [Update update-readme.yaml](https://github.com/akifmt/akifmt.github.io/commit/fef4bc34f64612620ce6efb2d8e54deece4ee943) - 2024-04-04T20:50:11Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Update dependabot.yml](https://github.com/akifmt/akifmt.github.io/commit/ee6d817c47b81e5c0682c02e4c1ef35325d6a2a9) - 2024-04-04T20:36:48Z 
 - :page_facing_up: [added new post Blazor .NET 8 Microservices Blazor Client and Securing API with Duende Identity Server](https://github.com/akifmt/akifmt.github.io/commit/4edd2dc44867e70cc43f19dbb2c948b39a56d4d8) - 2024-03-22T08:36:29Z 
 - :page_facing_up: [updated codeblock height](https://github.com/akifmt/akifmt.github.io/commit/e52ca8c5c3c7c61739f228b289dbc37a08c48238) - 2024-03-22T08:34:04Z 
-- :page_facing_up: [added new post Blazor .NET 8 and Minimal APIs Native AOT CRUD](https://github.com/akifmt/akifmt.github.io/commit/70f8b6644e1f8ea614e1bc62abbca65d2a33c6d4) - 2024-02-14T09:25:50Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
