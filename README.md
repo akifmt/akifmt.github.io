@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Tue%20Apr%2016%202024%2023%3A44%3A43%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Fri%20Apr%2026%202024%2020%3A21%3A06%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added gtag](https://github.com/akifmt/akifmt.github.io/commit/451298f2c505bb08ec7e15af4deba6bd1f16a709) - 2024-04-26T20:20:07Z 
 - :page_facing_up: [added new post Blazor .NET 8 Autocompile Sass and Less](https://github.com/akifmt/akifmt.github.io/commit/af5a070f2dc6f3947f177ec0c2fada15cc56137a) - 2024-04-16T23:44:03Z 
 - :page_facing_up: [added new post Blazor .NET 8 Microservices 2 Blazor Client Ocelot Gateway and Securing API with Duende Identity Server](https://github.com/akifmt/akifmt.github.io/commit/2f8b7ec112c84ed4da91a1f43b42fded7ab0dfcf) - 2024-04-05T18:00:16Z 
 - :page_facing_up: [Update deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/c74a85f900bbb72f1be921001cab07049aea5715) - 2024-04-04T21:11:01Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Update merge-to-main.yaml](https://github.com/akifmt/akifmt.github.io/commit/0767c37126c7115eb476d9a9fa38dfcc390b772e) - 2024-04-04T20:39:45Z 
 - :page_facing_up: [Update and rename deploy-site.yaml to merge-to-main.yaml](https://github.com/akifmt/akifmt.github.io/commit/b215c11431c674a8ffa50c5d76bff76775d5b5a9) - 2024-04-04T20:38:56Z 
 - :page_facing_up: [Update dependabot.yml](https://github.com/akifmt/akifmt.github.io/commit/ee6d817c47b81e5c0682c02e4c1ef35325d6a2a9) - 2024-04-04T20:36:48Z 
-- :page_facing_up: [added new post Blazor .NET 8 Microservices Blazor Client and Securing API with Duende Identity Server](https://github.com/akifmt/akifmt.github.io/commit/4edd2dc44867e70cc43f19dbb2c948b39a56d4d8) - 2024-03-22T08:36:29Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
