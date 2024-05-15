@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sat%20May%2004%202024%2018%3A06%3A53%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Wed%20May%2015%202024%2018%3A29%3A00%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Radzen .NET 8 Html Editor](https://github.com/akifmt/akifmt.github.io/commit/38e0b3b15d2e6d87824299b75904b7756d135e58) - 2024-05-15T18:27:51Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Multiple Themes Dark and Light Mode](https://github.com/akifmt/akifmt.github.io/commit/98b4f25a153289d5e461340624fcf1433fb92ee3) - 2024-05-04T18:05:53Z 
 - :page_facing_up: [added gtag to header](https://github.com/akifmt/akifmt.github.io/commit/156ec8117ab13d1317523b2a1f6a3adb43af7a50) - 2024-04-26T20:39:23Z 
 - :page_facing_up: [Updated gtag](https://github.com/akifmt/akifmt.github.io/commit/ce757bf16a448f172b3ec31693cbb5c236f1ddd1) - 2024-04-26T20:25:35Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Update deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/c74a85f900bbb72f1be921001cab07049aea5715) - 2024-04-04T21:11:01Z 
 - :page_facing_up: [Update and rename merge-to-main.yaml to deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/ab68c8f5eca5f64c5aaf1456883336e5c1ca05da) - 2024-04-04T21:07:00Z 
 - :page_facing_up: [Update update-readme.yaml](https://github.com/akifmt/akifmt.github.io/commit/fef4bc34f64612620ce6efb2d8e54deece4ee943) - 2024-04-04T20:50:11Z 
-- :page_facing_up: [first version of v4](https://github.com/akifmt/akifmt.github.io/commit/c93ca8b8eb1c4dceab8ef9c720cfe0f9e64c3664) - 2024-04-04T20:45:25Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
