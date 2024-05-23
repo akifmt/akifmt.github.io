@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Thu%20May%2023%202024%2019%3A04%3A01%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Thu%20May%2023%202024%2019%3A18%3A31%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [Fixed top-menu position](https://github.com/akifmt/akifmt.github.io/commit/4eaaa406849f228785fc60bf93f3eade00ac705e) - 2024-05-23T19:17:16Z 
 - :page_facing_up: [Changed deps to local fork](https://github.com/akifmt/akifmt.github.io/commit/a206608215a613e5856d13b5982855b6baace16e) - 2024-05-23T19:02:46Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Html Editor](https://github.com/akifmt/akifmt.github.io/commit/38e0b3b15d2e6d87824299b75904b7756d135e58) - 2024-05-15T18:27:51Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Multiple Themes Dark and Light Mode](https://github.com/akifmt/akifmt.github.io/commit/98b4f25a153289d5e461340624fcf1433fb92ee3) - 2024-05-04T18:05:53Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor .NET 8 Autocompile Sass and Less](https://github.com/akifmt/akifmt.github.io/commit/af5a070f2dc6f3947f177ec0c2fada15cc56137a) - 2024-04-16T23:44:03Z 
 - :page_facing_up: [added new post Blazor .NET 8 Microservices 2 Blazor Client Ocelot Gateway and Securing API with Duende Identity Server](https://github.com/akifmt/akifmt.github.io/commit/2f8b7ec112c84ed4da91a1f43b42fded7ab0dfcf) - 2024-04-05T18:00:16Z 
 - :page_facing_up: [Update deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/c74a85f900bbb72f1be921001cab07049aea5715) - 2024-04-04T21:11:01Z 
-- :page_facing_up: [Update and rename merge-to-main.yaml to deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/ab68c8f5eca5f64c5aaf1456883336e5c1ca05da) - 2024-04-04T21:07:00Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
