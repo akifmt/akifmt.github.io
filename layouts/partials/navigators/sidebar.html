@@ -12,7 +12,6 @@
       <i data-feather="{{ $icon }}"></i><a class="{{$class}} list-link" href="{{ .URL }}"> {{.Name}}</a>
       <!-- Add sub-tree -->
       <ul class="{{ $class }}">
-	  asdasd
         {{ partial "navigators/sidebar.html" (dict "menuName" $.menuName "menuItems" .Children "ctx" $.ctx) }}
       </ul>
     </li>

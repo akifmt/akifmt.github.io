@@ -4,7 +4,7 @@
 
 {{ define "sidebar" }}
   {{ $homePage:="#" }}
-  {{ if site.IsMultiLingual }}
+  {{ if hugo.IsMultilingual }}
     {{ $homePage = (path.Join (cond ( eq .Language.Lang "en") "" .Language.Lang) .Type) }}
   {{ end }}
 
@@ -58,8 +58,8 @@
                   {{ end }}
                 </div>
                 <div class="card-footer">
-                  <span class="float-left">${date}</span>
-                  <a href="${link}" class="float-right btn btn-outline-info btn-sm">Read</a>
+                  <span class="float-start">${date}</span>
+                  <a href="${link}" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
               </div>
           </div>
