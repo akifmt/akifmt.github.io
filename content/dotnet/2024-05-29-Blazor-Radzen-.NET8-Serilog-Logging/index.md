@@ -1,36 +1,25 @@
 ---
-title: "Blazor Serilog Logging to Console, File and Database"
-date: 2023-08-15T00:00:00+00:00
-hero: blazor_dotnet.jpg
-description: Blazor Serilog Logging to Console, File and Database
+title: "Blazor Radzen .NET 8 Serilog Logging to Console, File and Database"
+date: 2024-05-29T00:00:00+00:00
+hero: blazor_radzen_dotnet8.jpg
+description: Blazor Radzen .NET 8 Serilog Logging to Console, File and Database
 menu:
   dotnet:
-    name: Blazor Serilog Logging to Console, File and Database
-    identifier: blazor-serilog-logging-to-console-file-and-database
-    weight: -20230815
-tags: [ Dotnet, Blazor Serilog Logging to Console File and Database]
-categories: [ Dotnet, Blazor Serilog Logging to Console File and Database]
+    name: Blazor Radzen .NET 8 Serilog Logging to Console, File and Database
+    identifier: blazor-radzen-dotnet8-serilog-logging-to-console-file-and-database
+    weight: -20240529
+tags: [dotnet8, .NET8, Blazor, Radzen, Serilog Logging to Console, File and Database]
+categories: [dotnet8, .NET8, Blazor, Radzen, Serilog Logging to Console, File and Database]
 
 author:
   name: Akif T.
 ---
 
 <p class="d-flex justify-content-center">
-<img src="blazor_dotnet.jpg" alt="blazor_dotnet" title="blazor_dotnet"><br>
+<img src="blazor_radzen_dotnet8.jpg" alt="blazor_radzen_dotnet8" title="blazor_radzen_dotnet8" style="border-radius: 20px;"><br>
 <p>
 
-#### **Blazor Serilog Logging to Console, File and Database**
-
-
-{{< alert type="warning" >}}
-Warning
-
-- This post is about ```.NET 6```.
-- ```.NET 8``` version is in the link below:  
-Link: [Blazor Radzen .NET 8 Serilog Logging to Console, File and Database](/dotnet/2024-05-19-blazor-radzen-.net8-serilog-logging/)
-
-{{< /alert >}}
-
+#### **Blazor Radzen .NET 8 Serilog Logging to Console, File and Database**
 
 Logging: Logging is the process of recording events, messages, or exceptions that occur during the execution of an application. It helps developers understand the behavior of the application, diagnose issues, and track its performance. Logging is an essential aspect of software development and plays a crucial role in maintaining and troubleshooting applications.
 
@@ -46,8 +35,10 @@ File Logging: File logging is a type of logging where log messages are written t
 SQLite Database Logging: SQLite database logging is a type of logging where log messages are stored in an SQLite database. It provides a structured way to store and query log data.
 
 ##### **Log.cs**
+
 The provided code defines a Log model class within the BlazorAppSerilogLogging.Models namespace. The Log class has the following properties:
 
+<kbd>Log.cs</kbd>
 ```
 namespace BlazorAppSerilogLogging.Models;
 
@@ -76,11 +67,13 @@ Properties: A string property that stores additional properties or metadata rela
 
 ##### **ApplicationLoggerDbContext.cs**
 The ```ApplicationLoggerDbContext``` class is a C# code that represents the database context for logging in a Blazor application using Serilog. It is responsible for managing the connection to the database and providing access to the ```Logs``` table.
+
+<kbd>ApplicationLoggerDbContext.cs</kbd>
 ```
-using BlazorAppSerilogLogging.Models;
+using BlazorAppRadzenNet8SerilogLogging.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorAppSerilogLogging.Data;
+namespace BlazorAppRadzenNet8SerilogLogging.Data;
 
 public class ApplicationLoggerDbContext : DbContext
 {
@@ -109,11 +102,15 @@ The ```OnModelCreating``` method is overridden but left empty in this code examp
 ##### **LoggerService.cs**
 The ```LoggerService``` class is defined within the ```BlazorAppSerilogLogging.Data``` namespace. It implements several methods for logging operations and interacts with the ```ApplicationLoggerDbContext``` class.
 
-```
-using BlazorAppSerilogLogging.Models;
-using Microsoft.EntityFrameworkCore;
 
-namespace BlazorAppSerilogLogging.Data;
+<kbd>LoggerService.cs</kbd>
+```
+using BlazorAppRadzenNet8SerilogLogging.Models;
+using Microsoft.EntityFrameworkCore;
+using Radzen;
+using System.Linq.Dynamic.Core;
+
+namespace BlazorAppRadzenNet8SerilogLogging.Data;
 
 public class LoggerService
 {
@@ -126,21 +123,54 @@ public class LoggerService
         _loggerDbContext = loggerDbContext;
     }
 
-    public async Task<IEnumerable<Log>> GetLogsAsync()
+    public async Task<Log?> GetLogByIdAsync(int id)
     {
-        _logger.LogInformation($"Called GetLogsAsync");
-        return await _loggerDbContext.Logs.OrderByDescending(x => x.Timestamp).ToListAsync();
-    }
-
-    public async Task<Log?> GetLogAsync(int id)
-    {
-        _logger.LogInformation($"Called GetLogAsync", id);
+        _logger.LogInformation($"Called GetLogByIdAsync", id);
         return await _loggerDbContext.Logs.FirstOrDefaultAsync(x => x.id == id);
     }
 
-    public async Task<bool?> DeleteLogsAsync()
+    public async Task<(IEnumerable<Log> Result, int TotalCount)> GetLogsAsync(string? filter = default, int? top = default, int? skip = default, string? orderby = default, string? expand = default, string? select = default, bool? count = default)
     {
-        _logger.LogInformation($"Called DeleteLogsAsync");
+        _logger.LogInformation($"Called GetLogsAsync");
+
+        var query = _loggerDbContext.Logs.AsQueryable();
+
+        if (!string.IsNullOrEmpty(filter))
+            query = query.Where(filter);
+
+        if (!string.IsNullOrEmpty(orderby))
+            query = query.OrderBy(orderby);
+
+        int totalCount = 0;
+        if (count == true)
+            totalCount = query.Count();
+
+        IEnumerable<Log>? result;
+        if (skip == null || top == null)
+            result = await query.ToListAsync();
+        else
+            result = await query.Skip(skip.Value).Take(top.Value).ToListAsync();
+
+        return (result, totalCount);
+    }
+
+    public async Task<bool> DeleteLogByIdAsync(int id)
+    {
+        _logger.LogInformation($"Called DeleteLogByIdAsync", id);
+
+        var log = await _loggerDbContext.Logs.FirstOrDefaultAsync(x => x.id == id);
+        if (log == null)
+            return false;
+
+        _loggerDbContext.Logs.Remove(log);
+        await _loggerDbContext.SaveChangesAsync();
+
+        return true;
+    }
+
+    public async Task<bool?> DeleteAllLogsAsync()
+    {
+        _logger.LogInformation($"Called DeleteAllLogsAsync");
         var all = await _loggerDbContext.Logs.ToListAsync();
         _loggerDbContext.Logs.RemoveRange(all); ;
         await _loggerDbContext.SaveChangesAsync();
@@ -161,82 +191,105 @@ The constructor of the ```LoggerService``` class takes in an ```ILogger<LoggerSe
 ##### **Index.razor**
 Index.razor is a Blazor component that displays logs retrieved from a logging service. It allows users to view and delete logs. The logs are fetched asynchronously and displayed in a table format.
 
+<kbd>Index.razor</kbd>
 ```
-@page "/Logs"
+@page "/Log"
 
-@using AutoMapper
-@using BlazorAppSerilogLogging.Data;
-@using BlazorAppSerilogLogging.Models;
-@using BlazorAppSerilogLogging.Services;
-@using BlazorAppSerilogLogging.ViewModels;
+@inject DialogService DialogService
 
-@inject IMapper Mapper
-@inject NavigationManager NavigationManager
-@inject LoggerService LoggerService
+<PageTitle>Logs</PageTitle>
 
-<PageTitle>Index</PageTitle>
+<RadzenRow>
 
-<h1>Index</h1>
-<p>
-    <button class="btn btn-danger" @onclick="() => DeleteAllLogs()">Delete All Logs</button>
-</p>
-@if (logs == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>@nameof(LogViewModel.id)</th>
-                <th>@nameof(LogViewModel.Timestamp)</th>
-                <th>@nameof(LogViewModel.Level)</th>
-                <th>@nameof(LogViewModel.Exception)</th>
-                <th>@nameof(LogViewModel.RenderedMessage)</th>
-                <th>@nameof(LogViewModel.Properties)</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var log in logs)
-            {
-                <tr>
-                    <td>@log.id</td>
-                    <td>@log.Timestamp</td>
-                    <td>
-                        <span class="text-@Helpers.LogEventLevelHelper.GetBootstrapUIClass(log.Level)">
-                            @log.Level
-                        </span>
-                    </td>
-                    <td>@log.Exception</td>
-                    <td>@log.RenderedMessage</td>
-                    <td>@log.Properties</td>
-                    <td>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+    <RadzenColumn SizeSM="12" SizeMD="12" SizeLG="4">
+
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+            <RadzenText Text="Logs" TextStyle="TextStyle.H5" />
+            <RadzenButton Text="DELETE ALL LOGS" Icon="delete_forever"
+                          Click="DeleteAllLogs"
+                          ButtonStyle="ButtonStyle.Danger" class="rz-mb-2 rz-p-2" />
+        </RadzenStack>
+
+    </RadzenColumn>
+
+</RadzenRow>
+
+<RadzenDataGrid KeyProperty="id" IsLoading="@isLoading" ShowPagingSummary=true
+                Count="@totalCount" Data="@logs" LoadData="@LoadData"
+                FilterPopupRenderMode="PopupRenderMode.OnDemand"
+                FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                FilterMode="FilterMode.Advanced" AllowSorting="true" AllowFiltering="true"
+                AllowPaging="true" PageSize="@itemPageSize" PagerHorizontalAlign="HorizontalAlign.Center"
+                TItem="LogViewModel" ColumnWidth="200px">
+    <Columns>
+        <RadzenDataGridColumn TItem="LogViewModel" Property="id" Filterable="false" Title="Id" Frozen="true" Width="30px" MinWidth="30px" TextAlign="TextAlign.Center" />
+
+        <RadzenDataGridColumn TItem="LogViewModel" Property="Timestamp" Title="Timestamp" />
+        <RadzenDataGridColumn TItem="LogViewModel" Property="Level" Title="Level" Context="log">
+            <Template>
+                <span class="text-@Helpers.LogEventLevelHelper.GetBootstrapUIClass(log.Level)">
+                    @log.Level
+                </span>
+            </Template>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn TItem="LogViewModel" Property="Exception" Title="Exception" />
+        <RadzenDataGridColumn TItem="LogViewModel" Property="RenderedMessage" Title="RenderedMessage" />
+        <RadzenDataGridColumn TItem="LogViewModel" Property="Properties" Title="Properties" />
+
+        <RadzenDataGridColumn TItem="LogViewModel" Context="log" Filterable="false" Sortable="false" Width="150px" TextAlign="TextAlign.Center">
+            <Template Context="log">
+
+                <RadzenRow JustifyContent="JustifyContent.Center">
+                    <RadzenButton Icon="pageview" ButtonStyle="ButtonStyle.Info" Variant="Variant.Flat" Size="ButtonSize.Medium"
+                                  Click="@(args => NavigatetoDetail(log.id))" @onclick:stopPropagation="true">
+                    </RadzenButton>
+                    <RadzenButton Icon="delete_forever" ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium"
+                                  Click="@(args => NavigatetoDelete(log.id))" @onclick:stopPropagation="true">
+                    </RadzenButton>
+                </RadzenRow>
+
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
 
 
 @code {
+
+    const int itemPageSize = 10;
+    private bool isLoading;
+    private int totalCount;
     private IEnumerable<LogViewModel>? logs;
 
-    protected override async Task OnInitializedAsync()
+    private async Task LoadData(LoadDataArgs args)
     {
-        if (logs == null)
-        {
-            var result = await LoggerService.GetLogsAsync();
-            logs = Mapper.Map<IEnumerable<Log>, IEnumerable<LogViewModel>>(result);
-        }
+        isLoading = true;
+
+        var result = await LoggerService.GetLogsAsync(filter: args.Filter, top: args.Top, skip: args.Skip, orderby: args.OrderBy, count: true);
+
+        logs = Mapper.Map<IEnumerable<Log>, IEnumerable<LogViewModel>>(result.Result);
+        totalCount = result.TotalCount;
+
+        isLoading = false;
     }
 
-    private async void DeleteAllLogs()
+    private async Task DeleteAllLogs()
     {
-        await LoggerService.DeleteLogsAsync();
+        var dialogResult = await DialogService.Confirm("Are you sure DELETE All Logs?", "Delete All Logs",
+                    new ConfirmOptions { OkButtonText = "Ok", CancelButtonText = "Cancel" });
+
+        if (dialogResult == true)
+        {
+            var deleteAllLogsResult = await LoggerService.DeleteAllLogsAsync();
+            if (deleteAllLogsResult == true)
+                NavigationManager.NavigateTo("/Log", true);
+        }
+
     }
+
+    private void NavigatetoDetail(int id) => NavigationManager.NavigateTo($"/Log/Detail/{id}");
+    private void NavigatetoDelete(int id) => NavigationManager.NavigateTo($"/Log/Delete/{id}");
 
 }
 ```
@@ -244,6 +297,7 @@ This code block is executed when the component is initialized. It calls the ```G
 
 ##### **Program.cs**
 
+<kbd>Program.cs</kbd>
 ```
 builder.Host.UseSerilog((ctx, lc) => lc
 	.MinimumLevel.Information()
@@ -275,6 +329,7 @@ Registers the ```ApplicationLoggerDbContext``` and ```ApplicationDbContext``` se
 
 We discussed the key concepts of ```logging, console logging, file logging, and SQLite database logging```. We also examined the code structure and provided code examples to illustrate the configuration process. By understanding this code, developers can effectively set up logging in their Blazor applications using Serilog.
 
+
 #### **Source**
 Full source code is available at this repository in GitHub:  
-https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppSerilogLogging
+https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppRadzenNet8SerilogLogging
