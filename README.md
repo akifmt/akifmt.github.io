@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Fri%20May%2024%202024%2021%3A38%3A57%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Wed%20May%2029%202024%2018%3A47%3A37%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Radzen .NET 8 Serilog Logging to Console, File and Database](https://github.com/akifmt/akifmt.github.io/commit/1723fce0cb73c674034cb00a78352ff5181a61e7) - 2024-05-29T18:46:12Z 
 - :page_facing_up: [Update layouts to v4](https://github.com/akifmt/akifmt.github.io/commit/1e39c2bcc281f5de8f1b4b9b6b82bcb89a40f3f7) - 2024-05-24T21:36:30Z 
 - :page_facing_up: [Update config, added newsletter](https://github.com/akifmt/akifmt.github.io/commit/630c963beab54974e3ba2130f058c7ab70246375) - 2024-05-24T21:35:39Z 
 - :page_facing_up: [Fixed top-menu position](https://github.com/akifmt/akifmt.github.io/commit/4eaaa406849f228785fc60bf93f3eade00ac705e) - 2024-05-23T19:17:16Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added gtag to header](https://github.com/akifmt/akifmt.github.io/commit/156ec8117ab13d1317523b2a1f6a3adb43af7a50) - 2024-04-26T20:39:23Z 
 - :page_facing_up: [Updated gtag](https://github.com/akifmt/akifmt.github.io/commit/ce757bf16a448f172b3ec31693cbb5c236f1ddd1) - 2024-04-26T20:25:35Z 
 - :page_facing_up: [added gtag](https://github.com/akifmt/akifmt.github.io/commit/451298f2c505bb08ec7e15af4deba6bd1f16a709) - 2024-04-26T20:20:07Z 
-- :page_facing_up: [added new post Blazor .NET 8 Autocompile Sass and Less](https://github.com/akifmt/akifmt.github.io/commit/af5a070f2dc6f3947f177ec0c2fada15cc56137a) - 2024-04-16T23:44:03Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
