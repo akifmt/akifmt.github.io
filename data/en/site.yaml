@@ -15,7 +15,8 @@ description: Portfolio and personal blog of akifmt.
 customMenus:
  - name: dotnet Blog
    url: /dotnet/
-   preimage: /images/dotnet-logo.png
+   showpreimage: true
+   preimage: /images/dotnet-logo.png # 20h x 20w
         
    # specify whether to hide the menu item from top navbar or not.
    hideFromNavbar: false
