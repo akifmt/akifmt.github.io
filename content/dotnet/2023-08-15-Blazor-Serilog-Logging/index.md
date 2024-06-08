@@ -27,7 +27,7 @@ Warning
 
 - This post is about ```.NET 6```.
 - ```.NET 8``` version is in the link below:  
-Link: [Blazor Radzen .NET 8 Serilog Logging to Console, File and Database](/dotnet/2024-05-19-blazor-radzen-.net8-serilog-logging/)
+Link: [Blazor Radzen .NET 8 Serilog Logging to Console, File and Database](/dotnet/2024-05-29-blazor-radzen-.net8-serilog-logging/)
 
 {{< /alert >}}
 
