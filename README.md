@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sat%20Jun%2008%202024%2019%3A07%3A10%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Sun%20Jun%2009%202024%2015%3A16%3A23%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Radzen .NET 8 Google Maps](https://github.com/akifmt/akifmt.github.io/commit/e4367a508016e55fe22769b74f44b70d93ee4a94) - 2024-06-09T15:14:33Z 
 - :page_facing_up: [Fix post link](https://github.com/akifmt/akifmt.github.io/commit/ea8f9de1a9db12259695c2102f8026b324ec9488) - 2024-06-08T19:05:29Z 
 - :page_facing_up: [Added image to custom menu item](https://github.com/akifmt/akifmt.github.io/commit/8dc34e63fa6681e83fc319bbd38fbf56b14d2175) - 2024-06-08T18:54:41Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Serilog Logging to Console, File and Database](https://github.com/akifmt/akifmt.github.io/commit/1723fce0cb73c674034cb00a78352ff5181a61e7) - 2024-05-29T18:46:12Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Changed deps to local fork](https://github.com/akifmt/akifmt.github.io/commit/a206608215a613e5856d13b5982855b6baace16e) - 2024-05-23T19:02:46Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Html Editor](https://github.com/akifmt/akifmt.github.io/commit/38e0b3b15d2e6d87824299b75904b7756d135e58) - 2024-05-15T18:27:51Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Multiple Themes Dark and Light Mode](https://github.com/akifmt/akifmt.github.io/commit/98b4f25a153289d5e461340624fcf1433fb92ee3) - 2024-05-04T18:05:53Z 
-- :page_facing_up: [added gtag to header](https://github.com/akifmt/akifmt.github.io/commit/156ec8117ab13d1317523b2a1f6a3adb43af7a50) - 2024-04-26T20:39:23Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
