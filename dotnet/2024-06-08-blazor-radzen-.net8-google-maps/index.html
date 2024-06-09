@@ -1,0 +1,267 @@
+<!doctype html><html lang=en><head><title>Blazor Radzen .NET 8 Google Maps</title>
+<meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><script async src="https://www.googletagmanager.com/gtag/js?id=G-S9QF79W9GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-S9QF79W9GM")</script><link rel=stylesheet href=/application.0d9012d65f65702682bcef2365fb9eef7e7694262d61d4e7c0619a37e89c8519.css integrity="sha256-DZAS1l9lcCaCvO8jZfue7352lCYtYdTnwGGaN+ichRk="><link rel=stylesheet href=/css/main_custom.css><link rel=icon type=image/png href=/images/site/favicon_hu5e0469842f323d92977e05301135eda0_41440_42x0_resize_box_3.png><meta property="og:url" content="https://akifmt.github.io/dotnet/2024-06-08-blazor-radzen-.net8-google-maps/"><meta property="og:site_name" content="akifmt"><meta property="og:title" content="Blazor Radzen .NET 8 Google Maps"><meta property="og:description" content="Blazor Radzen .NET 8 Google Maps"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="dotnet"><meta property="article:published_time" content="2024-06-08T00:00:00+00:00"><meta property="article:modified_time" content="2024-06-08T00:00:00+00:00"><meta property="article:tag" content="Dotnet8"><meta property="article:tag" content=".NET8"><meta property="article:tag" content="Blazor"><meta property="article:tag" content="Radzen"><meta property="article:tag" content="Google Maps"><meta name=twitter:card content="summary"><meta name=twitter:title content="Blazor Radzen .NET 8 Google Maps"><meta name=twitter:description content="Blazor Radzen .NET 8 Google Maps"><meta name=description content="Blazor Radzen .NET 8 Google Maps"><script>theme=localStorage.getItem("darkmode:color-scheme")||"system",theme=="system"&&(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?theme="dark":theme="light"),document.documentElement.setAttribute("data-theme",theme)</script></head><body class="type-dotnet kind-page" data-bs-spy=scroll data-bs-target=#TableOfContents data-bs-offset=80><div class="container-fluid bg-secondary wrapper"><nav class="navbar navbar-expand-xl top-navbar shadow" id=top-navbar><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button>
+<i data-feather=sidebar></i>
+</button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png id=logo alt=Logo>
+akifmt</a>
+<button class="navbar-toggler navbar-light" id=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#top-nav-items aria-label=menu>
+<i data-feather=menu></i></button><div class="collapse navbar-collapse dynamic-navbar" id=top-nav-items><ul class="nav navbar-nav ms-auto"><li class=nav-item><a class=nav-link href=/#home>Home</a></li><li class=nav-item><a class=nav-link href=/#about>About</a></li><li class=nav-item><a class=nav-link href=/#skills>Skills</a></li><li class=nav-item><a class=nav-link href=/#experiences>Experiences</a></li><li class=nav-item><a class=nav-link href=/#projects>Projects</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false>More</a><div class=dropdown-menu aria-labelledby=navbarDropdown><a class=dropdown-item href=/#recent-posts-dotnet>Recent Dotnet Posts</a>
+<a class=dropdown-item href=/#recent-posts>Recent Posts</a></div></li><div id=top-navbar-divider></div><li class=nav-item><a class=nav-link id=blog-link href=/posts>Posts</a></li><li class=nav-item><a class=nav-link href=/dotnet/><img height=20 src=/images/dotnet-logo.png>
+dotnet Blog</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg class=theme-icon src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div id=themeMenu class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# data-scheme=light><img class=theme-icon src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme">
+</a><a class="dropdown-item nav-link" href=# data-scheme=dark><img class=theme-icon src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme">
+</a><a class="dropdown-item nav-link" href=# data-scheme=system><img class=theme-icon src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div><img src=/images/site/main-logo_hu9e97de834330d7f5d59d0d943d25df7c_18556_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_huaeac6b74eff06a7b4d6b563d4aa0a06e_40468_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading>dotnet<a href=/dotnet/ data-filter=all></a></li><div class=subtree><li><a class="active list-link" href=/dotnet/2024-06-08-blazor-radzen-.net8-google-maps/ title="Blazor Radzen .NET 8 Google Maps">Blazor Radzen .NET 8 Google Maps</a></li><li><a class=list-link href=/dotnet/2024-05-29-blazor-radzen-.net8-serilog-logging/ title="Blazor Radzen .NET 8 Serilog Logging to Console, File and Database">Blazor Radzen .NET 8 Serilog Logging to Console, File and Database</a></li><li><a class=list-link href=/dotnet/2024-05-15-blazor-radzen-.net8-htmleditor/ title="Blazor Radzen .NET 8 Html Editor">Blazor Radzen .NET 8 Html Editor</a></li><li><a class=list-link href=/dotnet/2024-05-04-blazor-radzen-.net8-multiple-themes-dark-and-light-mode/ title="Blazor Radzen .NET 8 Multiple Themes Dark and Light Mode">Blazor Radzen .NET 8 Multiple Themes Dark and Light Mode</a></li><li><a class=list-link href=/dotnet/2024-04-16-blazor-.net8-autocompile-sass-and-less/ title="Blazor .NET 8 Autocompile Sass and Less">Blazor .NET 8 Autocompile Sass and Less</a></li><li><a class=list-link href=/dotnet/2024-04-05-blazor-.net8-microservices-2-blazor-client-ocelot-gateway-and-securing-api-with-duende-identity-server/ title="Blazor .NET 8 Microservices 2 Blazor Client Ocelot Gateway and Securing API with Duende Identity Server">Blazor .NET 8 Microservices 2 Blazor Client Ocelot Gateway and Securing API with Duende Identity Server</a></li><li><a class=list-link href=/dotnet/2024-03-15-blazor-.net8-microservices-blazor-client-and-securing-api-with-duende-identity-server/ title="Blazor .NET 8 Microservices Blazor Client and Securing API with Duende Identity Server">Blazor .NET 8 Microservices Blazor Client and Securing API with Duende Identity Server</a></li><li><a class=list-link href=/dotnet/2024-02-12-blazor-.net8-and-minimal-apis-native-aot-crud/ title="Blazor .NET 8 and Minimal APIs Native AOT CRUD">Blazor .NET 8 and Minimal APIs Native AOT CRUD</a></li><li><a class=list-link href=/dotnet/2024-02-09-blazor-.net8-object-mapping-with-automapper/ title="Blazor .NET 8 Object Mapping with AutoMapper">Blazor .NET 8 Object Mapping with AutoMapper</a></li><li><a class=list-link href=/dotnet/2024-01-24-blazor-.net8-object-mapping-with-mapster/ title="Blazor .NET 8 Object Mapping with Mapster">Blazor .NET 8 Object Mapping with Mapster</a></li><li><a class=list-link href=/dotnet/2024-01-20-blazor-.net8-migrating-app-from-.net-6-or-.net-7-to-.net-8/ title="Blazor .NET 8 Migrating app from .NET 6 or .NET 7 to .NET 8">Blazor .NET 8 Migrating app from .NET 6 or .NET 7 to .NET 8</a></li><li><a class=list-link href=/dotnet/2024-01-16-blazor-.net8-server-side-rendering-ssr/ title="Blazor .NET 8 Server-side Rendering (SSR)">Blazor .NET 8 Server-side Rendering (SSR)</a></li><li><a class=list-link href=/dotnet/2024-01-13-blazor-.net8-hosting-models/ title="Blazor .NET 8 Hosting Models">Blazor .NET 8 Hosting Models</a></li><li><a class=list-link href=/dotnet/2023-10-16-blazor-infinite-scrolling/ title="Blazor Infinite Scrolling">Blazor Infinite Scrolling</a></li><li><a class=list-link href=/dotnet/2023-09-26-blazor-export-data-to-word-excel-pdf-csv/ title="Blazor Export Data to Word, Excel, PDF, CSV">Blazor Export Data to Word, Excel, PDF, CSV</a></li><li><a class=list-link href=/dotnet/2023-09-21-blazor-external-login-identity-provider/ title="Blazor External Login Identity Provider Google, Facebook, Microsoft, Twitter">Blazor External Login Identity Provider Google, Facebook, Microsoft, Twitter</a></li><li><a class=list-link href=/dotnet/2023-09-10-blazor-radzen-loading-on-page/ title="Blazor Radzen Loading on Page">Blazor Radzen Loading on Page</a></li><li><a class=list-link href=/dotnet/2023-09-03-blazor-send-email-with-mailkit/ title="Blazor Send Email with MailKit">Blazor Send Email with MailKit</a></li><li><a class=list-link href=/dotnet/2023-08-30-blazor-redis-as-backplane/ title="Blazor Redis as Backplane">Blazor Redis as Backplane</a></li><li><a class=list-link href=/dotnet/2023-08-25-blazor-resize-and-upload-images/ title="Blazor Resize and Upload Images">Blazor Resize and Upload Images</a></li><li><a class=list-link href=/dotnet/2023-08-18-blazor-scheduling-with-quartz.net/ title="Blazor Scheduling with Quartz.NET">Blazor Scheduling with Quartz.NET</a></li><li><a class=list-link href=/dotnet/2023-08-15-blazor-serilog-logging/ title="Blazor Serilog Logging to Console, File and Database">Blazor Serilog Logging to Console, File and Database</a></li><li><a class=list-link href=/dotnet/2023-08-13-blazor-implementing-google-recaptcha-v2/ title="Blazor Implementing Google reCAPTCHA v2">Blazor Implementing Google reCAPTCHA v2</a></li><li><a class=list-link href=/dotnet/2023-08-11-blazor-implementing-google-recaptcha-v3/ title="Blazor Implementing Google reCAPTCHA v3">Blazor Implementing Google reCAPTCHA v3</a></li><li><a class=list-link href=/dotnet/2023-08-09-blazor-radzen-globalization-and-localization/ title="Blazor Radzen Globalization and Localization">Blazor Radzen Globalization and Localization</a></li><li><a class=list-link href=/dotnet/2023-08-07-blazor-using-npm-packages/ title="Blazor Using NPM Packages">Blazor Using NPM Packages</a></li><li><a class=list-link href=/dotnet/2023-08-05-blazor-generic-components/ title="Blazor Generic Components">Blazor Generic Components</a></li><li><a class=list-link href=/dotnet/2023-08-02-blazor-rssfeed/ title="Blazor Expose a Feed as RSS">Blazor Expose a Feed as RSS</a></li><li><a class=list-link href=/dotnet/2023-07-31-blazor-ef-multipledbproviders/ title="Blazor EF Migrations with Multiple Providers">Blazor EF Migrations with Multiple Providers</a></li><li><a class=list-link href=/dotnet/2023-07-30-blazor-authentication-authorization/ title="Blazor Authentication and Authorization">Blazor Authentication and Authorization</a></li><li><a class=list-link href=/dotnet/2023-07-26-blazor-radzen-crud/ title="Blazor Radzen CRUD">Blazor Radzen CRUD</a></li><li><a class=list-link href=/dotnet/2023-07-21-blazor-radzen-searchcomponent/ title="Blazor Radzen SearchComponent">Blazor Radzen SearchComponent</a></li><li><a class=list-link href=/dotnet/2023-07-20-blazor-plyr-video-player/ title="Blazor Plyr Video Player">Blazor Plyr Video Player</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/dotnet/2024-06-08-blazor-radzen-.net8-google-maps/blazor_radzen_dotnet8.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/akif_hu0b098ee5eab0ebaed64b2691fffe1073_4640_120x120_fit_box_3.png alt="Author Image"><h5 class=author-name>Akif T.</h5><p class=text-muted>Saturday, June 8, 2024 | 6 minutes</p></div><div class=title><h1>Blazor Radzen .NET 8 Google Maps</h1></div><div class=tags><ul style=padding-left:0><li class=rounded><a href=/tags/dotnet8/ class="btn btn-sm btn-info">dotnet8</a></li><li class=rounded><a href=/tags/.net8/ class="btn btn-sm btn-info">.NET8</a></li><li class=rounded><a href=/tags/blazor/ class="btn btn-sm btn-info">Blazor</a></li><li class=rounded><a href=/tags/radzen/ class="btn btn-sm btn-info">Radzen</a></li><li class=rounded><a href=/tags/google-maps/ class="btn btn-sm btn-info">Google Maps</a></li></ul></div><div class=post-content id=post-content><p class="d-flex justify-content-center"><img src=blazor_radzen_dotnet8.jpg alt=blazor_radzen_dotnet8 title=blazor_radzen_dotnet8 style=border-radius:20px><br><p><h4 id=blazor-radzen-net-8-google-maps><strong>Blazor Radzen .NET 8 Google Maps</strong></h4><p class="d-flex justify-content-center"><img src=googlemaps.jpg alt=googlemaps title=googlemaps style=border-radius:20px><br><p><p>Blazor: <code>Blazor</code> is a web framework for building interactive client-side web applications using <code>C#</code> instead of JavaScript. It allows developers to write code in C# and have it run directly in the browser.</p><p>Radzen: <code>Radzen</code> is a low-code development platform that provides tools and components for building <code>web applications</code>. It simplifies the development process by generating code and providing a visual interface for designing user interfaces.</p><p>.NET 8: <code>.NET 8</code> is the latest version of the .NET framework, a software development platform for building applications. It includes various improvements and new features for developing web, desktop, and mobile applications.</p><p>Google Maps: <code>Google Maps</code> is a <code>web mapping service</code> provided by Google. It allows users to view maps, get directions, and search for locations.</p><p>Google Maps API: <code>The Google Maps API</code> is a set of APIs provided by Google that allows developers to integrate <code>Google Maps</code> into their applications. It provides various functionalities for displaying maps, adding markers, and handling user interactions.</p><h5 id=mapmarkercs><strong>MapMarker.cs</strong></h5><p><kbd>MapMarker.cs</kbd></p><pre tabindex=0><code>namespace BlazorAppRadzenGoogleMaps.Models;
+
+public class MapMarker
+{
+    public int Id { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public double Lat { get; set; }
+    public double Lng { get; set; }
+}
+</code></pre><p>We have a <code>C#</code> class named <code>MapMarker</code> within the <code>BlazorAppRadzenGoogleMaps.Models</code> namespace. This class represents a map marker with properties such as <code>Id</code>, <code>Title</code>, <code>Latitude (Lat)</code>, and <code>Longitude (Lng)</code>.</p><p>The <code>MapMarker</code> class defines properties for <code>Id</code>, <code>Title</code>, <code>Lat</code>, and <code>Lng</code>. The <code>Id</code> property is an integer representing the marker&rsquo;s unique identifier. The <code>Title</code> property is a string initialized to an empty string. The <code>Lat and Lng</code> properties are doubles representing the latitude and longitude coordinates, respectively.</p><h5 id=mapmarkerservicecs><strong>MapMarkerService.cs</strong></h5><p><kbd>MapMarkerService.cs</kbd></p><pre tabindex=0><code>using BlazorAppRadzenGoogleMaps.Data;
+using BlazorAppRadzenGoogleMaps.Models;
+using Microsoft.EntityFrameworkCore;
+using Radzen;
+using System.Linq.Dynamic.Core;
+
+namespace BlazorAppRadzenGoogleMaps.Services;
+
+public class MapMarkerService
+{
+    private readonly ApplicationDbContext _context;
+
+    public MapMarkerService(ApplicationDbContext context)
+    {
+        _context = context;
+    }
+
+    public Task&lt;MapMarker?&gt; GetbyId(int id)
+    {
+        return _context.MapMarkers.FirstOrDefaultAsync(x =&gt; x.Id == id);
+    }
+
+    public async Task&lt;(IEnumerable&lt;MapMarker&gt; Result, int TotalCount)&gt; GetMapMarkersAsync(string? filter = default, int? top = default, int? skip = default, string? orderby = default, string? expand = default, string? select = default, bool? count = default)
+    {
+        var query = _context.MapMarkers.AsQueryable();
+
+        if (!string.IsNullOrEmpty(filter))
+            query = query.Where(filter);
+
+        if (!string.IsNullOrEmpty(orderby))
+            query = query.OrderBy(orderby);
+
+        int totalCount = 0;
+        if (count == true)
+            totalCount = query.Count();
+
+        IEnumerable&lt;MapMarker&gt;? result;
+        if (skip == null || top == null)
+            result = await query.ToListAsync();
+        else
+            result = await query.Skip(skip.Value).Take(top.Value).ToListAsync();
+
+        return (result, totalCount);
+    }
+
+    public async Task&lt;bool&gt; AddMapMarkerAsync(MapMarker mapMarker)
+    {
+        try
+        {
+            await _context.MapMarkers.AddAsync(mapMarker);
+            await _context.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public async Task&lt;bool&gt; UpdateMapMarkerAsync(int id, MapMarker mapMarker)
+    {
+        try
+        {
+            var oldMapMarker = _context.MapMarkers.FirstOrDefault(x =&gt; x.Id == id);
+            if (oldMapMarker == null) return false;
+
+            oldMapMarker.Title = mapMarker.Title;
+            oldMapMarker.Lat = mapMarker.Lat;
+            oldMapMarker.Lng = mapMarker.Lng;
+
+            await _context.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public async Task&lt;bool&gt; DeletebyIdAsync(int id)
+    {
+        var mapMarker = await _context.MapMarkers.FirstOrDefaultAsync(x =&gt; x.Id == id);
+        if (mapMarker == null)
+            return false;
+
+        _context.MapMarkers.Remove(mapMarker);
+        await _context.SaveChangesAsync();
+
+        return true;
+    }
+}
+</code></pre><p>The <code>MapMarkerService</code> class is a service that provides methods for interacting with <code>map markers</code> in a Blazor application. It is responsible for <code>retrieving</code>, <code>adding</code>, <code>updating</code>, and <code>deleting</code> map markers from the database.</p><h5 id=indexrazor><strong>Index.razor</strong></h5><p><kbd>Index.razor</kbd></p><pre tabindex=0><code>@page &#34;/GoogleMap&#34;
+
+@inject Microsoft.JSInterop.IJSRuntime JSRuntime
+
+&lt;PageTitle&gt;GoogleMap&lt;/PageTitle&gt;
+
+&lt;RadzenRow&gt;
+    &lt;RadzenColumn SizeSM=&#34;12&#34; SizeMD=&#34;12&#34; SizeLG=&#34;12&#34;&gt;
+        &lt;RadzenStack Orientation=&#34;Orientation.Horizontal&#34; AlignItems=&#34;AlignItems.Center&#34;&gt;
+            &lt;RadzenText Text=&#34;GoogleMap&#34; TextStyle=&#34;TextStyle.H5&#34; /&gt;
+        &lt;/RadzenStack&gt;
+    &lt;/RadzenColumn&gt;
+&lt;/RadzenRow&gt;
+
+&lt;RadzenRow class=&#34;rz-mb-2 rz-p-2&#34;&gt;
+    &lt;RadzenColumn SizeSM=&#34;12&#34; SizeMD=&#34;12&#34; SizeLG=&#34;12&#34;&gt;
+        &lt;RadzenStack Orientation=&#34;Orientation.Horizontal&#34; AlignItems=&#34;AlignItems.Center&#34;&gt;
+
+            &lt;RadzenGoogleMap @ref=map ApiKey=@YOUR_GOOGLE_MAP_API_KEY style=&#34;height: 400px; width: 100%;&#34;
+                             Options=@(new Dictionary&lt;string, object&gt; { { &#34;disableDoubleClickZoom&#34;, true } })
+                             Zoom=@zoom Center=@mapCenter
+                             MapClick=@OnMapClick MarkerClick=@OnMarkerClick
+                             Data=&#34;radzenGoogleMapMarkers&#34;&gt;
+            &lt;/RadzenGoogleMap&gt;
+
+        &lt;/RadzenStack&gt;
+    &lt;/RadzenColumn&gt;
+&lt;/RadzenRow&gt;
+
+
+&lt;RadzenRow&gt;
+    &lt;RadzenColumn SizeSM=&#34;12&#34; SizeMD=&#34;12&#34; SizeLG=&#34;4&#34;&gt;
+        &lt;RadzenStack Orientation=&#34;Orientation.Horizontal&#34; AlignItems=&#34;AlignItems.Center&#34;&gt;
+            &lt;RadzenText Text=&#34;MapMarkers&#34; TextStyle=&#34;TextStyle.H5&#34; /&gt;
+            &lt;RadzenButton Text=&#34;Create&#34; Icon=&#34;add_circle_outline&#34;
+                          Click=&#34;NavigatetoCreate&#34;
+                          ButtonStyle=&#34;ButtonStyle.Success&#34; class=&#34;rz-mb-2 rz-p-2&#34; /&gt;
+        &lt;/RadzenStack&gt;
+    &lt;/RadzenColumn&gt;
+&lt;/RadzenRow&gt;
+
+&lt;RadzenDataGrid KeyProperty=&#34;Id&#34; IsLoading=&#34;@isLoading&#34; ShowPagingSummary=true
+                Count=&#34;@totalCount&#34; Data=&#34;@mapMarkers&#34; LoadData=&#34;@LoadData&#34;
+                FilterPopupRenderMode=&#34;PopupRenderMode.OnDemand&#34;
+                FilterCaseSensitivity=&#34;FilterCaseSensitivity.CaseInsensitive&#34;
+                FilterMode=&#34;FilterMode.Advanced&#34; AllowSorting=&#34;true&#34; AllowFiltering=&#34;true&#34;
+                AllowPaging=&#34;true&#34; PageSize=&#34;@itemPageSize&#34; PagerHorizontalAlign=&#34;HorizontalAlign.Center&#34;
+                TItem=&#34;MapMarkerViewModel&#34; ColumnWidth=&#34;200px&#34;&gt;
+    &lt;Columns&gt;
+        &lt;RadzenDataGridColumn TItem=&#34;MapMarkerViewModel&#34; Property=&#34;Id&#34; Filterable=&#34;false&#34; Title=&#34;Id&#34; Frozen=&#34;true&#34; Width=&#34;30px&#34; MinWidth=&#34;30px&#34; TextAlign=&#34;TextAlign.Center&#34; /&gt;
+
+        &lt;RadzenDataGridColumn TItem=&#34;MapMarkerViewModel&#34; Property=&#34;Title&#34; Title=&#34;Title&#34; /&gt;
+        &lt;RadzenDataGridColumn TItem=&#34;MapMarkerViewModel&#34; Property=&#34;Lat&#34; Title=&#34;Lat&#34; /&gt;
+        &lt;RadzenDataGridColumn TItem=&#34;MapMarkerViewModel&#34; Property=&#34;Lng&#34; Title=&#34;Lng&#34; /&gt;
+
+        &lt;RadzenDataGridColumn TItem=&#34;MapMarkerViewModel&#34; Context=&#34;mapMarker&#34; Filterable=&#34;false&#34; Sortable=&#34;false&#34; Width=&#34;150px&#34; TextAlign=&#34;TextAlign.Center&#34;&gt;
+            &lt;Template Context=&#34;mapMarker&#34;&gt;
+
+                &lt;RadzenRow JustifyContent=&#34;JustifyContent.Center&#34;&gt;
+                    &lt;RadzenButton Icon=&#34;pageview&#34; ButtonStyle=&#34;ButtonStyle.Info&#34; Variant=&#34;Variant.Flat&#34; Size=&#34;ButtonSize.Medium&#34;
+                                  Click=&#34;@(args =&gt; NavigatetoDetail(mapMarker.Id))&#34; @onclick:stopPropagation=&#34;true&#34;&gt;
+                    &lt;/RadzenButton&gt;
+                    &lt;RadzenButton Icon=&#34;edit&#34; ButtonStyle=&#34;ButtonStyle.Warning&#34; Variant=&#34;Variant.Flat&#34; Size=&#34;ButtonSize.Medium&#34;
+                                  Click=&#34;@(args =&gt; NavigatetoEdit(mapMarker.Id))&#34; @onclick:stopPropagation=&#34;true&#34;&gt;
+                    &lt;/RadzenButton&gt;
+                    &lt;RadzenButton Icon=&#34;delete_forever&#34; ButtonStyle=&#34;ButtonStyle.Danger&#34; Variant=&#34;Variant.Flat&#34; Size=&#34;ButtonSize.Medium&#34;
+                                  Click=&#34;@(args =&gt; NavigatetoDelete(mapMarker.Id))&#34; @onclick:stopPropagation=&#34;true&#34;&gt;
+                    &lt;/RadzenButton&gt;
+                &lt;/RadzenRow&gt;
+
+            &lt;/Template&gt;
+        &lt;/RadzenDataGridColumn&gt;
+    &lt;/Columns&gt;
+&lt;/RadzenDataGrid&gt;
+
+
+@code {
+
+    const int itemPageSize = 10;
+    private bool isLoading;
+    private int totalCount;
+    private IEnumerable&lt;MapMarkerViewModel&gt;? mapMarkers;
+
+    private RadzenGoogleMap map;
+    private string YOUR_GOOGLE_MAP_API_KEY = &#34;&#34;;
+    private int zoom = 3;
+    private GoogleMapPosition mapCenter = new GoogleMapPosition() { Lat = 39.931348444036296, Lng = 32.86293982331063 };
+    private IEnumerable&lt;RadzenGoogleMapMarker&gt;? radzenGoogleMapMarkers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        isLoading = true;
+
+        var result = await MapMarkerService.GetMapMarkersAsync();
+
+        mapMarkers = Mapper.Map&lt;IEnumerable&lt;MapMarker&gt;, IEnumerable&lt;MapMarkerViewModel&gt;&gt;(result.Result);
+        totalCount = result.TotalCount;
+
+        List&lt;RadzenGoogleMapMarker&gt; gMapMarkers = new();
+        foreach (var mapMarker in mapMarkers)
+            gMapMarkers.Add(new() { Title = mapMarker.Title, Label = mapMarker.Title, Position = new() { Lat = mapMarker.Lat, Lng = mapMarker.Lng } });
+        radzenGoogleMapMarkers = gMapMarkers;
+
+        isLoading = false;
+    }
+
+    private async Task LoadData(LoadDataArgs args)
+    {
+        isLoading = true;
+
+        var result = await MapMarkerService.GetMapMarkersAsync(filter: args.Filter, top: args.Top, skip: args.Skip, orderby: args.OrderBy, count: true);
+
+        mapMarkers = Mapper.Map&lt;IEnumerable&lt;MapMarker&gt;, IEnumerable&lt;MapMarkerViewModel&gt;&gt;(result.Result);
+        totalCount = result.TotalCount;
+
+        isLoading = false;
+    }
+
+    private void NavigatetoCreate() =&gt; NavigationManager.NavigateTo(&#34;/GoogleMap/Create&#34;);
+    private void NavigatetoDetail(int id) =&gt; NavigationManager.NavigateTo($&#34;/GoogleMap/Detail/{id}&#34;);
+    private void NavigatetoEdit(int id) =&gt; NavigationManager.NavigateTo($&#34;/GoogleMap/Edit/{id}&#34;);
+    private void NavigatetoDelete(int id) =&gt; NavigationManager.NavigateTo($&#34;/GoogleMap/Delete/{id}&#34;);
+
+    void OnMapClick(GoogleMapClickEventArgs args) { }
+
+    async Task OnMarkerClick(RadzenGoogleMapMarker marker)
+    {
+        var message = $&#34;Custom information about &lt;b&gt;{marker.Title}&lt;/b&gt;&#34;;
+
+        var code = $@&#34;
+var map = Radzen[&#39;{map.UniqueID}&#39;].instance;
+var marker = map.markers.find(m =&gt; m.title == &#39;{marker.Title}&#39;);
+if(window.infoWindow) {{window.infoWindow.close();}}
+window.infoWindow = new google.maps.InfoWindow({{content: &#39;{message}&#39;}});
+setTimeout(() =&gt; window.infoWindow.open(map, marker), 200);
+&#34;;
+
+        await JSRuntime.InvokeVoidAsync(&#34;eval&#34;, code);
+    }
+}
+</code></pre><p>A <code>Blazor component</code> called <code>GoogleMap</code>. It includes the necessary imports, injects the <code>IJSRuntime</code> for JavaScript interop, and defines the <code>UI</code> layout using <code>Radzen components</code>.</p><p>The <code>RadzenGoogleMap</code> component is used to initialize the <code>Google Map</code>. It requires an <code>API key</code> to authenticate with the <code>Google Maps API</code>. The <code>Options parameter</code> is used to customize the map&rsquo;s behavior, such as disabling double-click zoom. The Zoom and Center parameters define the initial zoom level and center position of the map. The <code>MapClick</code> and <code>MarkerClick</code> parameters specify the event handlers for map clicks and marker clicks, respectively. The <code>Data parameter</code> is used to bind the map markers.</p><p>When <code>a marker</code> is clicked, it creates <code>a custom information message</code> and opens an info window on the map with the message. The <code>RadzenGoogleMap</code> component provides access to the underlying <code>Google Map</code> instance through the map variable. The <code>marker parameter</code> contains information about the clicked marker.</p><p>The <code>GoogleMap</code> component in <code>this Blazor application</code> allows users to display and interact with a <code>Google Map</code>. It provides features such as <code>zooming</code>, <code>centering</code>, <code>adding markers</code>, and <code>handling map</code> and <code>marker click</code> events. By leveraging the <code>Radzen components</code>and the <code>Google Maps API</code>, developers can easily integrate maps into their Blazor applications.</p><h4 id=source><strong>Source</strong></h4><p>Full source code is available at this repository in GitHub:<br><a href=https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppRadzenGoogleMaps target=_blank rel=noopener>https://github.com/akifmt/DotNetCoding/tree/main/src/BlazorAppRadzenGoogleMaps</a></p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn icon-button bg-facebook" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2024-06-08-blazor-radzen-.net8-google-maps%2f" target=_blank><i class="fab fa-facebook"></i>
+</a><a class="btn icon-button bg-twitter" href="https://twitter.com/share?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2024-06-08-blazor-radzen-.net8-google-maps%2f&text=Blazor%20Radzen%20.NET%208%20Google%20Maps&via=akifmt" target=_blank><i class="fab fa-twitter"></i>
+</a><a class="btn icon-button bg-reddit" href="https://reddit.com/submit?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2024-06-08-blazor-radzen-.net8-google-maps%2f&title=Blazor%20Radzen%20.NET%208%20Google%20Maps" target=_blank><i class="fab fa-reddit"></i>
+</a><a class="btn icon-button bg-linkedin" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2024-06-08-blazor-radzen-.net8-google-maps%2f&title=Blazor%20Radzen%20.NET%208%20Google%20Maps" target=_blank><i class="fab fa-linkedin"></i>
+</a><a class="btn icon-button bg-whatsapp" href="https://api.whatsapp.com/send?text=Blazor%20Radzen%20.NET%208%20Google%20Maps https%3a%2f%2fakifmt.github.io%2fdotnet%2f2024-06-08-blazor-radzen-.net8-google-maps%2f" target=_blank><i class="fab fa-whatsapp"></i>
+</a><a class="btn icon-button" href="mailto:?subject=Blazor%20Radzen%20.NET%208%20Google%20Maps&body=https%3a%2f%2fakifmt.github.io%2fdotnet%2f2024-06-08-blazor-radzen-.net8-google-maps%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/akifmt/akifmt.github.io/edit/main/content/dotnet/2024-06-08-Blazor-Radzen-.NET8-Google-Maps/index.md title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="akifmt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
+<a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><a id=scroll-to-top class=btn data-toggle=tooltip data-placement=left title="Scroll to top"><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#blazor-radzen-net-8-google-maps><strong>Blazor Radzen .NET 8 Google Maps</strong></a><ul><li><a href=#mapmarkercs><strong>MapMarker.cs</strong></a></li><li><a href=#mapmarkerservicecs><strong>MapMarkerService.cs</strong></a></li><li><a href=#indexrazor><strong>Index.razor</strong></a></li></ul></li><li><a href=#source><strong>Source</strong></a></li></ul></li></ul></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-start"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts-dotnet>Recent Dotnet Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://akifmt.github.io/#recent-posts>Recent Posts</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:akifmt@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>akifmt@gmail.com</span></a></li><li><a href=https://github.com/akifmt target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>akifmt</span></a></li></ul></div><div class="col-md-4 col-sm-12"><p>Stay up to date with email notification</p><form action="https://gmail.us17.list-manage.com/subscribe/post?u=9837d83f08f2fe6e2cefb8773&amp;amp;id=00c15e4346&amp;amp;f_id=00cac2e1f0" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div class=form-group><input type=email class=form-control id=mce-EMAIL name=EMAIL aria-describedby=emailHelp placeholder="Enter email">
+<small id=emailHelp class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small></div><button type=submit class="btn btn-info">Submit</button></form></div></div></div><hr><div class=container><p id=disclaimer><strong>Liability Notice:</strong> This theme is under MIT license. So, you can use it for non-commercial, commercial, or private uses. You can modify or distribute the theme without requiring any permission from the theme author. However, the theme author does not provide any warranty or takes any liability for any issue with the theme.</p></div><hr><div class=container><div class="row text-start"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2024 Copyright.</div><div class="col-md-4 text-end"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script src=/application.7ea48cac5c9f1f98d1499846cebb90d41a48f06232569cf86b20c6898114032f.js integrity="sha256-fqSMrFyfH5jRSZhGzruQ1BpI8GIyVpz4ayDGiYEUAy8=" defer></script><style>#consent-notice{padding:1rem;display:none;text-align:center;position:fixed;bottom:0;width:calc(100%);background:#222;color:rgba(255,255,255,.8)}#consent-notice span{margin-right:1rem}#consent-notice button{cursor:pointer;display:inline-block;width:auto}#consent-notice span a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.5)}#consent-notice button.btn{margin-left:.5rem}#consent-notice button.btn.manage-consent{font-weight:400}#consent-overlay{position:fixed;left:0;top:0;width:100%;height:100vh;display:none;background:rgba(0,0,0,.75);z-index:999999;overflow:auto;cursor:pointer}#consent-overlay.active{display:flex}#consent-overlay>div{background:#fff;width:100%;max-width:30rem;padding:1.75rem;margin:auto;cursor:initial}#consent-overlay>div>div{display:flex;align-items:flex-start;margin-bottom:0}#consent-overlay>div>div:last-child{margin:0}#consent-overlay h3{padding-top:0}#consent-overlay input{margin-top:.3rem;margin-right:.3rem}#consent-overlay label{display:block}#consent-overlay .btn{margin-right:.5rem}#consent-overlay button.btn.save-consent{font-weight:400}@media(max-width:767px){#consent-overlay>div{padding:1.75rem 1rem}#consent-notice span{display:block;padding-top:3px;margin-bottom:1.5rem}#consent-notice button.btn{position:relative;bottom:4px}}</style><div id=consent-notice style=z-index:99><span>We would like to use <a class=manage-consent href=#manage-consent>third party code</a> to improve the functionality of this website.</span><button class="btn btn-outline-info manage-consent">Manage preferences</button><button class="btn btn-outline-danger deny-consent">Deny</button><button class="btn btn-outline-success approve-consent">Allow</button></div><div id=consent-overlay><div class=rounded style=background:#222><div><input type=checkbox id=item0 value=1 name=item0 checked disabled>
+<label for=item0><h3 style=color:#f1f5f9;font-size:1.25rem>Google Anaytics (functional)</h3><p style=color:#cbd5e1;font-size:.9rem>This code gives us insight into the number of people that visit our website, where they are from and what they are clicking on.</p></label></div><div><input type=checkbox id=item1 value=1 name=item1>
+<label for=item1><h3 style=color:#f1f5f9;font-size:1.25rem>Test</h3><p style=color:#cbd5e1;font-size:.9rem>Test.</p></label></div><div><button id=save-consent class="btn btn-outline-info save-consent" data-consentvalue=0>Save preferences</button>
+<button class="btn btn-outline-success approve-consent">Allow all</button></div></div></div><script>const scripts=[];scripts[0]="/js/scriptAAA.js";function createCookie(e,t,n){var s,o="";n&&(s=new Date,s.setTime(s.getTime()+n*24*60*60*1e3),o="; expires="+s.toUTCString()),document.cookie=e+"="+t+o+"; path=/"}function readCookie(e){for(var t,s=e+"=",o=document.cookie.split(";"),n=0;n<o.length;n++){for(t=o[n];t.charAt(0)==" ";)t=t.substring(1,t.length);if(t.indexOf(s)==0)return t.substring(s.length,t.length)}return null}function eraseCookie(e){createCookie(e,"",-1)}function denyAllConsentScripts(){var e="";scripts.forEach(function(){e=e+"0"}),acceptSomeConsentScripts(e)}function acceptAllConsentScripts(){var e="";scripts.forEach(function(){e=e+"1"}),acceptSomeConsentScripts(e)}function acceptSomeConsentScripts(e){setConsentInputs(e),createCookie("consent-settings",e,31),document.getElementById("consent-notice").style.display="none",document.getElementById("consent-overlay").classList.remove("active"),loadConsentScripts(e)}function loadConsentScripts(e){scripts.forEach(function(t,n){if(e[n]=="1"){var s=document.createElement("script");s.type="text/javascript",s.src=t,document.body.appendChild(s)}})}function setConsentInputs(e){var t=document.querySelectorAll("#consent-overlay input:not([disabled])");t.forEach(function(t,n){e[n]=="1"?t.checked=!0:t.checked=!1})}function setConsentValue(){var t=document.querySelectorAll("#consent-overlay input:not([disabled])"),e="";t.forEach(function(t){t.checked?e=e+"1":e=e+"0"}),document.getElementById("save-consent").dataset.consentvalue=e}var consentValue,elements=document.querySelectorAll("#consent-overlay input:not([disabled])");elements.forEach(function(e){e.checked=!1}),readCookie("consent-settings")?(consentValue=readCookie("consent-settings").toString(),setConsentInputs(consentValue),loadConsentScripts(consentValue)):document.getElementById("consent-notice").style.display="block",elements=document.querySelectorAll(".manage-consent"),elements.forEach(function(e){e.addEventListener("click",function(){document.getElementById("consent-overlay").classList.toggle("active")})}),elements=document.querySelectorAll(".deny-consent"),elements.forEach(function(e){e.addEventListener("click",function(){denyAllConsentScripts()})}),elements=document.querySelectorAll(".approve-consent"),elements.forEach(function(e){e.addEventListener("click",function(){acceptAllConsentScripts()})}),document.getElementById("save-consent").addEventListener("click",function(){setConsentValue(),acceptSomeConsentScripts(this.dataset.consentvalue)}),document.getElementById("consent-overlay").addEventListener("click",function(e){document.querySelector("#consent-overlay > div").contains(e.target)||this.classList.toggle("active")})</script><script type=text/javascript src=/js/ga.js></script></body></html>
