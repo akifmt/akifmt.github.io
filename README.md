@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sun%20Jun%2009%202024%2015%3A16%3A23%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Mon%20Jun%2010%202024%2018%3A45%3A44%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added contacts](https://github.com/akifmt/akifmt.github.io/commit/55b5d57d77d3d2ab50b84398f900d1a6a17e656a) - 2024-06-10T18:43:40Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Google Maps](https://github.com/akifmt/akifmt.github.io/commit/e4367a508016e55fe22769b74f44b70d93ee4a94) - 2024-06-09T15:14:33Z 
 - :page_facing_up: [Fix post link](https://github.com/akifmt/akifmt.github.io/commit/ea8f9de1a9db12259695c2102f8026b324ec9488) - 2024-06-08T19:05:29Z 
 - :page_facing_up: [Added image to custom menu item](https://github.com/akifmt/akifmt.github.io/commit/8dc34e63fa6681e83fc319bbd38fbf56b14d2175) - 2024-06-08T18:54:41Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Fixed top-menu position](https://github.com/akifmt/akifmt.github.io/commit/4eaaa406849f228785fc60bf93f3eade00ac705e) - 2024-05-23T19:17:16Z 
 - :page_facing_up: [Changed deps to local fork](https://github.com/akifmt/akifmt.github.io/commit/a206608215a613e5856d13b5982855b6baace16e) - 2024-05-23T19:02:46Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Html Editor](https://github.com/akifmt/akifmt.github.io/commit/38e0b3b15d2e6d87824299b75904b7756d135e58) - 2024-05-15T18:27:51Z 
-- :page_facing_up: [added new post Blazor Radzen .NET 8 Multiple Themes Dark and Light Mode](https://github.com/akifmt/akifmt.github.io/commit/98b4f25a153289d5e461340624fcf1433fb92ee3) - 2024-05-04T18:05:53Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
