@@ -1,0 +1,37 @@
+{{ define "header" }}
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Title }}{{ end }}" />
+{{ end }}
+
+{{ define "navbar" }}
+    {{ partial "navigators/navbar.html" . }}
+{{ end }}
+
+{{ define "content" }}
+<section class="content-section" id="content-section" style="flex: 100%;max-width: 100%;">
+  <div class="content">
+    <div class="container p-0 read-area">
+      <!--Hero Area-->
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url({{ partial "helpers/get-hero.html" . }});height:100px'>
+      </div>
+
+      <!--Content Start-->
+      <div class="page-content">
+        
+        <div class="title">
+          <h1 style="color: #f1f5f9;">{{ .Page.Title }}</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          {{ .Page.Content }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--scroll back to top-->
+  <a id="scroll-to-top" class="btn"  data-toggle="tooltip" data-placement="left" title="Scroll to top">
+    <i class="fas fa-chevron-circle-up"></i>
+  </a>
+</section>
+{{ end }}
+

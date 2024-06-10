@@ -17,12 +17,19 @@ customMenus:
    url: /dotnet/
    showpreimage: true
    preimage: /images/dotnet-logo.png # 20h x 20w
-        
    # specify whether to hide the menu item from top navbar or not.
    hideFromNavbar: false
    # specify whether to show the menu item in footer or not.
    # if you set it to true, make sure you have set `footer.navigation.customMenus: true` in your config.yaml
-   showOnFooter: false
+   showOnFooter: true
+
+ - name: İletişim
+   url: /tr/contacts/contact/
+   # specify whether to hide the menu item from top navbar or not.
+   hideFromNavbar: false
+   # specify whether to show the menu item in footer or not.
+   # if you set it to true, make sure you have set `footer.navigation.customMenus: true` in your config.yaml
+   showOnFooter: true
 
 # Specify OpenGraph Headers
 #openGraph:
