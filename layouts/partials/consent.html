@@ -81,6 +81,17 @@
             consentValue = consentValue + "1";
         });
         acceptSomeConsentScripts(consentValue);
+		
+		
+		gtag('consent', 'update', {
+		  ad_user_data: 'granted',
+		  ad_personalization: 'granted',
+		  ad_storage: 'granted',
+		  analytics_storage: 'granted'
+		});
+		
+		
+		
     }
     function acceptSomeConsentScripts(consentValue) {
         setConsentInputs(consentValue);
