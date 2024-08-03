@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sat%20Jun%2029%202024%2022%3A27%3A02%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Sat%20Aug%2003%202024%2018%3A58%3A13%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Radzen .NET 8 Authentication & Authorization with Identity](https://github.com/akifmt/akifmt.github.io/commit/f14758d4cbcb0289976d2aee61c9bb3dc4e1eb5a) - 2024-08-03T18:57:08Z 
 - :page_facing_up: [Updated info](https://github.com/akifmt/akifmt.github.io/commit/12ad0b9b26d90b5664a785359176a39389911d83) - 2024-06-29T22:26:11Z 
 - :page_facing_up: [Updated base header](https://github.com/akifmt/akifmt.github.io/commit/3f41b5e87953c49b9131d34a055becec51df8f5a) - 2024-06-12T18:28:54Z 
 - :page_facing_up: [added contacts](https://github.com/akifmt/akifmt.github.io/commit/55b5d57d77d3d2ab50b84398f900d1a6a17e656a) - 2024-06-10T18:43:40Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Serilog Logging to Console, File and Database](https://github.com/akifmt/akifmt.github.io/commit/1723fce0cb73c674034cb00a78352ff5181a61e7) - 2024-05-29T18:46:12Z 
 - :page_facing_up: [Update layouts to v4](https://github.com/akifmt/akifmt.github.io/commit/1e39c2bcc281f5de8f1b4b9b6b82bcb89a40f3f7) - 2024-05-24T21:36:30Z 
 - :page_facing_up: [Update config, added newsletter](https://github.com/akifmt/akifmt.github.io/commit/630c963beab54974e3ba2130f058c7ab70246375) - 2024-05-24T21:35:39Z 
-- :page_facing_up: [Fixed top-menu position](https://github.com/akifmt/akifmt.github.io/commit/4eaaa406849f228785fc60bf93f3eade00ac705e) - 2024-05-23T19:17:16Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
