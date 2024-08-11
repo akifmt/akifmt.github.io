@@ -61,6 +61,18 @@
         {{ end }}
         <div class="post-content" id="post-content">
           {{ .Page.Content }}
+		  
+		  
+		  {{ if .Param "show_all_posts" | default false }}
+		    <div>
+            <table>
+			  {{ partial "posttableitem.html" (dict "menuName" "dotnet" "menuItems" site.Menus.dotnet "ctx" .) }}
+			</table>
+            </div>
+          {{ else }}
+          {{ end }}
+		  
+		  
         </div>
 
         <!-- Share or Contribute -->
