@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sat%20Aug%2003%202024%2018%3A59%3A56%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Sun%20Aug%2011%202024%2021%3A28%3A10%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Radzen .NET 8 Role-based Authorization with Identity](https://github.com/akifmt/akifmt.github.io/commit/65d98218b51059e97933fa3961841e30e3927518) - 2024-08-11T21:26:33Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Identity Automatically Logout Timer](https://github.com/akifmt/akifmt.github.io/commit/843660f5f40aff6f451314ef204e88ca3eedf8af) - 2024-08-03T18:58:53Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Authentication & Authorization with Identity](https://github.com/akifmt/akifmt.github.io/commit/f14758d4cbcb0289976d2aee61c9bb3dc4e1eb5a) - 2024-08-03T18:57:08Z 
 - :page_facing_up: [Updated info](https://github.com/akifmt/akifmt.github.io/commit/12ad0b9b26d90b5664a785359176a39389911d83) - 2024-06-29T22:26:11Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Fix post link](https://github.com/akifmt/akifmt.github.io/commit/ea8f9de1a9db12259695c2102f8026b324ec9488) - 2024-06-08T19:05:29Z 
 - :page_facing_up: [Added image to custom menu item](https://github.com/akifmt/akifmt.github.io/commit/8dc34e63fa6681e83fc319bbd38fbf56b14d2175) - 2024-06-08T18:54:41Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Serilog Logging to Console, File and Database](https://github.com/akifmt/akifmt.github.io/commit/1723fce0cb73c674034cb00a78352ff5181a61e7) - 2024-05-29T18:46:12Z 
-- :page_facing_up: [Update layouts to v4](https://github.com/akifmt/akifmt.github.io/commit/1e39c2bcc281f5de8f1b4b9b6b82bcb89a40f3f7) - 2024-05-24T21:36:30Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
