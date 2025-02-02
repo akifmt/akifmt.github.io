@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sun%20Feb%2002%202025%2018%3A28%3A24%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Sun%20Feb%2002%202025%2018%3A41%3A23%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [Update deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/06ade47c0abd24853813c43feb1e9e82595db8d9) - 2025-02-02T18:41:10Z 
 - :page_facing_up: [added new post New Features .NET 9 and C# 13: What Developers Need to Know](https://github.com/akifmt/akifmt.github.io/commit/b811ee38de30353301327cfd5bf61c8adbb50269) - 2025-02-02T18:27:47Z 
 - :page_facing_up: [Update config and site.yaml](https://github.com/akifmt/akifmt.github.io/commit/375b9e3e8249b66eb86276b42dc42db7fe483cc6) - 2025-02-02T18:26:34Z 
 - :page_facing_up: [added new post all dotnet posts](https://github.com/akifmt/akifmt.github.io/commit/19dcc96b51cc5dd7ce03c3ec49e4d748c9f93946) - 2024-08-11T21:32:53Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Identity Automatically Logout Timer](https://github.com/akifmt/akifmt.github.io/commit/843660f5f40aff6f451314ef204e88ca3eedf8af) - 2024-08-03T18:58:53Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Authentication & Authorization with Identity](https://github.com/akifmt/akifmt.github.io/commit/f14758d4cbcb0289976d2aee61c9bb3dc4e1eb5a) - 2024-08-03T18:57:08Z 
 - :page_facing_up: [Updated info](https://github.com/akifmt/akifmt.github.io/commit/12ad0b9b26d90b5664a785359176a39389911d83) - 2024-06-29T22:26:11Z 
-- :page_facing_up: [Updated base header](https://github.com/akifmt/akifmt.github.io/commit/3f41b5e87953c49b9131d34a055becec51df8f5a) - 2024-06-12T18:28:54Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
