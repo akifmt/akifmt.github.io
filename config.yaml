@@ -171,11 +171,11 @@ params:
     support:
       enable: false
       services:
-        kofi:
-          user: hossainemruz
-          text: Tip Me
-          textColor: '#f9fafc'
-          backgroundColor: '#248aaa'
+        # kofi:
+        #   user: hossainemruz
+        #   text: Tip Me
+        #   textColor: '#f9fafc'
+        #   backgroundColor: '#248aaa'
         # buymeacoffee:
         #   user: <your buymeacoffee.com user>
         #   text: Support me on Buy me a coffee!
