@@ -9,8 +9,6 @@ on:
 jobs:
   deploy-to-gh-pages:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.124.1
     steps:
     # checkout to the commit that has been pushed
     - uses: actions/checkout@v4
@@ -18,7 +16,7 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2.6.0
       with:
-        hugo-version: 'latest'
+        hugo-version: '0.124.1'
         extended: true
 
     - name: Update Hugo Modules
