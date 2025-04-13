@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sun%20Feb%2002%202025%2018%3A44%3A10%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Sun%20Apr%2013%202025%2021%3A42%3A53%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [Update about](https://github.com/akifmt/akifmt.github.io/commit/241db7da85449a9c774249dabd5695c8bebd00f3) - 2025-04-13T21:41:07Z 
 - :page_facing_up: [Update deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/7f367d960302290d17d124e1292c4aeaeead9b3e) - 2025-02-02T18:43:58Z 
 - :page_facing_up: [Update deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/06ade47c0abd24853813c43feb1e9e82595db8d9) - 2025-02-02T18:41:10Z 
 - :page_facing_up: [added new post New Features .NET 9 and C# 13: What Developers Need to Know](https://github.com/akifmt/akifmt.github.io/commit/b811ee38de30353301327cfd5bf61c8adbb50269) - 2025-02-02T18:27:47Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Upgrade Radzen 4 to 5](https://github.com/akifmt/akifmt.github.io/commit/c5a10fba7964afed243e1519d70aa58dce27449f) - 2024-08-11T21:28:05Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Role-based Authorization with Identity](https://github.com/akifmt/akifmt.github.io/commit/65d98218b51059e97933fa3961841e30e3927518) - 2024-08-11T21:26:33Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Identity Automatically Logout Timer](https://github.com/akifmt/akifmt.github.io/commit/843660f5f40aff6f451314ef204e88ca3eedf8af) - 2024-08-03T18:58:53Z 
-- :page_facing_up: [added new post Blazor Radzen .NET 8 Authentication & Authorization with Identity](https://github.com/akifmt/akifmt.github.io/commit/f14758d4cbcb0289976d2aee61c9bb3dc4e1eb5a) - 2024-08-03T18:57:08Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
