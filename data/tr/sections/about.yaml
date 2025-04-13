@@ -40,13 +40,13 @@ socialLinks:
   icon: "fab fa-linkedin"
   url: "https://www.linkedin.com/in/makiftokatlioglu/en-us"
 
-- name: Twitter
-  icon: "fab fa-twitter"
-  url: "https://twitter.com/akifmt"
-
-- name: Facebook
-  icon: "fab fa-facebook"
-  url: "#"
+# - name: Twitter
+#   icon: "fab fa-twitter"
+#   url: "#"
+# 
+# - name: Facebook
+#   icon: "fab fa-facebook"
+#   url: "#"
 
 # You can put custom buttons to link your relevant resources.
 # For example, you can put link for your resume.
