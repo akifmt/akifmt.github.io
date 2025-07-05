@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sun%20Jun%2022%202025%2019%3A26%3A43%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Sat%20Jul%2005%202025%2018%3A47%3A08%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Radzen .NET 8 DataGrid InLineEdit](https://github.com/akifmt/akifmt.github.io/commit/f354feacbe35dbe6f601d04a4f13c5bc04985ada) - 2025-07-05T18:45:01Z 
 - :page_facing_up: [Update disabled disqus](https://github.com/akifmt/akifmt.github.io/commit/275962ebd1cdfb7cade37c8816dcafcb7f820041) - 2025-06-22T19:24:39Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Menu with Adaptive Behavior for Mobile and Desktop](https://github.com/akifmt/akifmt.github.io/commit/f6c724537dee1db7ce9f672c58bc27163b3f7975) - 2025-06-01T20:48:15Z 
 - :page_facing_up: [Update about](https://github.com/akifmt/akifmt.github.io/commit/241db7da85449a9c774249dabd5695c8bebd00f3) - 2025-04-13T21:41:07Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Update config and site.yaml](https://github.com/akifmt/akifmt.github.io/commit/375b9e3e8249b66eb86276b42dc42db7fe483cc6) - 2025-02-02T18:26:34Z 
 - :page_facing_up: [added new post all dotnet posts](https://github.com/akifmt/akifmt.github.io/commit/19dcc96b51cc5dd7ce03c3ec49e4d748c9f93946) - 2024-08-11T21:32:53Z 
 - :page_facing_up: [update dotnet post layout](https://github.com/akifmt/akifmt.github.io/commit/abc3b20f8705ad69030e397d2fec8d3cf9e47e0a) - 2024-08-11T21:31:06Z 
-- :page_facing_up: [added new post Blazor Radzen .NET 8 Upgrade Radzen 4 to 5](https://github.com/akifmt/akifmt.github.io/commit/c5a10fba7964afed243e1519d70aa58dce27449f) - 2024-08-11T21:28:05Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
