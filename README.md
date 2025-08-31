@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sun%20Jul%2020%202025%2019%3A35%3A40%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Sun%20Aug%2031%202025%2019%3A12%3A04%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post JSON Data Standard - IETF RFCs - IANA](https://github.com/akifmt/akifmt.github.io/commit/54fac6eb393bdf9ba26497c54ba167974f8d9eb9) - 2025-08-31T19:09:28Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 DataGrid InCellEdit](https://github.com/akifmt/akifmt.github.io/commit/d804941a4897667ee888e541d9ab10dc61a754ba) - 2025-07-20T19:33:24Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 DataGrid InLineEdit](https://github.com/akifmt/akifmt.github.io/commit/f354feacbe35dbe6f601d04a4f13c5bc04985ada) - 2025-07-05T18:45:01Z 
 - :page_facing_up: [Update disabled disqus](https://github.com/akifmt/akifmt.github.io/commit/275962ebd1cdfb7cade37c8816dcafcb7f820041) - 2025-06-22T19:24:39Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Update deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/06ade47c0abd24853813c43feb1e9e82595db8d9) - 2025-02-02T18:41:10Z 
 - :page_facing_up: [added new post New Features .NET 9 and C# 13: What Developers Need to Know](https://github.com/akifmt/akifmt.github.io/commit/b811ee38de30353301327cfd5bf61c8adbb50269) - 2025-02-02T18:27:47Z 
 - :page_facing_up: [Update config and site.yaml](https://github.com/akifmt/akifmt.github.io/commit/375b9e3e8249b66eb86276b42dc42db7fe483cc6) - 2025-02-02T18:26:34Z 
-- :page_facing_up: [added new post all dotnet posts](https://github.com/akifmt/akifmt.github.io/commit/19dcc96b51cc5dd7ce03c3ec49e4d748c9f93946) - 2024-08-11T21:32:53Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
