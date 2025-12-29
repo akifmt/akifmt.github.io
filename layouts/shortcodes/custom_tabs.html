@@ -1,0 +1,19 @@
+{{- with .Inner }}{{ end -}}
+{{ $seed := now.UnixMicro }}
+{{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
+{{- $groupId := substr $random 0 5 -}}
+
+<ul class="nav nav-tabs">
+{{- range $index, $tab := .Scratch.Get "tabs" -}}
+  <li class="nav-item">
+    <a class="nav-link {{ if eq $index 0 }}active{{ end }}" data-bs-toggle="tab" href="#{{ $groupId }}{{ $index }}"><kbd>{{ .name }}</kbd></a>
+  </li>
+{{- end -}}
+</ul>
+<div class="tab-content">
+{{- range $index, $tab := .Scratch.Get "tabs" -}}
+<div class="tab-pane container {{ if eq $index 0 }} active {{ else }} fade {{ end }}" id="{{ $groupId }}{{ $index }}">
+{{ .content }}
+</div>
+{{ end }}
+</div>
