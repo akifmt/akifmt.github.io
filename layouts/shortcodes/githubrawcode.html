@@ -4,7 +4,7 @@
     {{ errorf "%s" . }}
   {{ else }}
     {{ $lang := path.Ext $file | strings.TrimPrefix "." }}
-    {{ highlight .Content $lang }}
+    {{ highlight (.Content | safeHTML) $lang }}
   {{ end }}
 {{ else }}
   {{ errorf "Unable to get remote resource." }}
