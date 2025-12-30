@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Mon%20Dec%2029%202025%2006%3A31%3A57%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Tue%20Dec%2030%202025%2017%3A57%3A08%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/b8dfc71d97fdcda605c0d9f089b8d006a0f70305) - 2025-12-30T17:56:53Z 
 - :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/9ed6358300047dbe73381dcdcff97f647252a7ee) - 2025-12-29T06:31:37Z 
 - :page_facing_up: [added new post Blazor .NET 8 Custom JSON Converters for (De)Serializing Built-in and Custom Types](https://github.com/akifmt/akifmt.github.io/commit/e907659d2cc0744b749962dd90a94136ea2e29f0) - 2025-09-07T19:45:38Z 
 - :page_facing_up: [added new post JSON Data Standard - IETF RFCs - IANA](https://github.com/akifmt/akifmt.github.io/commit/54fac6eb393bdf9ba26497c54ba167974f8d9eb9) - 2025-08-31T19:09:28Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Menu with Adaptive Behavior for Mobile and Desktop](https://github.com/akifmt/akifmt.github.io/commit/f6c724537dee1db7ce9f672c58bc27163b3f7975) - 2025-06-01T20:48:15Z 
 - :page_facing_up: [Update about](https://github.com/akifmt/akifmt.github.io/commit/241db7da85449a9c774249dabd5695c8bebd00f3) - 2025-04-13T21:41:07Z 
 - :page_facing_up: [Update deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/7f367d960302290d17d124e1292c4aeaeead9b3e) - 2025-02-02T18:43:58Z 
-- :page_facing_up: [Update deploy-to-gh-pages.yaml](https://github.com/akifmt/akifmt.github.io/commit/06ade47c0abd24853813c43feb1e9e82595db8d9) - 2025-02-02T18:41:10Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
