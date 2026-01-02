@@ -20,7 +20,7 @@
     {{ errorf "%s" . }}
   {{ else }}
     {{ $lang := path.Ext $file | strings.TrimPrefix "." }}
-```{{ $lang }}
+```
 {{ .Content | safeHTML }}
 ```
   {{ end }}
