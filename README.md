@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Fri%20Jan%2002%202026%2005%3A58%3A00%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Fri%20Jan%2002%202026%2011%3A01%3A34%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor .NET 10 Migrate from .NET 8 to .NET 10](https://github.com/akifmt/akifmt.github.io/commit/60d68f31b411f13532e2ec61ead610a530b4f5c0) - 2026-01-02T11:01:16Z 
 - :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/2c356e8cfcabc09f3a8a6c56fce4c25b41f4c098) - 2026-01-02T05:57:41Z 
 - :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/b8dfc71d97fdcda605c0d9f089b8d006a0f70305) - 2025-12-30T17:56:53Z 
 - :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/9ed6358300047dbe73381dcdcff97f647252a7ee) - 2025-12-29T06:31:37Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor Radzen .NET 8 DataGrid InLineEdit](https://github.com/akifmt/akifmt.github.io/commit/f354feacbe35dbe6f601d04a4f13c5bc04985ada) - 2025-07-05T18:45:01Z 
 - :page_facing_up: [Update disabled disqus](https://github.com/akifmt/akifmt.github.io/commit/275962ebd1cdfb7cade37c8816dcafcb7f820041) - 2025-06-22T19:24:39Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 Menu with Adaptive Behavior for Mobile and Desktop](https://github.com/akifmt/akifmt.github.io/commit/f6c724537dee1db7ce9f672c58bc27163b3f7975) - 2025-06-01T20:48:15Z 
-- :page_facing_up: [Update about](https://github.com/akifmt/akifmt.github.io/commit/241db7da85449a9c774249dabd5695c8bebd00f3) - 2025-04-13T21:41:07Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
