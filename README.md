@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Thu%20Jan%2008%202026%2008%3A30%3A12%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Fri%20Jan%2009%202026%2014%3A33%3A49%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor .NET 10 QuickGrid Component](https://github.com/akifmt/akifmt.github.io/commit/458a32723bea1704dcb5167e7d9d3b9386e4127d) - 2026-01-09T14:33:31Z 
 - :page_facing_up: [Update all posts page](https://github.com/akifmt/akifmt.github.io/commit/172ae4ab5cc49df7a0f74f41613df67e67f5738e) - 2026-01-08T08:29:57Z 
 - :page_facing_up: [added new post Blazor .NET 10 Migrate from .NET 8 to .NET 10](https://github.com/akifmt/akifmt.github.io/commit/60d68f31b411f13532e2ec61ead610a530b4f5c0) - 2026-01-02T11:01:16Z 
 - :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/2c356e8cfcabc09f3a8a6c56fce4c25b41f4c098) - 2026-01-02T05:57:41Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post JSON Data Standard - IETF RFCs - IANA](https://github.com/akifmt/akifmt.github.io/commit/54fac6eb393bdf9ba26497c54ba167974f8d9eb9) - 2025-08-31T19:09:28Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 DataGrid InCellEdit](https://github.com/akifmt/akifmt.github.io/commit/d804941a4897667ee888e541d9ab10dc61a754ba) - 2025-07-20T19:33:24Z 
 - :page_facing_up: [added new post Blazor Radzen .NET 8 DataGrid InLineEdit](https://github.com/akifmt/akifmt.github.io/commit/f354feacbe35dbe6f601d04a4f13c5bc04985ada) - 2025-07-05T18:45:01Z 
-- :page_facing_up: [Update disabled disqus](https://github.com/akifmt/akifmt.github.io/commit/275962ebd1cdfb7cade37c8816dcafcb7f820041) - 2025-06-22T19:24:39Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
