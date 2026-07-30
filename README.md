@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Thu%20Jul%2030%202026%2010%3A46%3A47%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Thu%20Jul%2030%202026%2010%3A59%3A16%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor .NET 10 Extract JSON schema](https://github.com/akifmt/akifmt.github.io/commit/272054ffb791dd821fae9da8ec7c8480fe3bed26) - 2026-07-30T10:58:52Z 
 - :page_facing_up: [Update site.yaml](https://github.com/akifmt/akifmt.github.io/commit/49873e12ed923c2abd61e35587145fda42c84640) - 2026-07-30T10:46:27Z 
 - :page_facing_up: [added new post Blazor .NET 10 Server-Sent Events (SSE) with Minimal APIs](https://github.com/akifmt/akifmt.github.io/commit/8a11657ffb98e8beefebb8bbacc654c2a018ea2a) - 2026-04-16T22:48:10Z 
 - :page_facing_up: [added new post Blazor .NET 10 with Minimal API](https://github.com/akifmt/akifmt.github.io/commit/e93185af31386035a0fea95d6250312dbfd9d140) - 2026-01-30T13:37:33Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/2c356e8cfcabc09f3a8a6c56fce4c25b41f4c098) - 2026-01-02T05:57:41Z 
 - :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/b8dfc71d97fdcda605c0d9f089b8d006a0f70305) - 2025-12-30T17:56:53Z 
 - :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/9ed6358300047dbe73381dcdcff97f647252a7ee) - 2025-12-29T06:31:37Z 
-- :page_facing_up: [added new post Blazor .NET 8 Custom JSON Converters for (De)Serializing Built-in and Custom Types](https://github.com/akifmt/akifmt.github.io/commit/e907659d2cc0744b749962dd90a94136ea2e29f0) - 2025-09-07T19:45:38Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
