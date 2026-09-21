@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sun%20Aug%2023%202026%2006%3A07%3A44%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Mon%20Sep%2021%202026%2003%3A32%3A31%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Fluent UI .NET 10 DataGrid with Search Paging](https://github.com/akifmt/akifmt.github.io/commit/c9068990655bb10ffd0cbfaf0d5d83b91d45b721) - 2026-09-21T03:32:16Z 
 - :page_facing_up: [added new post .NET 10 Aspire Keycloak External Service Integration in .NET Aspire](https://github.com/akifmt/akifmt.github.io/commit/923d410917fbc08345b341ea955219ecc7fffbe9) - 2026-08-23T06:06:39Z 
 - :page_facing_up: [added new post Blazor .NET 10 Extract JSON schema](https://github.com/akifmt/akifmt.github.io/commit/272054ffb791dd821fae9da8ec7c8480fe3bed26) - 2026-07-30T10:58:52Z 
 - :page_facing_up: [Update site.yaml](https://github.com/akifmt/akifmt.github.io/commit/49873e12ed923c2abd61e35587145fda42c84640) - 2026-07-30T10:46:27Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [Update all posts page](https://github.com/akifmt/akifmt.github.io/commit/172ae4ab5cc49df7a0f74f41613df67e67f5738e) - 2026-01-08T08:29:57Z 
 - :page_facing_up: [added new post Blazor .NET 10 Migrate from .NET 8 to .NET 10](https://github.com/akifmt/akifmt.github.io/commit/60d68f31b411f13532e2ec61ead610a530b4f5c0) - 2026-01-02T11:01:16Z 
 - :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/2c356e8cfcabc09f3a8a6c56fce4c25b41f4c098) - 2026-01-02T05:57:41Z 
-- :page_facing_up: [Update shortcodes](https://github.com/akifmt/akifmt.github.io/commit/b8dfc71d97fdcda605c0d9f089b8d006a0f70305) - 2025-12-30T17:56:53Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
