@@ -11,7 +11,8 @@ A personal portfolio with minimalist design and responsiveness.
 ## Recent
 
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sun%20Oct%2018%202026%2018%3A59%3A26%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Wed%20Nov%2011%202026%2017%3A26%3A30%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [added new post Blazor Fluent UI .NET 10 Charts](https://github.com/akifmt/akifmt.github.io/commit/1c1822cf114f8a402e65ff9f9102401929c12c49) - 2026-11-11T17:26:06Z 
 - :page_facing_up: [added new post Blazor Fluent UI .NET 10 Highlighter](https://github.com/akifmt/akifmt.github.io/commit/52f551cbda321c7d1159ebb65272ac065ab3ccbb) - 2026-10-18T18:59:08Z 
 - :page_facing_up: [added new post Blazor Fluent UI .NET 10 Wizard](https://github.com/akifmt/akifmt.github.io/commit/8033af50e4a8e540d5532fb6cb9c4ce168cf2345) - 2026-10-13T17:38:43Z 
 - :page_facing_up: [added new post Blazor Fluent UI .NET 10 DataGrid with Search Paging](https://github.com/akifmt/akifmt.github.io/commit/c9068990655bb10ffd0cbfaf0d5d83b91d45b721) - 2026-09-21T03:32:16Z 
@@ -21,7 +22,6 @@ A personal portfolio with minimalist design and responsiveness.
 - :page_facing_up: [added new post Blazor .NET 10 Server-Sent Events (SSE) with Minimal APIs](https://github.com/akifmt/akifmt.github.io/commit/8a11657ffb98e8beefebb8bbacc654c2a018ea2a) - 2026-04-16T22:48:10Z 
 - :page_facing_up: [added new post Blazor .NET 10 with Minimal API](https://github.com/akifmt/akifmt.github.io/commit/e93185af31386035a0fea95d6250312dbfd9d140) - 2026-01-30T13:37:33Z 
 - :page_facing_up: [added new post Blazor .NET 10 QuickGrid Component](https://github.com/akifmt/akifmt.github.io/commit/458a32723bea1704dcb5167e7d9d3b9386e4127d) - 2026-01-09T14:33:31Z 
-- :page_facing_up: [Update all posts page](https://github.com/akifmt/akifmt.github.io/commit/172ae4ab5cc49df7a0f74f41613df67e67f5738e) - 2026-01-08T08:29:57Z 
 <!-- Latest_Commits_End -->
 
 ### Attribution
